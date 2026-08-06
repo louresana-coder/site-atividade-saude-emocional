@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz | Saúde Emocional</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>💚 Portal de Apoio ao Estudante</h1>
+            <p>Cuide de você. Sua saúde emocional importa.</p>
+        </div>
+        <nav class="menu-navegacao" id="menuPrincipal">
+            <button class="btn-menu" id="btnMenu">☰</button>
+            <ul id="listaMenu">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="escuta.html">Portal de Escuta</a></li>
+                <li><a href="quiz.html" class="ativo">Quiz</a></li>
+                <li><a href="referencias.html">Referências</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="conteudo-bloco">
+            <h2>🧠 Quiz: O que você sabe sobre Saúde Emocional?</h2>
+            <p>Responda e veja quantas acerta! As perguntas ajudam a refletir sobre o tema.</p>
+
+            <form id="formQuiz">
+                <div class="pergunta">
+                    <p><strong>1. Ter saúde emocional significa...</strong></p>
+                    <label><input type="radio" name="q1" value="errado"> Nunca se sentir triste ou preocupado</label>
+                    <label><input type="radio" name="q1" value="certo"> Reconhecer, entender e lidar com os sentimentos</label>
+                </div>
+
+                <div class="pergunta">
+                    <p><strong>2. Quando me sinto sobrecarregado(a), o que devo fazer PRIMEIRO?</strong></p>
+                    <label><input type="radio" name="q2" value="errado"> Ignorar e continuar fazendo tudo</label>
+                    <label><input type="radio" name="q2" value="certo"> Parar, respirar e buscar ajuda ou descansar</label>
+                </div>
+
+                <div class="pergunta">
+                    <p><strong>3. Sentir ansiedade com frequência significa que...</strong></p>
+                    <label><input type="radio" name="q3" value="errado"> Estou doente e sem solução</label>
+                    <label><input type="radio" name="q3" value="certo"> É um sinal de que preciso cuidar melhor de mim e buscar orientação</label>
+                </div>
+
+                <div class="pergunta">
+                    <p><strong>4. Qual destas é uma forma saudável de cuidar das emoções?</strong></p>
+                    <label><input type="radio" name="q4" value="errado"> Guardar tudo para si e não contar a ninguém</label>
+                    <label><input type="radio" name="q4" value="certo"> Conversar com alguém de confiança e expressar o que sente</label>
+                </div>
+
+                <div class="pergunta">
+                    <p><strong>5. Sobre pedir ajuda, podemos dizer que...</strong></p>
+                    <label><input type="radio" name="q5" value="errado"> É sinal de fraqueza</label>
+                    <label><input type="radio" name="q5" value="certo"> É coragem reconhecer que precisamos de apoio</label>
+                </div>
+
+                <button type="submit">✅ Verificar respostas</button>
+            </form>
+
+            <div id="resultadoQuiz" class="resposta"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 — Portal de Apoio ao Estudante | Tema: Saúde Emocional</p>
+        <p>💚 Você não está sozinho(a). Sempre há alguém disposto a ajudar.</p>
+    </footer>
+
+    <div class="botoes-acessibilidade">
+        <button id="btnModoEscuro" title="Modo Escuro">🌙</button>
+        <button id="btnAumentarFonte" title="Aumentar Fonte">🔤</button>
+        <button id="btnTopo" title="Voltar ao Topo">⬆</button>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
