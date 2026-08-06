@@ -3,94 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saúde Emocional | Portal de Apoio ao Estudante</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="imagens/favicon.ico">
+    <title>Saúde Emocional | Portal de Apoio</title>
+    <link rel="stylesheet" href="css/estilo.css">
 </head>
 <body>
 
-    <!-- Cabeçalho -->
-    <header>
-        <div class="logo">
-            <h1>💚 Portal de Apoio ao Estudante</h1>
-            <p>Cuide de você. Sua saúde emocional importa.</p>
-        </div>
-
-        <!-- Menu de Navegação -->
-        <nav class="menu-navegacao" id="menuPrincipal">
-            <button class="btn-menu" id="btnMenu">☰</button>
-            <ul id="listaMenu">
+    <!-- Navegação -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">🌿 Saúde Emocional</a>
+            <button class="menu-toggle" id="menuToggle">☰</button>
+            <ul class="nav-links" id="navLinks">
                 <li><a href="index.html" class="ativo">Início</a></li>
-                <li><a href="escuta.html">Portal de Escuta</a></li>
+                <li><a href="escuta.html">Espaço de Escuta</a></li>
                 <li><a href="quiz.html">Quiz</a></li>
                 <li><a href="referencias.html">Referências</a></li>
             </ul>
-        </nav>
-    </header>
+        </div>
+    </nav>
 
     <main>
-        <!-- Banner Principal -->
-        <section class="banner">
-            <img src="imagens/banner.jpg" alt="Cuidar da mente é tão importante quanto cuidar do corpo">
-            <div class="texto-banner">
-                <h2>Saúde Emocional: equilíbrio para viver bem</h2>
-                <p>Seus sentimentos têm valor. Conheça, cuide e peça ajuda quando precisar.</p>
+        <!-- Seção Hero -->
+        <section class="hero">
+            <h1>Cuide de Quem Cuida de Você</h1>
+            <p>Sua saúde emocional é o alicerce de tudo. Conheça, aprenda e peça ajuda quando precisar.</p>
+            <a href="#sobre" class="btn-principal">Saiba Mais</a>
+        </section>
+
+        <!-- O Que É -->
+        <section class="secao" id="sobre">
+            <h2 class="titulo-secao">🌱 O Que É Saúde Emocional?</h2>
+            <p class="texto-intro">É o equilíbrio entre sentimentos, pensamentos e ações. Não é ausência de problemas, mas a capacidade de lidar com eles com serenidade e apoio. Sentir é humano. Cuidar é essencial.</p>
+        </section>
+
+        <!-- Cards Informativos -->
+        <section class="secao">
+            <h2 class="titulo-secao">💡 Pilares do Bem-Estar</h2>
+            <div class="grade-cards">
+                <div class="card">
+                    <span class="icone">🧠</span>
+                    <h3>Autoconhecimento</h3>
+                    <p>Saber nomear o que sente é o primeiro passo. Tristeza, medo e alegria fazem parte de você. Reconheça e acolha suas emoções.</p>
+                </div>
+                <div class="card">
+                    <span class="icone">🤝</span>
+                    <h3>Peça Ajuda</h3>
+                    <p>Você não precisa carregar tudo sozinho(a). Conversar é o melhor caminho. Procure alguém de confiança e desabafe.</p>
+                </div>
+                <div class="card">
+                    <span class="icone">💤</span>
+                    <h3>Cuidar de Si</h3>
+                    <p>Durma bem, respire, descanse. Corpo e mente caminham juntos. Respeite seus limites e não se cobre demais.</p>
+                </div>
             </div>
         </section>
 
-        <!-- O que é Saúde Emocional -->
-        <section class="conteudo-bloco">
-            <h2>💡 O que é Saúde Emocional?</h2>
-            <p>A saúde emocional é a forma como lidamos com nossos sentimentos, pensamentos e reações. Estar bem emocionalmente não significa estar sempre feliz, mas sim saber reconhecer, entender e lidar com as emoções — tanto as boas quanto as difíceis.</p>
-            <p>Ela influencia como nos sentimos, pensamos e agimos no dia a dia. Também ajuda a lidar com o estresse, se relacionar com outras pessoas e fazer escolhas.</p>
-        </section>
-
-        <!-- Por que importa -->
-        <section class="conteudo-bloco">
-            <h2>💛 Por que cuidar da saúde emocional?</h2>
-            <div class="cards">
-                <div class="card">
-                    <h3>🌿 Equilíbrio</h3>
-                    <p>Ajuda a manter a calma mesmo em situações difíceis e a encontrar soluções com mais clareza.</p>
-                </div>
-                <div class="card">
-                    <h3>🤝 Relacionamentos</h3>
-                    <p>Melhora a forma como convivemos, ouvimos e nos relacionamos com amigos e familiares.</p>
-                </div>
-                <div class="card">
-                    <h3>📚 Aprendizado</h3>
-                    <p>Quando estamos bem emocionalmente, concentramos melhor e aprendemos com mais facilidade.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Como cuidar -->
-        <section class="conteudo-bloco">
-            <h2>🩺 Como cuidar da sua saúde emocional?</h2>
+        <!-- Dicas -->
+        <section class="secao caixa-destaque">
+            <h2 class="titulo-secao">🍃 Como Cuidar no Dia a Dia</h2>
             <ul class="lista-dicas">
-                <li>✅ Reconheça e nomeie seus sentimentos — não tenha vergonha do que sente</li>
-                <li>✅ Converse com alguém de confiança quando algo pesar</li>
-                <li>✅ Respeite seus limites e descanse quando precisar</li>
-                <li>✅ Pratique coisas que te fazem bem: ler, desenhar, caminhar, ouvir música</li>
-                <li>✅ Durma bem, cuide do corpo e mantenha hábitos saudáveis</li>
-                <li>✅ Peça ajuda profissional quando sentir que não dá conta sozinho(a)</li>
+                <li>✅ Respire fundo antes de reagir — calma ajuda a pensar melhor</li>
+                <li>✅ Converse com alguém quando algo pesar no peito</li>
+                <li>✅ Reserve tempo para coisas que te trazem paz</li>
+                <li>✅ Não se cobre tanto — ser humano é ter limites</li>
+                <li>✅ Se precisar, procure um(a) profissional de saúde</li>
             </ul>
         </section>
     </main>
 
-    <!-- Rodapé -->
     <footer>
-        <p>&copy; 2026 — Portal de Apoio ao Estudante | Tema: Saúde Emocional</p>
-        <p>💚 Você não está sozinho(a). Sempre há alguém disposto a ajudar.</p>
+        <p>🌿 Portal de Apoio ao Estudante — Saúde Emocional</p>
+        <p>Você não está sozinho(a). Sempre há alguém pronto para ouvir.</p>
     </footer>
 
-    <!-- Botões Flutuantes -->
     <div class="botoes-acessibilidade">
         <button id="btnModoEscuro" title="Modo Escuro">🌙</button>
         <button id="btnAumentarFonte" title="Aumentar Fonte">🔤</button>
         <button id="btnTopo" title="Voltar ao Topo">⬆</button>
     </div>
 
-    <script src="js/script.js"></script>
+    <script src="js/funcional.js"></script>
 </body>
 </html>
