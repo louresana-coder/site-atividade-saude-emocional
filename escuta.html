@@ -3,70 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portal de Escuta | Saúde Emocional</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Espaço de Escuta | Saúde Emocional</title>
+    <link rel="stylesheet" href="css/estilo.css">
 </head>
 <body>
 
-    <header>
-        <div class="logo">
-            <h1>💚 Portal de Apoio ao Estudante</h1>
-            <p>Cuide de você. Sua saúde emocional importa.</p>
-        </div>
-        <nav class="menu-navegacao" id="menuPrincipal">
-            <button class="btn-menu" id="btnMenu">☰</button>
-            <ul id="listaMenu">
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">🌿 Saúde Emocional</a>
+            <button class="menu-toggle" id="menuToggle">☰</button>
+            <ul class="nav-links" id="navLinks">
                 <li><a href="index.html">Início</a></li>
-                <li><a href="escuta.html" class="ativo">Portal de Escuta</a></li>
+                <li><a href="escuta.html" class="ativo">Espaço de Escuta</a></li>
                 <li><a href="quiz.html">Quiz</a></li>
                 <li><a href="referencias.html">Referências</a></li>
             </ul>
-        </nav>
-    </header>
+        </div>
+    </nav>
 
-    <main>
-        <section class="conteudo-bloco">
-            <h2>💬 Portal de Escuta</h2>
-            <p>Escreva o que está sentindo. Aqui você será ouvido(a) com respeito e carinho. Nenhuma informação será armazenada — é um espaço seguro e acolhedor.</p>
+    <main style="padding-top: 8rem;">
+        <section class="secao">
+            <h2 class="titulo-secao">💬 Espaço de Escuta</h2>
+            <p class="texto-intro">Este é um lugar seguro. Escreva o que sente, desabafe, fale sobre o que pesa no seu coração. Ninguém vai julgar você. Nenhuma informação será salva — é só você e suas palavras.</p>
 
             <form id="formEscuta">
-                <label for="nomeEscuta">Como prefere ser chamado(a):</label>
-                <input type="text" id="nomeEscuta" placeholder="Pode ser um nome ou apelido" required>
+                <label for="nomeEscuta">Como gostaria de ser chamado(a):</label>
+                <input type="text" id="nomeEscuta" placeholder="Pode ser um apelido ou nome fictício" required>
 
                 <label for="desabafo">Seu desabafo:</label>
-                <textarea id="desabafo" rows="6" placeholder="Fale sobre o que está sentindo... Pode ser o que vier à mente." required></textarea>
+                <textarea id="desabafo" rows="7" placeholder="Escreva livremente... o que te aflige, o que te alegra, o que você sente..." required></textarea>
 
-                <button type="submit">💛 Enviar mensagem</button>
+                <button type="submit">💛 Enviar com carinho</button>
             </form>
 
             <div id="respostaEscuta" class="resposta"></div>
         </section>
 
-        <section class="conteudo-bloco">
-            <h2>✨ Mensagens para você</h2>
-            <div class="caixa-destaque">
-                <ul class="lista-dicas">
-                    <li>✅ Sentir tristeza, medo ou ansiedade é normal — faz parte de ser humano.</li>
-                    <li>✅ Você não precisa carregar tudo sozinho(a). Pedir ajuda é um sinal de coragem.</li>
-                    <li>✅ Seus sentimentos importam. Você importa.</li>
-                    <li>✅ Descansar não é preguiça: é necessário para se reequilibrar.</li>
-                    <li>✅ Nem sempre é possível controlar o que acontece, mas podemos cuidar de como lidamos com isso.</li>
-                    <li>✅ Um dia de cada vez. Respire. Você está fazendo o seu melhor.</li>
-                </ul>
-            </div>
+        <section class="secao caixa-destaque">
+            <h2 class="titulo-secao">🌿 Mensagens para o coração</h2>
+            <ul class="lista-dicas">
+                <li>✅ Sentir demais não é defeito — é ser humano.</li>
+                <li>✅ Você não precisa estar bem o tempo todo. Descansar é permitido.</li>
+                <li>✅ Pedir ajuda é coragem, não é fraqueza.</li>
+                <li>✅ Seus sentimentos têm valor. Você tem valor.</li>
+                <li>✅ Um dia de cada vez. Respire. Você está fazendo o seu melhor.</li>
+                <li>✅ Sempre há alguém que se importa. Procure.</li>
+            </ul>
         </section>
 
-        <section class="conteudo-bloco">
-            <h2>📞 Onde buscar ajuda</h2>
-            <p>Se estiver passando por um momento difícil, converse com alguém de confiança: um(a) professor(a), pedagogo(a), familiar ou outro adulto. Eles podem te ouvir e orientar.</p>
-            <p>📌 <strong>CVV — Centro de Valorização da Vida:</strong> Ligue <strong>188</strong> — apoio emocional 24h, de graça.</p>
-            <p>📌 <strong>Disque 100:</strong> Direitos Humanos — orientação e ajuda gratuita.</p>
+        <section class="secao">
+            <h2 class="titulo-secao">📞 Onde Encontrar Apoio Real</h2>
+            <ul class="lista-dicas">
+                <li>📌 <strong>CVV — Centro de Valorização da Vida:</strong> Ligue 188 — apoio emocional 24h, gratuito.</li>
+                <li>📌 <strong>Disque 100:</strong> Orientação e ajuda em direitos humanos.</li>
+                <li>📌 <strong>Converse com alguém da escola:</strong> professor(a), pedagogo(a), diretor(a) — todos podem te orientar.</li>
+                <li>📌 <strong>Família e pessoas de confiança:</strong> não guarde tudo só para você.</li>
+            </ul>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 — Portal de Apoio ao Estudante | Tema: Saúde Emocional</p>
-        <p>💚 Você não está sozinho(a). Sempre há alguém disposto a ajudar.</p>
+        <p>🌿 Portal de Apoio ao Estudante — Saúde Emocional</p>
+        <p>Você não está sozinho(a). Sempre há alguém pronto para ouvir.</p>
     </footer>
 
     <div class="botoes-acessibilidade">
@@ -75,6 +73,6 @@
         <button id="btnTopo" title="Voltar ao Topo">⬆</button>
     </div>
 
-    <script src="js/script.js"></script>
+    <script src="js/funcional.js"></script>
 </body>
 </html>
