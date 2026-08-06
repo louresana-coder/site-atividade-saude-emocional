@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal de Escuta | Saúde Emocional</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>💚 Portal de Apoio ao Estudante</h1>
+            <p>Cuide de você. Sua saúde emocional importa.</p>
+        </div>
+        <nav class="menu-navegacao" id="menuPrincipal">
+            <button class="btn-menu" id="btnMenu">☰</button>
+            <ul id="listaMenu">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="escuta.html" class="ativo">Portal de Escuta</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li><a href="referencias.html">Referências</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="conteudo-bloco">
+            <h2>💬 Portal de Escuta</h2>
+            <p>Escreva o que está sentindo. Aqui você será ouvido(a) com respeito e carinho. Nenhuma informação será armazenada — é um espaço seguro e acolhedor.</p>
+
+            <form id="formEscuta">
+                <label for="nomeEscuta">Como prefere ser chamado(a):</label>
+                <input type="text" id="nomeEscuta" placeholder="Pode ser um nome ou apelido" required>
+
+                <label for="desabafo">Seu desabafo:</label>
+                <textarea id="desabafo" rows="6" placeholder="Fale sobre o que está sentindo... Pode ser o que vier à mente." required></textarea>
+
+                <button type="submit">💛 Enviar mensagem</button>
+            </form>
+
+            <div id="respostaEscuta" class="resposta"></div>
+        </section>
+
+        <section class="conteudo-bloco">
+            <h2>✨ Mensagens para você</h2>
+            <div class="caixa-destaque">
+                <ul class="lista-dicas">
+                    <li>✅ Sentir tristeza, medo ou ansiedade é normal — faz parte de ser humano.</li>
+                    <li>✅ Você não precisa carregar tudo sozinho(a). Pedir ajuda é um sinal de coragem.</li>
+                    <li>✅ Seus sentimentos importam. Você importa.</li>
+                    <li>✅ Descansar não é preguiça: é necessário para se reequilibrar.</li>
+                    <li>✅ Nem sempre é possível controlar o que acontece, mas podemos cuidar de como lidamos com isso.</li>
+                    <li>✅ Um dia de cada vez. Respire. Você está fazendo o seu melhor.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="conteudo-bloco">
+            <h2>📞 Onde buscar ajuda</h2>
+            <p>Se estiver passando por um momento difícil, converse com alguém de confiança: um(a) professor(a), pedagogo(a), familiar ou outro adulto. Eles podem te ouvir e orientar.</p>
+            <p>📌 <strong>CVV — Centro de Valorização da Vida:</strong> Ligue <strong>188</strong> — apoio emocional 24h, de graça.</p>
+            <p>📌 <strong>Disque 100:</strong> Direitos Humanos — orientação e ajuda gratuita.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 — Portal de Apoio ao Estudante | Tema: Saúde Emocional</p>
+        <p>💚 Você não está sozinho(a). Sempre há alguém disposto a ajudar.</p>
+    </footer>
+
+    <div class="botoes-acessibilidade">
+        <button id="btnModoEscuro" title="Modo Escuro">🌙</button>
+        <button id="btnAumentarFonte" title="Aumentar Fonte">🔤</button>
+        <button id="btnTopo" title="Voltar ao Topo">⬆</button>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
