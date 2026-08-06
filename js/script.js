@@ -1,51 +1,47 @@
-// === 1. MENU RESPONSIVO ===
-const btnMenu = document.getElementById('btnMenu');
-const listaMenu = document.getElementById('listaMenu');
+// === MENU RESPONSIVO ===
+const menuToggle = document.getElementById('menuToggle');
+const navLinks = document.getElementById('navLinks');
 
-if (btnMenu && listaMenu) {
-    btnMenu.addEventListener('click', () => {
-        listaMenu.classList.toggle('aberto');
+if (menuToggle && navLinks) {
+    menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('aberto');
     });
 }
 
-// === 2. MODO ESCURO ===
+// === MODO ESCURO ===
 const btnModoEscuro = document.getElementById('btnModoEscuro');
 
 if (btnModoEscuro) {
     btnModoEscuro.addEventListener('click', () => {
         document.body.classList.toggle('modo-escuro');
-        // Salva preferência no navegador
         const modo = document.body.classList.contains('modo-escuro') ? 'escuro' : 'claro';
         localStorage.setItem('modoVisual', modo);
     });
 
-    // Carrega preferência salva
     if (localStorage.getItem('modoVisual') === 'escuro') {
         document.body.classList.add('modo-escuro');
     }
 }
 
-// === 3. VOLTAR AO TOPO ===
+// === VOLTAR AO TOPO ===
 const btnTopo = document.getElementById('btnTopo');
-
 if (btnTopo) {
     btnTopo.addEventListener('click', () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 }
 
-// === 4. AUMENTAR FONTE ===
+// === AUMENTAR FONTE ===
 const btnAumentarFonte = document.getElementById('btnAumentarFonte');
-let tamanhoBase = 16;
-
+let tamanhoFonte = 17;
 if (btnAumentarFonte) {
     btnAumentarFonte.addEventListener('click', () => {
-        tamanhoBase += 2;
-        document.body.style.fontSize = `${tamanhoBase}px`;
+        tamanhoFonte += 2;
+        document.body.style.fontSize = `${tamanhoFonte}px`;
     });
 }
 
-// === 5. PORTAL DE ESCUTA ===
+// === ESPAÇO DE ESCUTA ===
 const formEscuta = document.getElementById('formEscuta');
 const respostaEscuta = document.getElementById('respostaEscuta');
 
@@ -55,16 +51,17 @@ if (formEscuta && respostaEscuta) {
         const nome = document.getElementById('nomeEscuta').value || 'Estudante';
 
         respostaEscuta.innerHTML = `
-            💛 Olá, ${nome}! Que bom que você compartilhou o que sente.<br><br>
-            Sua mensagem foi recebida com muito carinho. Lembre-se: seus sentimentos são importantes e você não precisa passar por isso sozinho(a).<br><br>
-            Respire fundo. Um dia de cada vez. Você é forte e merece estar bem! 💚
+            💛 Olá, ${nome}!<br><br>
+            Que bom que você se permitiu falar o que sente. Sua mensagem foi recebida com muito carinho.<br><br>
+            Lembre-se: você não precisa carregar tudo sozinho(a). Sentir é humano. Pedir ajuda é coragem. E você é importante! 💚<br><br>
+            Respire. Um dia de cada vez. Você está fazendo o seu melhor.
         `;
         respostaEscuta.classList.add('visivel');
         formEscuta.reset();
     });
 }
 
-// === 6. QUIZ ===
+// === QUIZ ===
 const formQuiz = document.getElementById('formQuiz');
 const resultadoQuiz = document.getElementById('resultadoQuiz');
 
@@ -72,17 +69,8 @@ if (formQuiz && resultadoQuiz) {
     formQuiz.addEventListener('submit', (e) => {
         e.preventDefault();
         let acertos = 0;
+        const respostasCertas = { q1: 'certo', q2: 'certo', q3: 'certo', q4: 'certo', q5: 'certo' };
 
-        // Respostas corretas
-        const respostasCertas = {
-            q1: 'certo',
-            q2: 'certo',
-            q3: 'certo',
-            q4: 'certo',
-            q5: 'certo'
-        };
-
-        // Verifica cada pergunta
         for (let i = 1; i <= 5; i++) {
             const resposta = document.querySelector(`input[name="q${i}"]:checked`);
             if (resposta && resposta.value === respostasCertas[`q${i}`]) {
@@ -90,14 +78,13 @@ if (formQuiz && resultadoQuiz) {
             }
         }
 
-        // Mensagem de resultado
         let mensagem = '';
         if (acertos === 5) {
-            mensagem = `🎉 Parabéns! Você acertou as 5 perguntas! Conhece muito sobre saúde emocional!`;
+            mensagem = `🎉 Parabéns! Você acertou TODAS as 5 perguntas! Cuide muito bem de você!`;
         } else if (acertos >= 3) {
-            mensagem = `✅ Você acertou ${acertos} de 5 perguntas! Muito bem! Continue cuidando de você!`;
+            mensagem = `✅ Você acertou ${acertos} de 5 perguntas! Muito bem! Continue aprendendo e cuidando!`;
         } else {
-            mensagem = `📚 Você acertou ${acertos} de 5 perguntas. Leia as informações com atenção e refleta sobre o tema!`;
+            mensagem = `🌱 Você acertou ${acertos} de 5 perguntas. Leia com atenção e refleta sobre o tema!`;
         }
 
         resultadoQuiz.innerHTML = mensagem;
