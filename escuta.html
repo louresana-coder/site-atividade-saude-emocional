@@ -8,69 +8,66 @@
 </head>
 <body>
 
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="logo">🌿 Saúde Emocional</a>
-            <button class="menu-toggle" id="menuToggle">☰</button>
-            <ul class="nav-links" id="navLinks">
+    <header>
+        <div class="cabecalho">
+            <h1>🌿 Saúde Emocional</h1>
+            <p>Equilíbrio • Acolhimento • Cuidado</p>
+        </div>
+        <nav class="menu-navegacao">
+            <button class="botao-menu" id="botaoMenu">☰</button>
+            <ul class="lista-menu" id="listaMenu">
                 <li><a href="index.html">Início</a></li>
                 <li><a href="escuta.html" class="ativo">Espaço de Escuta</a></li>
                 <li><a href="quiz.html">Quiz</a></li>
                 <li><a href="referencias.html">Referências</a></li>
             </ul>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
     <main style="padding-top: 8rem;">
         <section class="secao">
             <h2 class="titulo-secao">💬 Espaço de Escuta</h2>
-            <p class="texto-intro">Este é um lugar seguro. Escreva o que sente, desabafe, fale sobre o que pesa no seu coração. Ninguém vai julgar você. Nenhuma informação será salva — é só você e suas palavras.</p>
+            <p class="introducao">Este é um lugar seguro. Escreva o que sente, desabafe, fale sobre o que pesa no seu coração. Ninguém vai julgar você. Suas palavras ficam aqui — nada é salvo nem compartilhado. É só você e suas palavras.</p>
 
-            <form id="formEscuta">
-                <label for="nomeEscuta">Como gostaria de ser chamado(a):</label>
-                <input type="text" id="nomeEscuta" placeholder="Pode ser um apelido ou nome fictício" required>
+            <form id="formularioEscuta">
+                <label for="nomeUsuario">Como gostaria de ser chamado(a):</label>
+                <input type="text" id="nomeUsuario" placeholder="Pode ser um apelido ou nome fictício" required>
 
                 <label for="desabafo">Seu desabafo:</label>
-                <textarea id="desabafo" rows="7" placeholder="Escreva livremente... o que te aflige, o que te alegra, o que você sente..." required></textarea>
+                <textarea id="desabafo" rows="8" placeholder="Escreva livremente... o que te aflige, o que te alegra, o que você sente... não se preocupe com palavras bonitas ou gramática. Escreva do coração." required></textarea>
 
                 <button type="submit">💛 Enviar com carinho</button>
             </form>
 
-            <div id="respostaEscuta" class="resposta"></div>
+            <div id="respostaAutomatica" class="caixa-resposta"></div>
         </section>
 
         <section class="secao caixa-destaque">
             <h2 class="titulo-secao">🌿 Mensagens para o coração</h2>
-            <ul class="lista-dicas">
-                <li>✅ Sentir demais não é defeito — é ser humano.</li>
-                <li>✅ Você não precisa estar bem o tempo todo. Descansar é permitido.</li>
-                <li>✅ Pedir ajuda é coragem, não é fraqueza.</li>
-                <li>✅ Seus sentimentos têm valor. Você tem valor.</li>
-                <li>✅ Um dia de cada vez. Respire. Você está fazendo o seu melhor.</li>
-                <li>✅ Sempre há alguém que se importa. Procure.</li>
-            </ul>
+            <p id="fraseMotivacional" class="frase-motivacional"></p>
+            <button id="novaFrase" class="botao pequeno">🔗 Ver outra mensagem</button>
         </section>
 
         <section class="secao">
-            <h2 class="titulo-secao">📞 Onde Encontrar Apoio Real</h2>
-            <ul class="lista-dicas">
-                <li>📌 <strong>CVV — Centro de Valorização da Vida:</strong> Ligue 188 — apoio emocional 24h, gratuito.</li>
-                <li>📌 <strong>Disque 100:</strong> Orientação e ajuda em direitos humanos.</li>
-                <li>📌 <strong>Converse com alguém da escola:</strong> professor(a), pedagogo(a), diretor(a) — todos podem te orientar.</li>
-                <li>📌 <strong>Família e pessoas de confiança:</strong> não guarde tudo só para você.</li>
+            <h2 class="titulo-secao">📞 Precisa de alguém real?</h2>
+            <p>Se o que você sente é muito pesado e precisa conversar com uma pessoa de verdade, não hesite:</p>
+            <ul class="lista-apoio">
+                <li><strong>CVV — Ligue 188:</strong> Pessoas prontas para ouvir você, gratuitamente, 24h por dia.</li>
+                <li><strong>Disque 100:</strong> Orientação e ajuda em qualquer situação difícil.</li>
+                <li><strong>Procure um adulto de confiança:</strong> Família, professor(a), ou alguém da escola.</li>
             </ul>
         </section>
     </main>
 
     <footer>
-        <p>🌿 Portal de Apoio ao Estudante — Saúde Emocional</p>
+        <p>🌿 Portal de Saúde Emocional — Projeto Educativo Ana Laura</p>
         <p>Você não está sozinho(a). Sempre há alguém pronto para ouvir.</p>
     </footer>
 
-    <div class="botoes-acessibilidade">
-        <button id="btnModoEscuro" title="Modo Escuro">🌙</button>
-        <button id="btnAumentarFonte" title="Aumentar Fonte">🔤</button>
-        <button id="btnTopo" title="Voltar ao Topo">⬆</button>
+    <div class="botoes-flutuantes">
+        <button id="botaoModoEscuro" title="Modo Escuro">🌙</button>
+        <button id="botaoAumentarFonte" title="Aumentar Fonte">🔤</button>
+        <button id="botaoTopo" title="Voltar ao Topo">⬆</button>
     </div>
 
     <script src="js/funcional.js"></script>
