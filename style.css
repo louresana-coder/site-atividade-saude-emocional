@@ -1,25 +1,33 @@
-/* === PALETA DE CORES — VERDE MUSGO === */
+/* ==============================================
+   🌿 PALETA DE CORES — VERDE MUSGO DEFINITIVA
+   Fundo: verde musgo escuro
+   Destaques: verde claro
+   Texto: tons claros com contraste
+   ============================================== */
+
 :root {
-    --verde-musgo-escuro: #344E41;
-    --verde-musgo-medio: #406343;
-    --verde-claro: #52B788;
-    --verde-suave: #74C69D;
-    --texto-claro: #F8FAF9;
-    --texto-suave: #D8E4DD;
-    --borda-suave: rgba(255,255,255,0.1);
-    --sombra-suave: 0 4px 20px rgba(0,0,0,0.15);
-    --sombra-destaque: 0 8px 30px rgba(82,183,136,0.2);
-    --transicao: all 0.35s cubic-bezier(0.4,0,0.2,1);
+    --verde-musgo-escuro: #344E41;   /* Fundo principal */
+    --verde-musgo-medio: #406343;    /* Seções e cards */
+    --verde-claro: #52B788;          /* Botões, links, destaques */
+    --verde-suave: #74C69D;          /* Títulos e acentos */
+    --texto-claro: #F8FAF9;          /* Texto principal */
+    --texto-suave: #D8E4DD;          /* Texto secundário */
+    --borda-suave: rgba(116, 198, 157, 0.15);
+    --sombra-destaque: 0 8px 30px rgba(82, 183, 136, 0.2);
+    --transicao: all 0.35s ease;
 }
 
-/* === MODO ESCURO === */
+/* 🌙 MODO ESCURO — ainda mais escuro */
 body.modo-escuro {
     --verde-musgo-escuro: #1E2E25;
     --verde-musgo-medio: #2A3F2C;
     --texto-suave: #B8C9BF;
 }
 
-/* === RESET E BASE === */
+/* ==============================================
+   BASE E FUNDO — AQUI ESTÁ A COR PRINCIPAL!
+   ============================================== */
+
 * {
     margin: 0;
     padding: 0;
@@ -36,15 +44,18 @@ body {
     transition: var(--transicao);
 }
 
-/* === CABEÇALHO === */
+/* ==============================================
+   CABEÇALHO
+   ============================================== */
+
 header {
-    background: rgba(0,0,0,0.15);
+    background: rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(12px);
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
-    border-bottom: 1px solid var(--borda-suave);
+    border-bottom: 2px solid var(--borda-suave);
 }
 
 .cabecalho {
@@ -58,6 +69,7 @@ header {
     font-size: 1.6rem;
     color: var(--verde-suave);
     margin-bottom: 0.2rem;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
 .cabecalho p {
@@ -71,7 +83,10 @@ header {
     margin-top: 0.3rem;
 }
 
-/* === MENU DE NAVEGAÇÃO === */
+/* ==============================================
+   MENU DE NAVEGAÇÃO
+   ============================================== */
+
 .menu-navegacao {
     max-width: 1200px;
     margin: 0 auto;
@@ -103,16 +118,21 @@ header {
     font-weight: 500;
     font-size: 0.95rem;
     transition: var(--transicao);
+    border: 1px solid transparent;
 }
 
 .lista-menu a:hover,
 .lista-menu a.ativo {
-    background: rgba(82,183,136,0.2);
-    color: white;
+    background: rgba(82, 183, 136, 0.2);
+    color: var(--verde-claro);
+    border-color: var(--verde-claro);
     transform: translateY(-2px);
 }
 
-/* === CONTEÚDO PRINCIPAL === */
+/* ==============================================
+   CONTEÚDO PRINCIPAL
+   ============================================== */
+
 main {
     max-width: 1200px;
     margin: 0 auto;
@@ -128,7 +148,8 @@ main {
     margin-bottom: 1.2rem;
     color: var(--verde-suave);
     padding-bottom: 0.5rem;
-    border-bottom: 2px solid rgba(82,183,136,0.3);
+    border-bottom: 3px solid var(--verde-claro);
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
 .introducao {
@@ -139,7 +160,10 @@ main {
     line-height: 1.8;
 }
 
-/* === DESTAQUE PRINCIPAL === */
+/* ==============================================
+   DESTAQUE PRINCIPAL
+   ============================================== */
+
 .destaque-principal {
     text-align: center;
     padding: 2rem 0 3rem;
@@ -153,6 +177,7 @@ main {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     line-height: 1.3;
+    filter: drop-shadow(0 2px 6px rgba(0,0,0,0.2));
 }
 
 .destaque-principal p {
@@ -170,7 +195,10 @@ main {
     margin-top: 2rem;
 }
 
-/* === BOTÕES === */
+/* ==============================================
+   BOTÕES — COM COR VERDE DESTAQUE!
+   ============================================== */
+
 .botao {
     display: inline-block;
     padding: 0.9rem 2rem;
@@ -181,23 +209,29 @@ main {
     border: none;
     cursor: pointer;
     transition: var(--transicao);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
 .botao:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
 }
 
 .botao.primario {
     background: linear-gradient(90deg, var(--verde-claro), var(--verde-suave));
     color: #1A2F23;
+    font-weight: 700;
 }
 
 .botao.secundario {
-    background: rgba(255,255,255,0.1);
-    color: var(--texto-claro);
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--verde-claro);
     border: 2px solid var(--verde-claro);
+}
+
+.botao.secundario:hover {
+    background: var(--verde-claro);
+    color: #1A2F23;
 }
 
 .botao.grande {
@@ -210,9 +244,14 @@ main {
     padding: 0.6rem 1.2rem;
     font-size: 0.9rem;
     margin-top: 1rem;
+    background: var(--verde-musgo-medio);
+    color: var(--texto-claro);
 }
 
-/* === CARDS === */
+/* ==============================================
+   CARDS — COM FUNDO VERDE ESCURO
+   ============================================== */
+
 .grade-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -221,18 +260,19 @@ main {
 }
 
 .card {
-    background: rgba(64,99,67,0.4);
-    border: 1px solid var(--borda-suave);
+    background: var(--verde-musgo-medio);
+    border: 2px solid var(--borda-suave);
     border-radius: 14px;
     padding: 1.5rem;
     transition: var(--transicao);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
 .card:hover {
     transform: translateY(-8px);
-    background: rgba(64,99,67,0.6);
+    background: rgba(64, 99, 67, 0.9);
     box-shadow: var(--sombra-destaque);
-    border-color: rgba(82,183,136,0.3);
+    border-color: var(--verde-claro);
 }
 
 .card h3 {
@@ -247,15 +287,21 @@ main {
     line-height: 1.6;
 }
 
-/* === FUNDO DESTAQUE === */
+/* ==============================================
+   SEÇÕES DESTAQUE
+   ============================================== */
+
 .fundo-destaque {
-    background: rgba(82,183,136,0.08);
-    border: 1px solid rgba(82,183,136,0.15);
+    background: rgba(82, 183, 136, 0.08);
+    border: 2px solid rgba(82, 183, 136, 0.15);
     border-radius: 16px;
     padding: 2rem;
 }
 
-/* === LISTAS === */
+/* ==============================================
+   LISTAS E ITENS
+   ============================================== */
+
 .lista-pilares, .lista-cuidados {
     display: grid;
     gap: 1.2rem;
@@ -263,10 +309,11 @@ main {
 }
 
 .item-pilar, .item-cuidado {
-    background: rgba(64,99,67,0.3);
+    background: var(--verde-musgo-medio);
     padding: 1.3rem;
     border-radius: 12px;
     border-left: 4px solid var(--verde-claro);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .item-pilar h3, .item-cuidado h3 {
@@ -296,9 +343,10 @@ main {
 }
 
 .apoio {
-    background: rgba(82,183,136,0.1);
+    background: rgba(82, 183, 136, 0.1);
     border-radius: 16px;
     padding: 2rem;
+    border: 2px solid rgba(82, 183, 136, 0.2);
 }
 
 .apoio h3 {
@@ -306,7 +354,10 @@ main {
     margin-bottom: 1rem;
 }
 
-/* === ENCERRAMENTO === */
+/* ==============================================
+   CITAÇÃO E ENCERRAMENTO
+   ============================================== */
+
 .encerramento {
     text-align: center;
 }
@@ -319,16 +370,16 @@ blockquote {
     border-left: 4px solid var(--verde-claro);
     border-right: 4px solid var(--verde-claro);
     margin: 1.5rem 0;
-    background: rgba(82,183,136,0.08);
+    background: rgba(82, 183, 136, 0.08);
     border-radius: 12px;
 }
 
 .chamada-escuta {
     margin-top: 2.5rem;
     padding: 2rem;
-    background: rgba(82,183,136,0.12);
+    background: rgba(82, 183, 136, 0.12);
     border-radius: 16px;
-    border: 1px solid rgba(82,183,136,0.25);
+    border: 2px solid var(--verde-claro);
 }
 
 .chamada-escuta h3 {
@@ -336,10 +387,13 @@ blockquote {
     margin-bottom: 0.8rem;
 }
 
-/* === FORMULÁRIOS E PERGUNTAS === */
+/* ==============================================
+   FORMULÁRIOS E PERGUNTAS
+   ============================================== */
+
 form {
-    background: rgba(64,99,67,0.4);
-    border: 1px solid var(--borda-suave);
+    background: var(--verde-musgo-medio);
+    border: 2px solid var(--borda-suave);
     border-radius: 16px;
     padding: 2rem;
     margin-top: 1.5rem;
@@ -355,9 +409,9 @@ label {
 input, textarea {
     width: 100%;
     padding: 0.9rem;
-    border: 2px solid rgba(82,183,136,0.25);
+    border: 2px solid var(--verde-claro);
     border-radius: 10px;
-    background: rgba(0,0,0,0.15);
+    background: rgba(0, 0, 0, 0.2);
     color: var(--texto-claro);
     font-size: 1rem;
     transition: var(--transicao);
@@ -365,20 +419,21 @@ input, textarea {
 
 input:focus, textarea:focus {
     outline: none;
-    border-color: var(--verde-claro);
-    box-shadow: 0 0 0 4px rgba(82,183,136,0.15);
+    border-color: var(--verde-suave);
+    box-shadow: 0 0 0 4px rgba(116, 198, 157, 0.2);
 }
 
 .pergunta {
     margin: 1.8rem 0;
     padding-bottom: 1.5rem;
-    border-bottom: 1px dashed rgba(255,255,255,0.1);
+    border-bottom: 1px dashed rgba(82, 183, 136, 0.3);
 }
 
 .pergunta p {
     font-weight: 600;
     margin-bottom: 1rem;
     font-size: 1rem;
+    color: var(--verde-suave);
 }
 
 .pergunta label {
@@ -389,22 +444,27 @@ input:focus, textarea:focus {
     border-radius: 6px;
     cursor: pointer;
     transition: background 0.2s;
+    color: var(--texto-suave);
 }
 
 .pergunta label:hover {
-    background: rgba(255,255,255,0.05);
+    background: rgba(82, 183, 136, 0.1);
 }
 
-/* === RESPOSTAS E CAIXAS === */
+/* ==============================================
+   CAIXAS DE RESPOSTA
+   ============================================== */
+
 .caixa-resposta {
     margin-top: 1.5rem;
     padding: 1.5rem;
-    background: rgba(82,183,136,0.15);
-    border: 1px solid rgba(82,183,136,0.3);
+    background: rgba(82, 183, 136, 0.15);
+    border: 2px solid var(--verde-claro);
     border-radius: 12px;
     display: none;
     animation: surgir 0.6s ease;
     line-height: 1.8;
+    color: var(--texto-claro);
 }
 
 .caixa-resposta.mostrar {
@@ -421,20 +481,24 @@ input:focus, textarea:focus {
     font-style: italic;
     color: var(--verde-suave);
     padding: 1rem;
-    background: rgba(0,0,0,0.15);
+    background: rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     margin-top: 1rem;
+    border-left: 3px solid var(--verde-claro);
 }
 
 .caixa-destaque {
-    background: rgba(82,183,136,0.1);
-    border: 1px solid rgba(82,183,136,0.2);
+    background: rgba(82, 183, 136, 0.1);
+    border: 2px solid rgba(82, 183, 136, 0.2);
     border-radius: 16px;
     padding: 2rem;
     margin-top: 2rem;
 }
 
-/* === REFERÊNCIAS === */
+/* ==============================================
+   REFERÊNCIAS
+   ============================================== */
+
 .lista-referencias {
     list-style: none;
     margin-top: 1.5rem;
@@ -442,10 +506,11 @@ input:focus, textarea:focus {
 
 .lista-referencias li {
     padding: 1.2rem;
-    background: rgba(64,99,67,0.3);
+    background: var(--verde-musgo-medio);
     border-radius: 10px;
     margin-bottom: 1rem;
-    border-left: 3px solid var(--verde-claro);
+    border-left: 4px solid var(--verde-claro);
+    color: var(--texto-suave);
 }
 
 .lista-referencias a {
@@ -458,12 +523,16 @@ input:focus, textarea:focus {
 
 .lista-referencias a:hover {
     text-decoration: underline;
+    color: var(--verde-suave);
 }
 
-/* === RODAPÉ === */
+/* ==============================================
+   RODAPÉ
+   ============================================== */
+
 footer {
-    background: rgba(0,0,0,0.2);
-    border-top: 1px solid var(--borda-suave);
+    background: rgba(0, 0, 0, 0.25);
+    border-top: 2px solid var(--borda-suave);
     text-align: center;
     padding: 2rem 1.5rem;
     margin-top: 2rem;
@@ -475,7 +544,10 @@ footer p {
     margin-bottom: 0.5rem;
 }
 
-/* === BOTÕES FLUTUANTES === */
+/* ==============================================
+   BOTÕES FLUTUANTES
+   ============================================== */
+
 .botoes-flutuantes {
     position: fixed;
     bottom: 1.5rem;
@@ -497,9 +569,20 @@ footer p {
     justify-content: center;
     margin: 0;
     box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    background: var(--verde-musgo-medio);
+    color: var(--verde-claro);
+    border: 2px solid var(--verde-claro);
 }
 
-/* === RESPONSIVIDADE === */
+.botoes-flutuantes .botao:hover {
+    background: var(--verde-claro);
+    color: #1A2F23;
+}
+
+/* ==============================================
+   RESPONSIVIDADE
+   ============================================== */
+
 @media (max-width: 768px) {
     .botao-menu {
         display: block;
