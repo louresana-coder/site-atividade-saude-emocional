@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -8,47 +9,78 @@
 </head>
 <body>
 
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="logo">🌿 Saúde Emocional</a>
-            <button class="menu-toggle" id="menuToggle">☰</button>
-            <ul class="nav-links" id="navLinks">
+    <header>
+        <div class="cabecalho">
+            <h1>🌿 Saúde Emocional</h1>
+            <p>Equilíbrio • Acolhimento • Cuidado</p>
+        </div>
+        <nav class="menu-navegacao">
+            <button class="botao-menu" id="botaoMenu">☰</button>
+            <ul class="lista-menu" id="listaMenu">
                 <li><a href="index.html">Início</a></li>
                 <li><a href="escuta.html">Espaço de Escuta</a></li>
                 <li><a href="quiz.html">Quiz</a></li>
                 <li><a href="referencias.html" class="ativo">Referências</a></li>
             </ul>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
     <main style="padding-top: 8rem;">
         <section class="secao">
-            <h2 class="titulo-secao">📚 Fontes e Referências</h2>
-            <ul class="lista-dicas">
-                <li>🔗 <strong>Ministério da Saúde:</strong> Saúde Mental. Disponível em: <a href="https://www.gov.br/saude/pt-br" target="_blank">www.gov.br/saude</a></li>
-                <li>🔗 <strong>CVV — Centro de Valorização da Vida:</strong> Apoio emocional gratuito 24h. Disponível em: <a href="https://www.cvv.org.br" target="_blank">www.cvv.org.br</a></li>
-                <li>🔗 <strong>Ministério da Educação — MEC:</strong> Orientações sobre saúde emocional no ambiente escolar. <a href="https://www.gov.br/mec" target="_blank">www.gov.br/mec</a></li>
-                <li>🔗 <strong>Organização Mundial da Saúde — OMS:</strong> Saúde mental e bem-estar. <a href="https://www.paho.org/pt" target="_blank">www.paho.org/pt</a></li>
-                <li>🔗 <strong>Disque 100:</strong> Direitos Humanos e orientação gratuita.</li>
+            <h2 class="titulo-secao">📚 Fontes e Referências Confiáveis</h2>
+            <p class="introducao">Todo o conteúdo deste site foi baseado em informações de fontes oficiais e reconhecidas nacional e internacionalmente.</p>
+            
+            <ul class="lista-referencias">
+                <li>
+                    <strong>🏛️ Ministério da Saúde — Governo Federal</strong><br>
+                    Orientações oficiais sobre saúde mental e emocional para a população brasileira.<br>
+                    <a href="https://www.gov.br/saude/pt-br" target="_blank">www.gov.br/saude</a>
+                </li>
+                <li>
+                    <strong>🌍 Organização Mundial da Saúde (OMS)</strong><br>
+                    Definições oficiais sobre saúde, saúde mental e bem-estar.<br>
+                    <a href="https://www.paho.org/pt" target="_blank">www.paho.org/pt</a>
+                </li>
+                <li>
+                    <strong>📘 Ministério da Educação (MEC)</strong><br>
+                    Orientações sobre saúde emocional no ambiente escolar.<br>
+                    <a href="https://www.gov.br/mec/pt-br" target="_blank">www.gov.br/mec</a>
+                </li>
+                <li>
+                    <strong>💚 CVV — Centro de Valorização da Vida</strong><br>
+                    Apoio emocional gratuito e 24h — Ligue 188.<br>
+                    <a href="https://www.cvv.org.br" target="_blank">www.cvv.org.br</a>
+                </li>
+                <li>
+                    <strong>👶 UNICEF — Fundo das Nações Unidas para a Infância</strong><br>
+                    Orientações sobre saúde mental e bem-estar de crianças e adolescentes.<br>
+                    <a href="https://www.unicef.org/brazil" target="_blank">www.unicef.org/brazil</a>
+                </li>
+                <li>
+                    <strong>📞 Disque 100 — Direitos Humanos</strong><br>
+                    Canal gratuito do Governo Federal para orientação e proteção.<br>
+                    <a href="https://www.gov.br/mdh/pt-br/disque-100" target="_blank">www.gov.br/mdh/disque-100</a>
+                </li>
             </ul>
         </section>
 
         <section class="secao caixa-destaque">
             <h2 class="titulo-secao">ℹ️ Sobre o Projeto</h2>
-            <p>Este site foi desenvolvido como projeto educativo com o objetivo de informar e orientar estudantes sobre saúde emocional. As informações aqui apresentadas têm caráter educativo e não substituem orientação profissional.</p>
-            <p>Em caso de dificuldades emocionais, procure sempre um(a) profissional de saúde ou pessoa de confiança. Você não está sozinho(a).</p>
+            <p>Este site foi desenvolvido por <strong>Ana Laura</strong> como projeto educativo com o objetivo de informar, conscientizar e oferecer apoio a jovens sobre a importância da saúde emocional.</p>
+            <p>Todas as informações apresentadas são baseadas em fontes confiáveis. No entanto, este site não substitui a consulta com um profissional de saúde. Em caso de dificuldades, procure ajuda — você não está sozinho(a).</p>
         </section>
     </main>
 
     <footer>
-        <p>🌿 Portal de Apoio ao Estudante — Saúde Emocional</p>
+        <p>🌿 Portal de Saúde Emocional — Projeto Educativo Ana Laura</p>
+        <p>Conteúdo baseado em fontes oficiais: OMS, Ministério da Saúde, MEC, UNICEF e CVV</p>
         <p>Você não está sozinho(a). Sempre há alguém pronto para ouvir.</p>
     </footer>
 
-    <div class="botoes-acessibilidade">
-        <button id="btnModoEscuro" title="Modo Escuro">🌙</button>
-        <button id="btnAumentarFonte" title="Aumentar Fonte">🔤</button>
-        <button id="btnTopo" title="Voltar ao Topo">⬆</button>
+    <div class="botoes-flutuantes">
+        <button id="botaoModoEscuro" title="Modo Escuro">🌙</button>
+        <button id="botaoAumentarFonte" title="Aumentar Fonte">🔤</button>
+        <button id="botaoTopo" title="Voltar ao Topo">⬆</button>
     </div>
 
     <script src="js/funcional.js"></script>
