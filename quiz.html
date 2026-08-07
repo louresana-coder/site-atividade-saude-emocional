@@ -8,71 +8,79 @@
 </head>
 <body>
 
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="logo">🌿 Saúde Emocional</a>
-            <button class="menu-toggle" id="menuToggle">☰</button>
-            <ul class="nav-links" id="navLinks">
+    <header>
+        <div class="cabecalho">
+            <h1>🌿 Saúde Emocional</h1>
+            <p>Equilíbrio • Acolhimento • Cuidado</p>
+        </div>
+        <nav class="menu-navegacao">
+            <button class="botao-menu" id="botaoMenu">☰</button>
+            <ul class="lista-menu" id="listaMenu">
                 <li><a href="index.html">Início</a></li>
                 <li><a href="escuta.html">Espaço de Escuta</a></li>
                 <li><a href="quiz.html" class="ativo">Quiz</a></li>
                 <li><a href="referencias.html">Referências</a></li>
             </ul>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
     <main style="padding-top: 8rem;">
         <section class="secao">
             <h2 class="titulo-secao">🧠 Quiz: O Que Você Sabe Sobre Saúde Emocional?</h2>
-            <p class="texto-intro">Responda com calma. No final você verá quantas acertou!</p>
+            <p class="introducao">Responda com calma. No final você verá sua pontuação e receberá uma mensagem especial!</p>
 
-            <form id="formQuiz">
+            <form id="formularioQuiz">
                 <div class="pergunta">
-                    <p><strong>1. Ter saúde emocional significa...</strong></p>
-                    <label><input type="radio" name="q1" value="errado"> Nunca sentir tristeza ou medo</label>
-                    <label><input type="radio" name="q1" value="certo"> Reconhecer, entender e lidar com os sentimentos</label>
+                    <p><strong>1. O que significa ter saúde emocional?</strong></p>
+                    <label><input type="radio" name="p1" value="errado"> Nunca sentir tristeza, medo ou ansiedade</label>
+                    <label><input type="radio" name="p1" value="certo"> Reconhecer, aceitar e saber lidar com os sentimentos</label>
+                    <label><input type="radio" name="p1" value="errado"> Estar sempre feliz e sorrindo</label>
                 </div>
 
                 <div class="pergunta">
-                    <p><strong>2. Quando estamos sobrecarregados, devemos...</strong></p>
-                    <label><input type="radio" name="q2" value="errado"> Ignorar e continuar sem parar</label>
-                    <label><input type="radio" name="q2" value="certo"> Parar, respirar e buscar ajuda ou descansar</label>
+                    <p><strong>2. Quando estamos nos sentindo sobrecarregados, o que devemos fazer PRIMEIRO?</strong></p>
+                    <label><input type="radio" name="p2" value="errado"> Ignorar os sentimentos e continuar trabalhando/estudando</label>
+                    <label><input type="radio" name="p2" value="errado"> Ficar sozinho(a) sem falar com ninguém</label>
+                    <label><input type="radio" name="p2" value="certo"> Parar, respirar e buscar ajuda ou descansar</label>
                 </div>
 
                 <div class="pergunta">
-                    <p><strong>3. Sentir ansiedade com frequência é sinal de que...</strong></p>
-                    <label><input type="radio" name="q3" value="errado"> Estamos doentes sem solução</label>
-                    <label><input type="radio" name="q3" value="certo"> Precisamos cuidar melhor de nós e buscar orientação</label>
+                    <p><strong>3. Sentir ansiedade com frequência significa que:</strong></p>
+                    <label><input type="radio" name="p3" value="errado"> Você está doente sem solução</label>
+                    <label><input type="radio" name="p3" value="certo"> Precisa cuidar melhor de si e buscar orientação profissional</label>
+                    <label><input type="radio" name="p3" value="errado"> É só uma fase e vai passar sozinha sem precisar de ninguém</label>
                 </div>
 
                 <div class="pergunta">
-                    <p><strong>4. Qual atitude é MAIS saudável diante de um problema?</strong></p>
-                    <label><input type="radio" name="q4" value="errado"> Guardar tudo e não contar a ninguém</label>
-                    <label><input type="radio" name="q4" value="certo"> Conversar com alguém de confiança e buscar apoio</label>
+                    <p><strong>4. Qual é a atitude MAIS saudável diante de um problema ou sentimento difícil?</strong></p>
+                    <label><input type="radio" name="p4" value="errado"> Guardar tudo dentro de si e não contar a ninguém</label>
+                    <label><input type="radio" name="p4" value="certo"> Conversar com alguém de confiança e buscar apoio</label>
+                    <label><input type="radio" name="p4" value="errado"> Fingir que nada está acontecendo</label>
                 </div>
 
                 <div class="pergunta">
-                    <p><strong>5. Sobre pedir ajuda, podemos dizer que é...</strong></p>
-                    <label><input type="radio" name="q5" value="errado"> Sinal de fraqueza</label>
-                    <label><input type="radio" name="q5" value="certo"> Coragem de reconhecer que precisamos de apoio</label>
+                    <p><strong>5. Sobre pedir ajuda quando precisamos, podemos dizer que é:</strong></p>
+                    <label><input type="radio" name="p5" value="errado"> Sinal de fraqueza</label>
+                    <label><input type="radio" name="p5" value="certo"> Coragem de reconhecer que não precisamos enfrentar tudo sozinhos</label>
+                    <label><input type="radio" name="p5" value="errado"> Algo que só pessoas fracas fazem</label>
                 </div>
 
-                <button type="submit">✅ Verificar respostas</button>
+                <button type="submit" class="botao grande">✅ Verificar respostas</button>
             </form>
 
-            <div id="resultadoQuiz" class="resposta"></div>
+            <div id="resultadoQuiz" class="caixa-resposta"></div>
         </section>
     </main>
 
     <footer>
-        <p>🌿 Portal de Apoio ao Estudante — Saúde Emocional</p>
+        <p>🌿 Portal de Saúde Emocional — Projeto Educativo Ana Laura</p>
         <p>Você não está sozinho(a). Sempre há alguém pronto para ouvir.</p>
     </footer>
 
-    <div class="botoes-acessibilidade">
-        <button id="btnModoEscuro" title="Modo Escuro">🌙</button>
-        <button id="btnAumentarFonte" title="Aumentar Fonte">🔤</button>
-        <button id="btnTopo" title="Voltar ao Topo">⬆</button>
+    <div class="botoes-flutuantes">
+        <button id="botaoModoEscuro" title="Modo Escuro">🌙</button>
+        <button id="botaoAumentarFonte" title="Aumentar Fonte">🔤</button>
+        <button id="botaoTopo" title="Voltar ao Topo">⬆</button>
     </div>
 
     <script src="js/funcional.js"></script>
