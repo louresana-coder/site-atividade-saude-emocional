@@ -1,75 +1,339 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Espaço de Escuta | Saúde Emocional</title>
+
     <link rel="stylesheet" href="css/estilo.css">
 </head>
+
 <body>
 
+    <!-- =========================
+         CABEÇALHO
+    ========================== -->
+
     <header>
+
         <div class="cabecalho">
+
             <h1>🌿 Saúde Emocional</h1>
-            <p>Equilíbrio • Acolhimento • Cuidado</p>
+
+            <p>
+                Equilíbrio • Acolhimento • Cuidado
+            </p>
+
         </div>
+
+
+        <!-- MENU -->
+
         <nav class="menu-navegacao">
-            <button class="botao-menu" id="botaoMenu">☰</button>
-            <ul class="lista-menu" id="listaMenu">
-                <li><a href="index.html">Início</a></li>
-                <li><a href="escuta.html" class="ativo">Espaço de Escuta</a></li>
-                <li><a href="quiz.html">Quiz</a></li>
-                <li><a href="referencias.html">Referências</a></li>
+
+            <button
+                class="botao-menu"
+                id="botaoMenu"
+                aria-label="Abrir menu">
+                ☰
+            </button>
+
+            <ul
+                class="lista-menu"
+                id="listaMenu">
+
+                <li>
+                    <a href="index.html">
+                        Início
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        href="escuta.html"
+                        class="ativo">
+                        Espaço de Escuta
+                    </a>
+                </li>
+
+                <li>
+                    <a href="quiz.html">
+                        Quiz
+                    </a>
+                </li>
+
+                <li>
+                    <a href="referencias.html">
+                        Referências
+                    </a>
+                </li>
+
             </ul>
+
         </nav>
+
     </header>
 
-    <main style="padding-top: 8rem;">
+
+    <!-- =========================
+         CONTEÚDO
+    ========================== -->
+
+    <main>
+
+        <!-- INTRODUÇÃO -->
+
         <section class="secao">
-            <h2 class="titulo-secao">💬 Espaço de Escuta</h2>
-            <p class="introducao">Este é um lugar seguro. Escreva o que sente, desabafe, fale sobre o que pesa no seu coração. Ninguém vai julgar você. Suas palavras ficam aqui — nada é salvo nem compartilhado. É só você e suas palavras.</p>
+
+            <div class="pagina-titulo">
+
+                <h2>
+                    💬 Espaço de Escuta
+                </h2>
+
+                <p>
+                    Um espaço para colocar em palavras aquilo
+                    que você está sentindo.
+                </p>
+
+            </div>
+
+
+            <div class="caixa-destaque">
+
+                <p>
+                    Às vezes, organizar os sentimentos em palavras
+                    pode ajudar a entender melhor o que estamos
+                    vivendo. Aqui, você pode escrever livremente,
+                    sem se preocupar em encontrar as palavras
+                    perfeitas.
+                </p>
+
+                <p>
+                    <strong>
+                        Seus sentimentos são importantes.
+                    </strong>
+                    Você não precisa enfrentar tudo sozinho(a).
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- FORMULÁRIO -->
+
+        <section class="secao">
+
+            <h2 class="titulo-secao">
+                📝 Coloque seus sentimentos no papel
+            </h2>
 
             <form id="formularioEscuta">
-                <label for="nomeUsuario">Como gostaria de ser chamado(a):</label>
-                <input type="text" id="nomeUsuario" placeholder="Pode ser um apelido ou nome fictício" required>
 
-                <label for="desabafo">Seu desabafo:</label>
-                <textarea id="desabafo" rows="8" placeholder="Escreva livremente... o que te aflige, o que te alegra, o que você sente... não se preocupe com palavras bonitas ou gramática. Escreva do coração." required></textarea>
+                <label for="nomeUsuario">
+                    Como gostaria de ser chamado(a)?
+                </label>
 
-                <button type="submit">💛 Enviar com carinho</button>
+                <input
+                    type="text"
+                    id="nomeUsuario"
+                    placeholder="Pode ser seu nome ou um apelido"
+                    required>
+
+
+                <label for="desabafo">
+                    O que você gostaria de dizer?
+                </label>
+
+                <textarea
+                    id="desabafo"
+                    rows="9"
+                    placeholder="Escreva livremente sobre o que está sentindo..."
+                    required></textarea>
+
+
+                <button
+                    type="submit"
+                    class="botao primario">
+
+                    💚 Enviar meu desabafo
+
+                </button>
+
             </form>
 
-            <div id="respostaAutomatica" class="caixa-resposta"></div>
+
+            <!-- RESPOSTA AUTOMÁTICA -->
+
+            <div
+                id="respostaAutomatica"
+                class="caixa-resposta">
+
+            </div>
+
         </section>
+
+
+        <!-- MENSAGENS -->
 
         <section class="secao caixa-destaque">
-            <h2 class="titulo-secao">🌿 Mensagens para o coração</h2>
-            <p id="fraseMotivacional" class="frase-motivacional"></p>
-            <button id="novaFrase" class="botao pequeno">🔗 Ver outra mensagem</button>
+
+            <h2 class="titulo-secao">
+                🌿 Uma mensagem para você
+            </h2>
+
+            <p>
+                Às vezes, uma pequena mensagem pode fazer
+                diferença no nosso dia.
+            </p>
+
+
+            <p
+                id="fraseMotivacional"
+                class="frase-motivacional">
+            </p>
+
+
+            <button
+                id="novaFrase"
+                class="botao pequeno"
+                type="button">
+
+                🌱 Quero outra mensagem
+
+            </button>
+
         </section>
 
-        <section class="secao">
-            <h2 class="titulo-secao">📞 Precisa de alguém real?</h2>
-            <p>Se o que você sente é muito pesado e precisa conversar com uma pessoa de verdade, não hesite:</p>
+
+        <!-- IMPORTANTE -->
+
+        <section class="secao apoio">
+
+            <h2 class="titulo-secao">
+                🤝 Quando conversar com alguém pode ajudar
+            </h2>
+
+            <p>
+                Escrever pode ser uma forma de organizar os
+                pensamentos, mas algumas situações precisam
+                de apoio de uma pessoa de confiança ou de um
+                profissional.
+            </p>
+
             <ul class="lista-apoio">
-                <li><strong>CVV — Ligue 188:</strong> Pessoas prontas para ouvir você, gratuitamente, 24h por dia.</li>
-                <li><strong>Disque 100:</strong> Orientação e ajuda em qualquer situação difícil.</li>
-                <li><strong>Procure um adulto de confiança:</strong> Família, professor(a), ou alguém da escola.</li>
+
+                <li>
+                    <strong>🏫 Na escola:</strong>
+                    procure um professor, pedagogo,
+                    orientador ou outro adulto de confiança.
+                </li>
+
+                <li>
+                    <strong>💚 Em casa:</strong>
+                    converse com seus pais, responsáveis
+                    ou outro familiar em quem confie.
+                </li>
+
+                <li>
+                    <strong>🏥 Profissionais:</strong>
+                    uma Unidade Básica de Saúde pode orientar
+                    sobre os serviços disponíveis.
+                </li>
+
             </ul>
+
         </section>
+
+
+        <!-- ENCERRAMENTO -->
+
+        <section class="secao encerramento">
+
+            <blockquote>
+                Você não precisa ter todas as respostas agora.
+                Dar um passo de cada vez também é seguir em frente.
+            </blockquote>
+
+            <p>
+                Cuidar da saúde emocional também significa
+                reconhecer quando precisamos de apoio.
+                Pedir ajuda é um ato de coragem.
+            </p>
+
+
+            <a
+                href="index.html"
+                class="botao grande">
+
+                🌿 Voltar para o início
+
+            </a>
+
+        </section>
+
     </main>
 
+
+    <!-- =========================
+         RODAPÉ
+    ========================== -->
+
     <footer>
-        <p>🌿 Portal de Saúde Emocional — Projeto Educativo Ana Laura</p>
-        <p>Você não está sozinho(a). Sempre há alguém pronto para ouvir.</p>
+
+        <p>
+            🌿 Portal de Saúde Emocional —
+            Projeto Educativo Ana Laura
+        </p>
+
+        <p>
+            Conteúdo desenvolvido para fins educativos.
+        </p>
+
+        <p>
+            Cuidar de si também é uma forma de cuidado.
+        </p>
+
     </footer>
 
+
+    <!-- =========================
+         BOTÕES FLUTUANTES
+    ========================== -->
+
     <div class="botoes-flutuantes">
-        <button id="botaoModoEscuro" title="Modo Escuro">🌙</button>
-        <button id="botaoAumentarFonte" title="Aumentar Fonte">🔤</button>
-        <button id="botaoTopo" title="Voltar ao Topo">⬆</button>
+
+        <button
+            id="botaoModoEscuro"
+            title="Ativar modo escuro"
+            aria-label="Ativar modo escuro">
+            🌙
+        </button>
+
+        <button
+            id="botaoAumentarFonte"
+            title="Aumentar fonte"
+            aria-label="Aumentar fonte">
+            🔤
+        </button>
+
+        <button
+            id="botaoTopo"
+            title="Voltar ao topo"
+            aria-label="Voltar ao topo">
+            ⬆
+        </button>
+
     </div>
 
+
+    <!-- JAVASCRIPT -->
+
     <script src="js/funcional.js"></script>
+
 </body>
+
 </html>
