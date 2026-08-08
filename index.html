@@ -1,187 +1,767 @@
  <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saúde Emocional | Portal de Apoio</title>
-    <link rel="stylesheet" href="css/estilo.css">
+
+    <title>Saúde Emocional | Cuidar também é se ouvir</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
+
 <body>
 
-    <header>
-        <div class="cabecalho">
-            <h1>🌿 Saúde Emocional</h1>
-            <p>Equilíbrio • Acolhimento • Cuidado</p>
-            <p class="subtitulo">Projeto de Conscientização e Apoio ao Jovem</p>
-        </div>
-        <nav class="menu-navegacao">
-            <button class="botao-menu" id="botaoMenu">☰</button>
-            <ul class="lista-menu" id="listaMenu">
-                <li><a href="index.html" class="ativo">Início</a></li>
-                <li><a href="escuta.html">Espaço de Escuta</a></li>
-                <li><a href="quiz.html">Quiz</a></li>
-                <li><a href="referencias.html">Referências</a></li>
+    <!-- =========================
+         CABEÇALHO
+    ========================= -->
+
+    <header class="hero-header">
+
+        <nav class="navbar">
+
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-leaf"></i>
+
+                <div>
+                    <h2>Saúde Emocional</h2>
+                    <p>Equilíbrio • Acolhimento • Cuidado</p>
+                </div>
+            </a>
+
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                aria-label="Abrir menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <ul class="menu" id="menu">
+
+                <li>
+                    <a href="index.html" class="ativo">
+                        Início
+                    </a>
+                </li>
+
+                <li>
+                    <a href="escuta.html">
+                        Espaço de Escuta
+                    </a>
+                </li>
+
+                <li>
+                    <a href="quiz.html">
+                        Quiz
+                    </a>
+                </li>
+
+                <li>
+                    <a href="referencias.html">
+                        Referências
+                    </a>
+                </li>
+
             </ul>
+
         </nav>
+
+
+        <!-- =========================
+             BANNER PRINCIPAL
+        ========================= -->
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <span class="tag">
+                    <i class="fa-solid fa-heart"></i>
+                    Cuidar também é se ouvir
+                </span>
+
+                <h1>
+                    Sua saúde emocional
+                    importa.
+                </h1>
+
+                <h2>
+                    Acolher, compreender e cuidar de si
+                    também faz parte da vida.
+                </h2>
+
+                <p>
+                    A saúde emocional está presente na forma como
+                    lidamos com nossos sentimentos, pensamentos,
+                    relacionamentos e desafios do dia a dia.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#sobre" class="btn-principal">
+                        Conhecer o projeto
+                    </a>
+
+                    <a href="escuta.html" class="btn-secundario">
+                        <i class="fa-solid fa-comments"></i>
+                        Espaço de Escuta
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
     </header>
 
+
     <main>
-        <section class="secao destaque-principal">
-            <h2>Sua saúde emocional é o alicerce de tudo.</h2>
-            <p>Juntos podemos construir um ambiente com mais acolhimento, respeito e cuidado com os sentimentos.</p>
-            <p>O <strong>Portal de Saúde Emocional</strong> nasceu para conscientizar, orientar e mostrar que cuidar de si e do outro é essencial. Toda pessoa merece viver em um ambiente seguro, acolhedor e livre de julgamentos.</p>
-            <div class="botoes-acao">
-                <a href="#principios" class="botao primario">Conhecer o Projeto</a>
-                <a href="escuta.html" class="botao secundario">Acessar Portal de Escuta</a>
+
+
+        <!-- =========================
+             SOBRE
+        ========================= -->
+
+        <section class="secao" id="sobre">
+
+            <div class="container">
+
+                <div class="titulo-secao">
+
+                    <span>Entenda</span>
+
+                    <h2>
+                        O que é saúde emocional?
+                    </h2>
+
+                </div>
+
+
+                <div class="sobre-conteudo">
+
+                    <div class="sobre-texto">
+
+                        <p>
+                            Saúde emocional está relacionada à maneira
+                            como uma pessoa compreende e lida com seus
+                            sentimentos, pensamentos e situações da vida.
+                        </p>
+
+                        <p>
+                            Ter saúde emocional não significa estar feliz
+                            o tempo todo. Significa reconhecer o que sentimos,
+                            respeitar nossos limites e saber quando buscar
+                            apoio.
+                        </p>
+
+                        <p>
+                            Cuidar das emoções é uma parte importante do
+                            cuidado com a saúde e pode contribuir para
+                            relações mais saudáveis e uma rotina com
+                            mais equilíbrio.
+                        </p>
+
+                    </div>
+
+
+                    <div class="sobre-destaque">
+
+                        <i class="fa-solid fa-seedling"></i>
+
+                        <h3>
+                            Cuidar de si é importante
+                        </h3>
+
+                        <p>
+                            Assim como uma planta precisa de cuidado
+                            para crescer, nossas emoções também precisam
+                            de atenção, respeito e acolhimento.
+                        </p>
+
+                    </div>
+
+                </div>
+
             </div>
+
         </section>
 
-        <section class="secao" id="principios">
-            <h2 class="titulo-secao">Nossos Princípios</h2>
-            <p class="introducao">Juntos fazemos a diferença no cuidado com as emoções.</p>
-            <div class="grade-cards">
-                <div class="card">
-                    <h3>🤝 Acolhimento</h3>
-                    <p>Ouvir sem julgar é o primeiro passo para cuidar de alguém.</p>
+
+        <!-- =========================
+             PRINCÍPIOS
+        ========================= -->
+
+        <section class="secao fundo-rosa">
+
+            <div class="container">
+
+                <div class="titulo-secao">
+
+                    <span>Construindo juntos</span>
+
+                    <h2>
+                        Princípios do cuidado emocional
+                    </h2>
+
                 </div>
-                <div class="card">
-                    <h3>💚 Respeito</h3>
-                    <p>Todas as pessoas merecem ser tratadas com gentileza, independentemente do que sentem.</p>
+
+
+                <div class="cards">
+
+                    <article class="card">
+
+                        <i class="fa-solid fa-hands-holding-child"></i>
+
+                        <h3>
+                            Acolhimento
+                        </h3>
+
+                        <p>
+                            Ouvir alguém com atenção e sem julgamentos
+                            pode fazer uma grande diferença.
+                        </p>
+
+                    </article>
+
+
+                    <article class="card">
+
+                        <i class="fa-solid fa-heart"></i>
+
+                        <h3>
+                            Respeito
+                        </h3>
+
+                        <p>
+                            Cada pessoa possui sentimentos, limites
+                            e experiências diferentes que devem ser respeitados.
+                        </p>
+
+                    </article>
+
+
+                    <article class="card">
+
+                        <i class="fa-solid fa-shield-heart"></i>
+
+                        <h3>
+                            Segurança
+                        </h3>
+
+                        <p>
+                            Ter ambientes onde podemos falar e ser
+                            ouvidos ajuda a fortalecer o bem-estar.
+                        </p>
+
+                    </article>
+
+
+                    <article class="card">
+
+                        <i class="fa-solid fa-comment"></i>
+
+                        <h3>
+                            Sua voz importa
+                        </h3>
+
+                        <p>
+                            Falar sobre aquilo que sentimos pode ser
+                            um passo importante para buscar ajuda.
+                        </p>
+
+                    </article>
+
                 </div>
-                <div class="card">
-                    <h3>🏫 Ambiente Seguro</h3>
-                    <p>Um espaço acolhedor permite que todos aprendam, cresçam e se expressem com confiança.</p>
-                </div>
-                <div class="card">
-                    <h3>🗣️ Sua Voz Importa</h3>
-                    <p>Falar sobre o que sente é um ato de coragem e pode transformar a sua jornada.</p>
-                </div>
+
             </div>
+
         </section>
 
-        <section class="secao fundo-destaque">
-            <h2 class="titulo-secao">O Que É Saúde Emocional?</h2>
-            <p>Segundo a <strong>Organização Mundial da Saúde (OMS)</strong>, saúde não é apenas ausência de doença, mas bem-estar físico, mental e social. A saúde emocional refere-se à forma como lidamos com nossos sentimentos, pensamentos e reações no dia a dia.</p>
-            <p>Ela influencia como nos sentimos, pensamos e agimos. Também ajuda a lidar com o estresse, se relacionar com outras pessoas e fazer escolhas. Não significa estar sempre feliz — significa saber buscar equilíbrio e apoio quando necessário.</p>
-            
-            <div class="grade-cards">
-                <div class="card">
-                    <h3>💛 Reconhecimento</h3>
-                    <p>Saber nomear o que se sente é o primeiro passo. Tristeza, medo, alegria e ansiedade fazem parte de ser humano.</p>
-                </div>
-                <div class="card">
-                    <h3>🤗 Apoio</h3>
-                    <p>Compartilhar o que sente com alguém de confiança alivia a carga. Ninguém precisa enfrentar tudo sozinho(a).</p>
-                </div>
-                <div class="card">
-                    <h3>💤 Cuidado</h3>
-                    <p>Descansar, respeitar limites e buscar equilíbrio são formas de cuidar da saúde emocional. Corpo e mente estão conectados.</p>
-                </div>
-            </div>
-        </section>
+
+        <!-- =========================
+             PILARES
+        ========================= -->
 
         <section class="secao">
-            <h2 class="titulo-secao">Pilares do Bem-Estar Emocional</h2>
-            <div class="lista-pilares">
-                <div class="item-pilar">
-                    <h3>🧠 Autoconhecimento</h3>
-                    <p>Entender suas emoções, saber o que te faz bem e o que te sobrecarrega ajuda a viver com mais equilíbrio. Conhecer-se é cuidar-se.</p>
+
+            <div class="container">
+
+                <div class="titulo-secao">
+
+                    <span>Bem-estar</span>
+
+                    <h2>
+                        Pilares da saúde emocional
+                    </h2>
+
                 </div>
-                <div class="item-pilar">
-                    <h3>🗣️ Expressão de Sentimentos</h3>
-                    <p>Falar o que sente de forma respeitosa — com amigos, familiares ou profissionais — é essencial. Guardar tudo dentro de si pode sobrecarregar.</p>
+
+
+                <div class="pilares-grid">
+
+                    <article class="pilar">
+
+                        <div class="pilar-icone">
+                            <i class="fa-solid fa-brain"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Autoconhecimento
+                            </h3>
+
+                            <p>
+                                Conhecer melhor suas emoções e perceber
+                                o que provoca diferentes sentimentos ajuda
+                                a compreender melhor a si mesmo.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="pilar">
+
+                        <div class="pilar-icone">
+                            <i class="fa-solid fa-comments"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Expressão
+                            </h3>
+
+                            <p>
+                                Encontrar maneiras saudáveis de expressar
+                                aquilo que sentimos pode tornar mais fácil
+                                lidar com momentos difíceis.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="pilar">
+
+                        <div class="pilar-icone">
+                            <i class="fa-solid fa-bed"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Descanso e rotina
+                            </h3>
+
+                            <p>
+                                Sono adequado, momentos de descanso e
+                                uma rotina equilibrada também fazem parte
+                                do cuidado com o bem-estar.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="pilar">
+
+                        <div class="pilar-icone">
+                            <i class="fa-solid fa-people-group"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Rede de apoio
+                            </h3>
+
+                            <p>
+                                Amigos, familiares, professores e profissionais
+                                podem oferecer apoio quando enfrentamos
+                                situações difíceis.
+                            </p>
+
+                        </div>
+
+                    </article>
+
                 </div>
-                <div class="item-pilar">
-                    <h3>💤 Cuidados com o Corpo</h3>
-                    <p>Durma bem, movimente-se e alimente-se com saúde. O que fazemos com o corpo reflete diretamente na mente e nas emoções.</p>
-                </div>
-                <div class="item-pilar">
-                    <h3>🤝 Rede de Apoio</h3>
-                    <p>Ter pessoas de confiança com quem conversar é fundamental. Família, amigos, professores e profissionais de saúde podem te ajudar.</p>
-                </div>
+
             </div>
+
         </section>
 
-        <section class="secao fundo-destaque">
-            <h2 class="titulo-secao">Por Que Cuidar da Saúde Emocional?</h2>
-            <div class="grade-cards">
-                <div class="card">
-                    <h3>💚 Respeito a Si Mesmo(a)</h3>
-                    <p>Você merece atenção e cuidado. Reconhecer seus limites é um sinal de sabedoria e amor-próprio. Não se cobre demais.</p>
+
+        <!-- =========================
+             CUIDADOS
+        ========================= -->
+
+        <section class="secao fundo-rosa">
+
+            <div class="container">
+
+                <div class="titulo-secao">
+
+                    <span>Pequenas atitudes</span>
+
+                    <h2>
+                        Como cuidar da saúde emocional?
+                    </h2>
+
                 </div>
-                <div class="card">
-                    <h3>🤝 Melhores Relações</h3>
-                    <p>Quando estamos bem emocionalmente, nos relacionamos melhor, ouvimos com calma e compreendemos mais o outro. Espalhamos gentileza.</p>
+
+
+                <div class="cuidados-grid">
+
+                    <article class="cuidado">
+
+                        <i class="fa-solid fa-ear-listen"></i>
+
+                        <h3>
+                            Observe seus sentimentos
+                        </h3>
+
+                        <p>
+                            Tente perceber como você está se sentindo
+                            e permita-se reconhecer suas emoções.
+                        </p>
+
+                    </article>
+
+
+                    <article class="cuidado">
+
+                        <i class="fa-solid fa-people-arrows"></i>
+
+                        <h3>
+                            Converse com alguém
+                        </h3>
+
+                        <p>
+                            Compartilhar o que sentimos com uma pessoa
+                            de confiança pode ajudar a enfrentar dificuldades.
+                        </p>
+
+                    </article>
+
+
+                    <article class="cuidado">
+
+                        <i class="fa-solid fa-person-walking"></i>
+
+                        <h3>
+                            Respeite seus limites
+                        </h3>
+
+                        <p>
+                            Entender que você não precisa dar conta de
+                            tudo ao mesmo tempo também é uma forma de cuidado.
+                        </p>
+
+                    </article>
+
+
+                    <article class="cuidado">
+
+                        <i class="fa-solid fa-hand-holding-heart"></i>
+
+                        <h3>
+                            Peça ajuda
+                        </h3>
+
+                        <p>
+                            Buscar apoio quando necessário é uma atitude
+                            de responsabilidade e cuidado consigo mesmo.
+                        </p>
+
+                    </article>
+
                 </div>
-                <div class="card">
-                    <h3>🏫 Vida Melhor</h3>
-                    <p>Uma mente equilibrada permite aprender, conviver e crescer com mais segurança, confiança e tranquilidade. Cuide de si para brilhar mais.</p>
-                </div>
+
             </div>
+
         </section>
+
+
+        <!-- =========================
+             NA ESCOLA
+        ========================= -->
 
         <section class="secao">
-            <h2 class="titulo-secao">Como Cuidar de Si Mesmo(a)?</h2>
-            <div class="lista-cuidados">
-                <div class="item-cuidado">
-                    <h3>👂 Ouça-se com atenção</h3>
-                    <p>Preste atenção no que você sente. Não se julgue — acolha suas emoções com carinho. Tudo bem não estar bem sempre.</p>
+
+            <div class="container">
+
+                <div class="titulo-secao">
+
+                    <span>Na escola</span>
+
+                    <h2>
+                        Um ambiente que acolhe
+                    </h2>
+
                 </div>
-                <div class="item-cuidado">
-                    <h3>🤝 Peça apoio sem medo</h3>
-                    <p>Converse com alguém de confiança: familiares, professores ou profissionais. Falar alivia e traz clareza. Pedir ajuda é coragem, não fraqueza.</p>
+
+
+                <div class="escola">
+
+                    <div class="escola-texto">
+
+                        <p>
+                            A escola é um espaço importante para aprender,
+                            conviver e desenvolver relações. Por isso,
+                            cuidar da saúde emocional também faz parte
+                            de construir uma comunidade escolar mais saudável.
+                        </p>
+
+                        <p>
+                            Demonstrar respeito, ouvir os colegas,
+                            combater julgamentos e procurar ajuda quando
+                            necessário são atitudes que podem contribuir
+                            para um ambiente mais acolhedor.
+                        </p>
+
+                        <a href="escuta.html" class="btn-principal">
+                            Quero ser ouvido(a)
+                        </a>
+
+                    </div>
+
+
+                    <div class="escola-cards">
+
+                        <div>
+                            <i class="fa-solid fa-user-group"></i>
+                            <strong>Respeite</strong>
+                            <span>as diferenças.</span>
+                        </div>
+
+                        <div>
+                            <i class="fa-solid fa-hand-holding-heart"></i>
+                            <strong>Acolha</strong>
+                            <span>quem precisa.</span>
+                        </div>
+
+                        <div>
+                            <i class="fa-solid fa-bullhorn"></i>
+                            <strong>Fale</strong>
+                            <span>quando algo estiver errado.</span>
+                        </div>
+
+                    </div>
+
                 </div>
-                <div class="item-cuidado">
-                    <h3>🏫 Busque ajuda na escola</h3>
-                    <p>A escola é um espaço de apoio. Procure professores, pedagogos ou a direção quando precisar ser ouvido(a). Você não está sozinho(a).</p>
-                </div>
-                <div class="item-cuidado">
-                    <h3>💚 Respeite seus limites</h3>
-                    <p>Descansar não é preguiça — é necessário para se reequilibrar. Faça o seu melhor, um dia de cada vez. O seu ritmo é o certo para você.</p>
-                </div>
+
             </div>
+
         </section>
+
+
+        <!-- =========================
+             COMO AJUDAR
+        ========================= -->
+
+        <section class="secao fundo-rosa">
+
+            <div class="container">
+
+                <div class="titulo-secao">
+
+                    <span>Para todos</span>
+
+                    <h2>
+                        Como ajudar alguém?
+                    </h2>
+
+                </div>
+
+
+                <div class="ajuda-grid">
+
+                    <div class="ajuda-item">
+
+                        <span>01</span>
+
+                        <div>
+
+                            <h3>
+                                Escute
+                            </h3>
+
+                            <p>
+                                Dê espaço para a pessoa falar sem
+                                interromper ou diminuir aquilo que ela sente.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="ajuda-item">
+
+                        <span>02</span>
+
+                        <div>
+
+                            <h3>
+                                Não julgue
+                            </h3>
+
+                            <p>
+                                Evite frases que façam a pessoa sentir
+                                que seus sentimentos não são importantes.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="ajuda-item">
+
+                        <span>03</span>
+
+                        <div>
+
+                            <h3>
+                                Incentive a busca por ajuda
+                            </h3>
+
+                            <p>
+                                Quando necessário, incentive a pessoa
+                                a conversar com um adulto ou profissional
+                                de confiança.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="ajuda-item">
+
+                        <span>04</span>
+
+                        <div>
+
+                            <h3>
+                                Esteja presente
+                            </h3>
+
+                            <p>
+                                Pequenas atitudes de carinho e presença
+                                podem mostrar que ninguém precisa enfrentar
+                                tudo sozinho.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             APOIO
+        ========================= -->
 
         <section class="secao apoio">
-            <h2 class="titulo-secao">Canais de Apoio Oficiais</h2>
-            <h3>Você não está sozinho(a) 💚</h3>
-            <p>Se você está passando por um momento difícil ou se sentindo sobrecarregado(a), saiba que pedir ajuda é um ato de coragem. Existem pessoas prontas para ouvir — gratuitamente e com sigilo.</p>
-            <ul class="lista-apoio">
-                <li><strong>🏫 Escola:</strong> Procure professores, pedagogos, direção ou outro funcionário de confiança.</li>
-                <li><strong>👨‍👩‍👧 Família:</strong> Converse com seus pais, responsáveis ou outro adulto de confiança.</li>
-                <li><strong>📞 CVV — Centro de Valorização da Vida:</strong> Ligue <strong>188</strong> — apoio emocional gratuito, 24h, todos os dias.</li>
-                <li><strong>📞 Disque 100:</strong> Canal gratuito do Governo Federal para orientação e proteção de direitos.</li>
-                <li><strong>🏥 SUS / CAPS:</strong> Procure a Unidade Básica de Saúde ou Centro de Atenção Psicossocial da sua cidade — atendimento gratuito.</li>
-                <li><strong>🚨 Emergências:</strong> Em situações de risco imediato, ligue para a Polícia Militar pelo número <strong>190</strong>.</li>
-            </ul>
-        </section>
 
-        <section class="secao encerramento">
-            <blockquote>
-                "Cuidar de si é a forma mais bonita de respeitar a vida. E cuidar do outro é a forma mais nobre de viver."
-            </blockquote>
-            <p>Pequenas atitudes de gentileza, acolhimento e cuidado podem transformar vidas. Escolha sempre ser a diferença — começando por você.</p>
-            
-            <div class="chamada-escuta">
-                <h3>Precisa conversar?</h3>
-                <p>Se está se sentindo sobrecarregado(a), saiba que você pode falar aqui. Nosso Espaço de Escuta foi criado para acolher você sem julgamentos.</p>
-                <a href="escuta.html" class="botao grande">💛 Acessar Espaço de Escuta</a>
+            <div class="container">
+
+                <div class="titulo-secao">
+
+                    <span>Você importa</span>
+
+                    <h2>
+                        Onde buscar apoio?
+                    </h2>
+
+                </div>
+
+
+                <div class="apoio-card">
+
+                    <div class="apoio-icone">
+                        <i class="fa-solid fa-hand-holding-heart"></i>
+                    </div>
+
+                    <div class="apoio-texto">
+
+                        <h3>
+                            Você não precisa enfrentar tudo sozinho.
+                        </h3>
+
+                        <p>
+                            Quando os sentimentos estiverem difíceis
+                            de lidar, procure uma pessoa de confiança.
+                            Pode ser um familiar, professor, responsável
+                            ou profissional de saúde.
+                        </p>
+
+                        <p>
+                            Também é possível buscar serviços públicos
+                            de saúde e canais oficiais de orientação.
+                        </p>
+
+                    </div>
+
+                </div>
+
             </div>
+
         </section>
-    </main>
 
-    <footer>
-        <p>🌿 Portal de Saúde Emocional — Projeto Educativo Ana Laura</p>
-        <p>Conteúdo baseado em fontes oficiais: OMS, Ministério da Saúde, MEC e CVV</p>
-        <p>Você não está sozinho(a). Sempre há alguém pronto para ouvir.</p>
-    </footer>
 
-    <div class="botoes-flutuantes">
-        <button id="botaoModoEscuro" title="Modo Escuro">🌙</button>
-        <button id="botaoAumentarFonte" title="Aumentar Fonte">🔤</button>
-        <button id="botaoTopo" title="Voltar ao Topo">⬆</button>
-    </div>
+        <!-- =========================
+             FRASE FINAL
+        ========================= -->
 
-    <script src="js/funcional.js"></script>
-</body>
-</html>
+        <section class="frase-final">
+
+            <div class="container">
+
+                <i class="fa-solid fa-quote-left"></i>
+
+                <h2>
+                    Cuidar das emoções também é cuidar da vida.
+                </h2>
+
+                <p>
+                    Você merece ser ouvido, respeitado e acolhido.
+                    E também pode ajudar a tornar o mundo ao seu redor
+                    um lugar mais gentil.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CTA
+        ========================= -->
+
+        <section class="cta">
+
