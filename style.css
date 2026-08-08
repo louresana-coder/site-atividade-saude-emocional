@@ -1,30 +1,42 @@
-/* ==============================================
-   🌿 PORTAL DE SAÚDE EMOCIONAL
-   PARTE 1 — BASE + CABEÇALHO + MENU + HERO
-   ============================================== */
+/* =========================================================
+   🌿 SAÚDE EMOCIONAL — STYLE.CSS
+   PARTE 1/4
+   Base + Cores + Menu + Cabeçalho + Hero
+   ========================================================= */
+
 
 /* =========================
-   PALETA DE CORES
+   PALETA
 ========================= */
 
 :root {
-    --verde-musgo: #5F7352;
-    --verde-escuro: #3F5037;
-    --verde-claro: #8FA47F;
+    --verde-musgo: #5f7352;
+    --verde-escuro: #3f5037;
+    --verde-claro: #8fa47f;
 
-    --bege: #E8DDC8;
-    --bege-claro: #F7F2E8;
-    --creme: #FFFDF8;
+    --bege: #e8ddc8;
+    --bege-claro: #f7f2e8;
+    --creme: #fffdf8;
 
-    --marrom: #403C34;
-    --marrom-claro: #6B655A;
+    --rosa: #eadbd7;
+    --rosa-claro: #f5eae7;
 
-    --branco: #FFFFFF;
+    --marrom: #403c34;
+    --marrom-claro: #6b655a;
 
-    --borda: rgba(95, 115, 82, .18);
-    --sombra: 0 10px 30px rgba(63, 80, 55, .12);
+    --branco: #ffffff;
 
-    --transicao: all .3s ease;
+    --borda: rgba(95, 115, 82, 0.18);
+
+    --sombra:
+        0 10px 30px rgba(63, 80, 55, 0.12);
+
+    --sombra-forte:
+        0 18px 45px rgba(63, 80, 55, 0.18);
+
+    --transicao: all 0.3s ease;
+
+    --raio: 22px;
 }
 
 
@@ -33,21 +45,29 @@
 ========================= */
 
 body.modo-escuro {
-    --verde-musgo: #78906B;
+    --verde-musgo: #78906b;
     --verde-escuro: #263222;
-    --verde-claro: #A9BE9A;
+    --verde-claro: #a9be9a;
 
-    --bege: #38372F;
-    --bege-claro: #292A25;
-    --creme: #1E211D;
+    --bege: #38372f;
+    --bege-claro: #292a25;
+    --creme: #1e211d;
 
-    --marrom: #F3F0E8;
-    --marrom-claro: #D2D0C7;
+    --rosa: #39312f;
+    --rosa-claro: #302a28;
 
-    --branco: #2B3028;
+    --marrom: #f3f0e8;
+    --marrom-claro: #d2d0c7;
 
-    --borda: rgba(169, 190, 154, .18);
-    --sombra: 0 10px 30px rgba(0, 0, 0, .25);
+    --branco: #2b3028;
+
+    --borda: rgba(169, 190, 154, 0.18);
+
+    --sombra:
+        0 10px 30px rgba(0, 0, 0, 0.25);
+
+    --sombra-forte:
+        0 18px 45px rgba(0, 0, 0, 0.35);
 }
 
 
@@ -67,14 +87,29 @@ html {
 }
 
 body {
-    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-family: "Poppins", "Segoe UI", Arial, sans-serif;
+
     background: var(--creme);
     color: var(--marrom);
+
     line-height: 1.7;
     font-size: 16px;
+
     min-height: 100vh;
+
     overflow-x: hidden;
+
     transition: var(--transicao);
+}
+
+body,
+button,
+input,
+textarea {
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease;
 }
 
 a {
@@ -89,6 +124,11 @@ textarea {
 
 button {
     cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 ::selection {
@@ -119,49 +159,62 @@ button {
 }
 
 
-/* =========================
+/* =========================================================
    CABEÇALHO
-========================= */
+========================================================= */
 
 header {
     position: fixed;
+
     top: 0;
     left: 0;
+
     width: 100%;
+
     z-index: 1000;
 
-    background: rgba(255, 253, 248, .94);
+    background: rgba(255, 253, 248, 0.96);
+
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
 
     border-bottom: 1px solid var(--borda);
 
-    box-shadow: 0 4px 20px rgba(63, 80, 55, .08);
+    box-shadow:
+        0 4px 20px rgba(63, 80, 55, 0.08);
 
     transition: var(--transicao);
 }
 
 body.modo-escuro header {
-    background: rgba(30, 33, 29, .94);
+    background: rgba(30, 33, 29, 0.96);
 }
 
 
-/* =========================
-   PARTE SUPERIOR DO CABEÇALHO
-========================= */
+/* =========================================================
+   CABEÇALHO — LOGO / TÍTULO
+========================================================= */
 
 .cabecalho {
+    width: 100%;
     max-width: 1200px;
-    margin: auto;
-    padding: 16px 25px 8px;
+
+    margin: 0 auto;
+
+    padding: 15px 25px 7px;
+
     text-align: center;
 }
 
 .cabecalho h1 {
-    font-size: 1.7rem;
     color: var(--verde-escuro);
+
+    font-size: 1.7rem;
+    font-weight: 700;
+
+    line-height: 1.3;
+
     margin-bottom: 2px;
-    letter-spacing: .3px;
 }
 
 body.modo-escuro .cabecalho h1 {
@@ -170,32 +223,34 @@ body.modo-escuro .cabecalho h1 {
 
 .cabecalho p {
     color: var(--marrom-claro);
-    font-size: .9rem;
-}
 
-.subtitulo {
-    font-size: .78rem !important;
-    opacity: .8;
-    margin-top: 2px;
+    font-size: 0.88rem;
 }
 
 
-/* =========================
+/* =========================================================
    MENU
-========================= */
+========================================================= */
 
 .menu-navegacao {
+    width: 100%;
     max-width: 1200px;
-    margin: auto;
+
+    margin: 0 auto;
+
     padding: 6px 25px 12px;
 }
 
 .lista-menu {
     list-style: none;
+
     display: flex;
+
     justify-content: center;
     align-items: center;
+
     flex-wrap: wrap;
+
     gap: 8px;
 }
 
@@ -206,73 +261,69 @@ body.modo-escuro .cabecalho h1 {
 .lista-menu a {
     position: relative;
 
-    text-decoration: none;
-    color: var(--marrom-claro);
+    display: inline-flex;
 
-    padding: 8px 15px;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 40px;
+
+    padding: 8px 17px;
+
     border-radius: 30px;
 
-    font-size: .9rem;
+    text-decoration: none;
+
+    color: var(--marrom-claro);
+
+    font-size: 0.9rem;
     font-weight: 600;
 
     transition: var(--transicao);
 }
 
-.lista-menu a::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    bottom: 3px;
-
-    width: 0;
-    height: 2px;
-
-    background: var(--verde-musgo);
-    border-radius: 20px;
-
-    transform: translateX(-50%);
-    transition: var(--transicao);
-}
-
 .lista-menu a:hover {
     color: var(--verde-escuro);
+
     background: var(--bege-claro);
+
     transform: translateY(-2px);
 }
 
-.lista-menu a:hover::after,
-.lista-menu a.ativo::after {
-    width: 35%;
-}
-
 .lista-menu a.ativo {
-    color: var(--verde-escuro);
-    background: var(--bege);
+    color: var(--branco);
+
+    background: var(--verde-musgo);
+
+    box-shadow:
+        0 5px 15px rgba(95, 115, 82, 0.2);
 }
 
-body.modo-escuro .lista-menu a:hover,
-body.modo-escuro .lista-menu a.ativo {
-    color: var(--verde-claro);
-    background: var(--bege);
+.lista-menu a.ativo:hover {
+    color: var(--branco);
+
+    background: var(--verde-escuro);
 }
 
 
-/* =========================
-   BOTÃO DO MENU MOBILE
-========================= */
+/* =========================================================
+   BOTÃO MENU MOBILE
+========================================================= */
 
 .botao-menu {
     display: none;
 
     border: none;
+
     background: var(--verde-musgo);
     color: var(--branco);
 
-    width: 44px;
-    height: 44px;
-    border-radius: 12px;
+    width: 45px;
+    height: 45px;
 
-    font-size: 1.4rem;
+    border-radius: 13px;
+
+    font-size: 1.35rem;
 
     margin: 5px auto;
 
@@ -281,37 +332,45 @@ body.modo-escuro .lista-menu a.ativo {
 
 .botao-menu:hover {
     background: var(--verde-escuro);
+
     transform: scale(1.05);
 }
 
+.botao-menu:active {
+    transform: scale(0.96);
+}
 
-/* =========================
+
+/* =========================================================
    CONTEÚDO PRINCIPAL
-========================= */
+========================================================= */
 
 main {
     width: 100%;
     max-width: 1200px;
-    margin: auto;
 
-    padding: 175px 25px 60px;
+    margin: 0 auto;
+
+    padding: 175px 25px 70px;
 }
 
 .secao {
-    margin-bottom: 85px;
+    width: 100%;
+
+    margin-bottom: 80px;
 }
 
 
-/* =========================
-   HERO / DESTAQUE PRINCIPAL
-========================= */
+/* =========================================================
+   HERO / DESTAQUE
+========================================================= */
 
 .destaque-principal {
     position: relative;
 
-    text-align: center;
+    width: 100%;
 
-    padding: 75px 35px;
+    padding: 80px 35px;
 
     border-radius: 30px;
 
@@ -324,62 +383,88 @@ main {
 
     color: var(--branco);
 
+    text-align: center;
+
     overflow: hidden;
 
-    box-shadow: var(--sombra);
+    box-shadow: var(--sombra-forte);
+
+    animation:
+        aparecer 0.7s ease both;
 }
+
+
+/* círculos decorativos */
 
 .destaque-principal::before {
     content: "";
+
     position: absolute;
 
-    width: 260px;
-    height: 260px;
+    width: 280px;
+    height: 280px;
 
     border-radius: 50%;
 
-    background: rgba(255,255,255,.06);
+    background: rgba(255, 255, 255, 0.06);
 
-    top: -120px;
+    top: -130px;
     right: -80px;
 }
 
 .destaque-principal::after {
     content: "";
+
     position: absolute;
 
-    width: 180px;
-    height: 180px;
+    width: 200px;
+    height: 200px;
 
     border-radius: 50%;
 
-    background: rgba(232,221,200,.08);
+    background: rgba(232, 221, 200, 0.08);
 
-    bottom: -90px;
-    left: -60px;
+    bottom: -100px;
+    left: -70px;
 }
 
 .destaque-principal > * {
     position: relative;
+
     z-index: 1;
 }
 
+
+/* título */
+
 .destaque-principal h2 {
     max-width: 850px;
-    margin: auto auto 20px;
 
-    font-size: clamp(2rem, 5vw, 3.4rem);
-    line-height: 1.2;
+    margin: 0 auto 20px;
 
     color: var(--branco);
+
+    font-size:
+        clamp(2rem, 5vw, 3.4rem);
+
+    line-height: 1.2;
+
+    font-weight: 700;
 }
+
+
+/* texto */
 
 .destaque-principal p {
     max-width: 780px;
+
     margin: 0 auto 15px;
 
+    color: rgba(255, 255, 255, 0.9);
+
     font-size: 1.05rem;
-    color: rgba(255,255,255,.9);
+
+    line-height: 1.8;
 }
 
 .destaque-principal strong {
@@ -387,27 +472,34 @@ main {
 }
 
 
-/* =========================
-   BOTÕES DE AÇÃO
-========================= */
+/* =========================================================
+   BOTÕES
+========================================================= */
 
 .botoes-acao {
     display: flex;
+
     justify-content: center;
     align-items: center;
 
-    gap: 15px;
     flex-wrap: wrap;
+
+    gap: 15px;
 
     margin-top: 30px;
 }
 
 .botao {
     display: inline-flex;
+
     align-items: center;
     justify-content: center;
 
-    padding: 13px 25px;
+    gap: 8px;
+
+    min-height: 48px;
+
+    padding: 12px 24px;
 
     border-radius: 50px;
 
@@ -415,17 +507,20 @@ main {
 
     text-decoration: none;
 
+    font-size: 0.95rem;
     font-weight: 700;
-    font-size: .95rem;
 
     transition: var(--transicao);
 
-    box-shadow: 0 5px 15px rgba(0,0,0,.12);
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.12);
 }
 
 .botao:hover {
     transform: translateY(-4px);
-    box-shadow: 0 10px 22px rgba(0,0,0,.18);
+
+    box-shadow:
+        0 10px 22px rgba(0, 0, 0, 0.18);
 }
 
 .botao:active {
@@ -433,10 +528,11 @@ main {
 }
 
 
-/* BOTÃO PRINCIPAL */
+/* botão principal */
 
 .botao.primario {
     background: var(--bege);
+
     color: var(--verde-escuro);
 }
 
@@ -445,36 +541,43 @@ main {
 }
 
 
-/* BOTÃO SECUNDÁRIO */
+/* botão secundário */
 
 .botao.secundario {
     background: transparent;
-    border-color: rgba(255,255,255,.75);
+
+    border-color: rgba(255, 255, 255, 0.75);
+
     color: var(--branco);
 }
 
 .botao.secundario:hover {
     background: var(--branco);
+
     color: var(--verde-escuro);
 }
 
 
-/* BOTÃO GRANDE */
+/* botão grande */
 
 .botao.grande {
-    width: auto;
     min-width: 240px;
-    padding: 15px 28px;
+
+    padding: 14px 28px;
 }
 
 
-/* BOTÃO PEQUENO */
+/* botão pequeno */
 
 .botao.pequeno {
-    padding: 9px 17px;
-    font-size: .88rem;
+    padding: 9px 18px;
+
+    min-height: 40px;
+
+    font-size: 0.88rem;
 
     background: var(--verde-musgo);
+
     color: var(--branco);
 }
 
@@ -483,26 +586,49 @@ main {
 }
 
 
-/* =========================
+/* =========================================================
    TÍTULOS DAS SEÇÕES
-========================= */
+========================================================= */
 
 .titulo-secao {
     position: relative;
 
     text-align: center;
 
-    font-size: clamp(1.7rem, 4vw, 2.4rem);
-
-    color: var(--verde-escuro);
-
-    margin-bottom: 15px;
+    margin-bottom: 35px;
 
     padding-bottom: 15px;
 }
 
-body.modo-escuro .titulo-secao {
+.titulo-secao h2 {
+    color: var(--verde-escuro);
+
+    font-size:
+        clamp(1.7rem, 4vw, 2.4rem);
+
+    line-height: 1.3;
+
+    font-weight: 700;
+}
+
+body.modo-escuro .titulo-secao h2 {
     color: var(--verde-claro);
+}
+
+.titulo-secao span {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: var(--verde-musgo);
+
+    font-size: 0.82rem;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1.5px;
 }
 
 .titulo-secao::after {
@@ -520,985 +646,55 @@ body.modo-escuro .titulo-secao {
     border-radius: 10px;
 }
 
+
+/* =========================================================
+   INTRODUÇÃO
+========================================================= */
+
 .introducao {
+    width: 100%;
+
     max-width: 750px;
-    margin: auto;
+
+    margin: 0 auto;
 
     text-align: center;
 
     color: var(--marrom-claro);
 
     font-size: 1rem;
+
+    line-height: 1.8;
 }
 
 
-/* =========================
-   ANIMAÇÃO DE ENTRADA
-========================= */
+/* =========================================================
+   ANIMAÇÃO
+========================================================= */
 
 @keyframes aparecer {
     from {
         opacity: 0;
-        transform: translateY(25px);
+
+        transform:
+            translateY(25px);
     }
 
     to {
         opacity: 1;
-        transform: translateY(0);
+
+        transform:
+            translateY(0);
     }
 }
 
-.destaque-principal {
-    animation: aparecer .7s ease both;
-}
-/* ==============================================
-   PARTE 2 — CARDS + PILARES + CUIDADOS + APOIO
-   ============================================== */
 
+/* =========================================================
+   ACESSIBILIDADE — FOCO
+========================================================= */
 
-/* =========================
-   GRADE DE CARDS
-========================= */
-
-.grade-cards {
-    display: grid;
-
-    grid-template-columns:
-        repeat(auto-fit, minmax(250px, 1fr));
-
-    gap: 22px;
-
-    margin-top: 30px;
-}
-
-
-/* =========================
-   CARD
-========================= */
-
-.card {
-    position: relative;
-
-    background: var(--branco);
-
-    border: 1px solid var(--borda);
-
-    border-radius: 20px;
-
-    padding: 28px 24px;
-
-    box-shadow: var(--sombra);
-
-    transition: var(--transicao);
-
-    overflow: hidden;
-}
-
-.card::before {
-    content: "";
-
-    position: absolute;
-
-    top: 0;
-    left: 0;
-
-    width: 100%;
-    height: 4px;
-
-    background: var(--verde-musgo);
-
-    transform: scaleX(0);
-    transform-origin: left;
-
-    transition: var(--transicao);
-}
-
-.card:hover {
-    transform: translateY(-7px);
-
-    box-shadow:
-        0 15px 35px rgba(63,80,55,.18);
-
-    border-color: var(--verde-claro);
-}
-
-.card:hover::before {
-    transform: scaleX(1);
-}
-
-
-/* TÍTULO DO CARD */
-
-.card h3 {
-    color: var(--verde-escuro);
-
-    font-size: 1.15rem;
-
-    margin-bottom: 10px;
-}
-
-body.modo-escuro .card h3 {
-    color: var(--verde-claro);
-}
-
-
-/* TEXTO DO CARD */
-
-.card p {
-    color: var(--marrom-claro);
-
-    font-size: .96rem;
-
-    line-height: 1.7;
-}
-
-
-/* =========================
-   SEÇÕES COM FUNDO DESTAQUE
-========================= */
-
-.fundo-destaque {
-    position: relative;
-
-    background: var(--bege-claro);
-
-    border: 1px solid var(--borda);
-
-    border-radius: 26px;
-
-    padding: 45px 35px;
-
-    box-shadow:
-        0 5px 20px rgba(63,80,55,.06);
-}
-
-.fundo-destaque .titulo-secao {
-    margin-bottom: 25px;
-}
-
-.fundo-destaque > p {
-    max-width: 900px;
-
-    margin: 0 auto 18px;
-
-    color: var(--marrom-claro);
-
-    text-align: center;
-
-    line-height: 1.8;
-}
-
-.fundo-destaque strong {
-    color: var(--verde-escuro);
-}
-
-
-/* =========================
-   LISTA DE PILARES
-========================= */
-
-.lista-pilares {
-    display: grid;
-
-    grid-template-columns:
-        repeat(2, minmax(0, 1fr));
-
-    gap: 20px;
-
-    margin-top: 30px;
-}
-
-.item-pilar {
-    background: var(--branco);
-
-    border: 1px solid var(--borda);
-
-    border-left: 5px solid var(--verde-musgo);
-
-    border-radius: 16px;
-
-    padding: 24px;
-
-    box-shadow: 0 5px 18px rgba(63,80,55,.08);
-
-    transition: var(--transicao);
-}
-
-.item-pilar:hover {
-    transform: translateX(5px);
-
-    border-left-color: var(--verde-claro);
-
-    box-shadow: var(--sombra);
-}
-
-.item-pilar h3 {
-    color: var(--verde-escuro);
-
-    margin-bottom: 8px;
-
-    font-size: 1.08rem;
-}
-
-.item-pilar p {
-    color: var(--marrom-claro);
-
-    font-size: .95rem;
-
-    line-height: 1.7;
-}
-
-body.modo-escuro .item-pilar h3 {
-    color: var(--verde-claro);
-}
-
-
-/* =========================
-   LISTA DE CUIDADOS
-========================= */
-
-.lista-cuidados {
-    display: grid;
-
-    grid-template-columns:
-        repeat(2, minmax(0, 1fr));
-
-    gap: 20px;
-
-    margin-top: 30px;
-}
-
-.item-cuidado {
-    background: var(--branco);
-
-    border: 1px solid var(--borda);
-
-    border-radius: 18px;
-
-    padding: 25px;
-
-    box-shadow: 0 5px 18px rgba(63,80,55,.08);
-
-    transition: var(--transicao);
-}
-
-.item-cuidado:hover {
-    transform: translateY(-5px);
-
-    box-shadow: var(--sombra);
-
-    border-color: var(--verde-claro);
-}
-
-.item-cuidado h3 {
-    color: var(--verde-escuro);
-
-    font-size: 1.08rem;
-
-    margin-bottom: 8px;
-}
-
-.item-cuidado p {
-    color: var(--marrom-claro);
-
-    font-size: .95rem;
-
-    line-height: 1.7;
-}
-
-body.modo-escuro .item-cuidado h3 {
-    color: var(--verde-claro);
-}
-
-
-/* =========================
-   CANAIS DE APOIO
-========================= */
-
-.apoio {
-    position: relative;
-
-    background:
-        linear-gradient(
-            135deg,
-            var(--verde-escuro),
-            var(--verde-musgo)
-        );
-
-    color: var(--branco);
-
-    border-radius: 28px;
-
-    padding: 45px 40px;
-
-    box-shadow: var(--sombra);
-
-    overflow: hidden;
-}
-
-.apoio::after {
-    content: "🌿";
-
-    position: absolute;
-
-    right: 35px;
-    top: 25px;
-
-    font-size: 4rem;
-
-    opacity: .08;
-}
-
-.apoio .titulo-secao {
-    color: var(--branco);
-}
-
-.apoio .titulo-secao::after {
-    background: var(--bege);
-}
-
-.apoio > h3 {
-    text-align: center;
-
-    color: var(--bege);
-
-    font-size: 1.3rem;
-
-    margin-bottom: 12px;
-}
-
-.apoio > p {
-    max-width: 800px;
-
-    margin: 0 auto 25px;
-
-    text-align: center;
-
-    color: rgba(255,255,255,.88);
-}
-
-
-/* LISTA DE APOIO */
-
-.lista-apoio {
-    max-width: 850px;
-
-    margin: auto;
-
-    list-style: none;
-}
-
-.lista-apoio li {
-    position: relative;
-
-    padding: 15px 18px;
-
-    margin-bottom: 10px;
-
-    border-radius: 12px;
-
-    background: rgba(255,255,255,.08);
-
-    border: 1px solid rgba(255,255,255,.08);
-
-    color: rgba(255,255,255,.92);
-
-    transition: var(--transicao);
-}
-
-.lista-apoio li:hover {
-    background: rgba(255,255,255,.14);
-
-    transform: translateX(4px);
-}
-
-.lista-apoio strong {
-    color: var(--bege);
-}
-
-
-/* =========================
-   ENCERRAMENTO
-========================= */
-
-.encerramento {
-    text-align: center;
-
-    max-width: 950px;
-
-    margin-left: auto;
-    margin-right: auto;
-}
-
-
-/* CITAÇÃO */
-
-blockquote {
-    max-width: 850px;
-
-    margin: 0 auto 25px;
-
-    padding: 30px;
-
-    background: var(--bege-claro);
-
-    border-left: 5px solid var(--verde-musgo);
-
-    border-right: 5px solid var(--verde-musgo);
-
-    border-radius: 18px;
-
-    color: var(--verde-escuro);
-
-    font-size: clamp(1.15rem, 2.5vw, 1.45rem);
-
-    font-style: italic;
-
-    line-height: 1.7;
-
-    box-shadow: 0 5px 20px rgba(63,80,55,.07);
-}
-
-body.modo-escuro blockquote {
-    color: var(--verde-claro);
-}
-
-
-/* TEXTO DO ENCERRAMENTO */
-
-.encerramento > p {
-    max-width: 750px;
-
-    margin: auto;
-
-    color: var(--marrom-claro);
-
-    line-height: 1.8;
-}
-
-
-/* =========================
-   CHAMADA PARA ESPAÇO DE ESCUTA
-========================= */
-
-.chamada-escuta {
-    margin-top: 35px;
-
-    padding: 35px 25px;
-
-    background: var(--bege);
-
-    border-radius: 22px;
-
-    border: 1px solid var(--borda);
-
-    box-shadow: var(--sombra);
-}
-
-.chamada-escuta h3 {
-    color: var(--verde-escuro);
-
-    font-size: 1.5rem;
-
-    margin-bottom: 8px;
-}
-
-body.modo-escuro .chamada-escuta h3 {
-    color: var(--verde-escuro);
-}
-
-.chamada-escuta p {
-    max-width: 650px;
-
-    margin: 0 auto 22px;
-
-    color: var(--marrom-claro);
-}
-
-.chamada-escuta .botao {
-    background: var(--verde-musgo);
-
-    color: var(--branco);
-}
-
-.chamada-escuta .botao:hover {
-    background: var(--verde-escuro);
-}
-
-
-/* =========================
-   DESTAQUE DE TEXTO
-========================= */
-
-main strong {
-    font-weight: 700;
-}
-
-main a {
-    transition: var(--transicao);
-}
-
-
-/* =========================
-   EFEITO DE FOCO
-========================= */
-
-.card:focus-within,
-.item-pilar:focus-within,
-.item-cuidado:focus-within {
-    outline: 3px solid rgba(143,164,127,.35);
-
-    outline-offset: 3px;
-}
-/* ==============================================
-   PARTE 3 — FORMULÁRIOS + ESCUTA + QUIZ + REFERÊNCIAS
-   ============================================== */
-
-
-/* =========================
-   FORMULÁRIOS
-========================= */
-
-form {
-    max-width: 850px;
-    margin: 30px auto 0;
-
-    padding: 35px;
-
-    background: var(--branco);
-
-    border: 1px solid var(--borda);
-
-    border-radius: 22px;
-
-    box-shadow: var(--sombra);
-}
-
-label {
-    display: block;
-
-    margin: 18px 0 7px;
-
-    color: var(--verde-escuro);
-
-    font-weight: 700;
-}
-
-body.modo-escuro label {
-    color: var(--verde-claro);
-}
-
-input,
-textarea {
-    width: 100%;
-
-    padding: 13px 15px;
-
-    border: 2px solid var(--borda);
-
-    border-radius: 12px;
-
-    background: var(--bege-claro);
-
-    color: var(--marrom);
-
-    outline: none;
-
-    transition: var(--transicao);
-}
-
-input:focus,
-textarea:focus {
-    border-color: var(--verde-claro);
-
-    box-shadow:
-        0 0 0 4px rgba(143,164,127,.15);
-}
-
-textarea {
-    min-height: 170px;
-
-    resize: vertical;
-}
-
-input::placeholder,
-textarea::placeholder {
-    color: var(--marrom-claro);
-
-    opacity: .7;
-}
-
-
-/* =========================
-   CAIXA DE RESPOSTA
-========================= */
-
-.caixa-resposta {
-    display: none;
-
-    margin: 25px auto 0;
-
-    max-width: 850px;
-
-    padding: 25px;
-
-    background: var(--bege-claro);
-
-    border: 2px solid var(--verde-claro);
-
-    border-radius: 18px;
-
-    color: var(--marrom);
-
-    line-height: 1.8;
-
-    animation: aparecer .5s ease;
-}
-
-.caixa-resposta.mostrar {
-    display: block;
-}
-
-
-/* =========================
-   FRASE MOTIVACIONAL
-========================= */
-
-.frase-motivacional {
-    margin-top: 20px;
-
-    padding: 20px;
-
-    background: var(--bege);
-
-    border-left: 4px solid var(--verde-musgo);
-
-    border-radius: 14px;
-
-    color: var(--verde-escuro);
-
-    font-size: 1.05rem;
-
-    font-style: italic;
-}
-
-body.modo-escuro .frase-motivacional {
-    color: var(--verde-escuro);
-}
-
-
-/* =========================
-   CAIXA DE DESTAQUE
-========================= */
-
-.caixa-destaque {
-    max-width: 850px;
-
-    margin: 30px auto;
-
-    padding: 30px;
-
-    background: var(--bege-claro);
-
-    border: 1px solid var(--borda);
-
-    border-radius: 20px;
-
-    box-shadow: var(--sombra);
-}
-
-.caixa-destaque h3 {
-    color: var(--verde-escuro);
-
-    margin-bottom: 10px;
-}
-
-.caixa-destaque p {
-    color: var(--marrom-claro);
-}
-
-
-/* =========================
-   QUIZ — PERGUNTAS
-========================= */
-
-.pergunta {
-    margin: 30px 0;
-
-    padding: 25px;
-
-    background: var(--bege-claro);
-
-    border-radius: 18px;
-
-    border: 1px solid var(--borda);
-}
-
-.pergunta p {
-    color: var(--verde-escuro);
-
-    font-size: 1.08rem;
-
-    font-weight: 700;
-
-    margin-bottom: 15px;
-}
-
-body.modo-escuro .pergunta p {
-    color: var(--verde-claro);
-}
-
-
-/* ALTERNATIVAS */
-
-.pergunta label {
-    display: flex;
-
-    align-items: center;
-
-    gap: 10px;
-
-    margin: 8px 0;
-
-    padding: 11px 13px;
-
-    border-radius: 10px;
-
-    color: var(--marrom-claro);
-
-    font-weight: 500;
-
-    cursor: pointer;
-
-    transition: var(--transicao);
-}
-
-.pergunta label:hover {
-    background: rgba(143,164,127,.12);
-
-    color: var(--verde-escuro);
-}
-
-.pergunta input[type="radio"],
-.pergunta input[type="checkbox"] {
-    width: auto;
-
-    accent-color: var(--verde-musgo);
-}
-
-
-/* =========================
-   RESULTADO DO QUIZ
-========================= */
-
-.resultado-quiz {
-    display: none;
-
-    max-width: 700px;
-
-    margin: 30px auto;
-
-    padding: 35px;
-
-    text-align: center;
-
-    background: var(--bege-claro);
-
-    border: 2px solid var(--verde-claro);
-
-    border-radius: 22px;
-
-    box-shadow: var(--sombra);
-
-    animation: aparecer .5s ease;
-}
-
-.resultado-quiz.mostrar {
-    display: block;
-}
-
-.resultado-quiz h2 {
-    color: var(--verde-escuro);
-
-    margin-bottom: 12px;
-}
-
-body.modo-escuro .resultado-quiz h2 {
-    color: var(--verde-claro);
-}
-
-.resultado-quiz p {
-    color: var(--marrom-claro);
-
-    margin-bottom: 10px;
-}
-
-
-/* =========================
-   REFERÊNCIAS
-========================= */
-
-.lista-referencias {
-    max-width: 900px;
-
-    margin: 30px auto;
-
-    padding: 0;
-
-    list-style: none;
-}
-
-.lista-referencias li {
-    position: relative;
-
-    margin-bottom: 15px;
-
-    padding: 20px 22px;
-
-    background: var(--branco);
-
-    border: 1px solid var(--borda);
-
-    border-left: 5px solid var(--verde-musgo);
-
-    border-radius: 14px;
-
-    color: var(--marrom-claro);
-
-    box-shadow: 0 4px 15px rgba(63,80,55,.06);
-
-    transition: var(--transicao);
-}
-
-.lista-referencias li:hover {
-    transform: translateX(5px);
-
-    border-left-color: var(--verde-claro);
-
-    box-shadow: var(--sombra);
-}
-
-.lista-referencias a {
-    display: inline-block;
-
-    margin-top: 7px;
-
-    color: var(--verde-musgo);
-
-    font-weight: 700;
-
-    text-decoration: none;
-
-    word-break: break-word;
-}
-
-.lista-referencias a:hover {
-    color: var(--verde-escuro);
-
-    text-decoration: underline;
-}
-
-body.modo-escuro .lista-referencias a {
-    color: var(--verde-claro);
-}
-
-
-/* =========================
-   TÍTULOS DE PÁGINAS INTERNAS
-========================= */
-
-.pagina-titulo {
-    text-align: center;
-
-    margin-bottom: 45px;
-}
-
-.pagina-titulo h2 {
-    color: var(--verde-escuro);
-
-    font-size: clamp(2rem, 4vw, 2.8rem);
-
-    margin-bottom: 10px;
-}
-
-body.modo-escuro .pagina-titulo h2 {
-    color: var(--verde-claro);
-}
-
-.pagina-titulo p {
-    max-width: 700px;
-
-    margin: auto;
-
-    color: var(--marrom-claro);
-}
-
-
-/* =========================
-   BOTÕES DE FORMULÁRIO
-========================= */
-
-form .botao {
-    margin-top: 20px;
-
-    background: var(--verde-musgo);
-
-    color: var(--branco);
-
-    border: none;
-}
-
-form .botao:hover {
-    background: var(--verde-escuro);
-}
-
-
-/* =========================
-   ESTADOS DE ACERTO / ERRO
-========================= */
-
-.resposta-certa {
-    border-color: #73966A !important;
-
-    background: #EEF5EA !important;
-
-    color: #3E5B37 !important;
-}
-
-.resposta-errada {
-    border-color: #B77B72 !important;
-
-    background: #F8ECE8 !important;
-
-    color: #75473F !important;
-}
-
-
-/* =========================
-   ANIMAÇÕES EXTRAS
-========================= */
-
-@keyframes flutuar {
-    0%, 100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-6px);
-    }
-}
-
-.botao.grande:hover {
-    animation: flutuar .8s ease infinite;
-}
-
-
-/* =========================
-   ACESSIBILIDADE
-========================= */
-
-button:focus-visible,
 a:focus-visible,
+button:focus-visible,
 input:focus-visible,
 textarea:focus-visible {
     outline: 3px solid var(--verde-claro);
@@ -1507,255 +703,9 @@ textarea:focus-visible {
 }
 
 
-/* =========================
-   AUMENTO DE FONTE
-========================= */
-
-body.fonte-aumentada {
-    font-size: 19px;
-}
-
-body.fonte-aumentada .cabecalho h1 {
-    font-size: 1.85rem;
-}
-
-body.fonte-aumentada .lista-menu a {
-    font-size: 1rem;
-}
-
-body.fonte-aumentada .card p,
-body.fonte-aumentada .item-pilar p,
-body.fonte-aumentada .item-cuidado p {
-    font-size: 1.05rem;
-}
-/* ==============================================
-   PARTE 4 — RODAPÉ + BOTÕES + RESPONSIVIDADE
-   ============================================== */
-
-
-/* =========================
-   RODAPÉ
-========================= */
-
-footer {
-    background: var(--verde-escuro);
-
-    color: var(--branco);
-
-    text-align: center;
-
-    padding: 40px 20px;
-
-    margin-top: 20px;
-
-    border-top: 4px solid var(--verde-claro);
-
-    box-shadow:
-        0 -8px 25px rgba(63,80,55,.10);
-}
-
-footer p {
-    max-width: 800px;
-
-    margin: 0 auto 8px;
-
-    color: rgba(255,255,255,.85);
-
-    font-size: .9rem;
-
-    line-height: 1.6;
-}
-
-footer p:first-child {
-    color: var(--bege);
-
-    font-weight: 700;
-
-    font-size: 1rem;
-}
-
-footer p:last-child {
-    margin-bottom: 0;
-
-    opacity: .75;
-}
-
-
-/* =========================
-   BOTÕES FLUTUANTES
-========================= */
-
-.botoes-flutuantes {
-    position: fixed;
-
-    right: 22px;
-    bottom: 22px;
-
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 10px;
-
-    z-index: 900;
-}
-
-.botoes-flutuantes button {
-    width: 48px;
-    height: 48px;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    border: 2px solid var(--verde-musgo);
-
-    border-radius: 50%;
-
-    background: var(--branco);
-
-    color: var(--verde-escuro);
-
-    font-size: 1.1rem;
-
-    box-shadow:
-        0 6px 18px rgba(0,0,0,.15);
-
-    transition: var(--transicao);
-}
-
-.botoes-flutuantes button:hover {
-    background: var(--verde-musgo);
-
-    color: var(--branco);
-
-    transform: translateY(-4px) scale(1.05);
-
-    box-shadow:
-        0 10px 22px rgba(63,80,55,.25);
-}
-
-body.modo-escuro .botoes-flutuantes button {
-    background: var(--bege);
-
-    color: var(--verde-escuro);
-
-    border-color: var(--verde-claro);
-}
-
-
-/* =========================
-   MODO ESCURO — AJUSTES
-========================= */
-
-body.modo-escuro .destaque-principal {
-    background:
-        linear-gradient(
-            135deg,
-            #263222,
-            #40513A
-        );
-}
-
-body.modo-escuro .card,
-body.modo-escuro .item-pilar,
-body.modo-escuro .item-cuidado,
-body.modo-escuro form,
-body.modo-escuro .lista-referencias li {
-    background: #2B3028;
-
-    border-color: rgba(169,190,154,.16);
-}
-
-body.modo-escuro .card p,
-body.modo-escuro .item-pilar p,
-body.modo-escuro .item-cuidado p,
-body.modo-escuro .lista-referencias li,
-body.modo-escuro .fundo-destaque > p,
-body.modo-escuro .introducao,
-body.modo-escuro .encerramento > p,
-body.modo-escuro .chamada-escuta p {
-    color: #D9DED7;
-}
-
-body.modo-escuro .fundo-destaque,
-body.modo-escuro .caixa-destaque,
-body.modo-escuro .caixa-resposta,
-body.modo-escuro .resultado-quiz {
-    background: #292D27;
-
-    border-color: rgba(169,190,154,.18);
-}
-
-body.modo-escuro .fundo-destaque > p strong {
-    color: var(--verde-claro);
-}
-
-body.modo-escuro input,
-body.modo-escuro textarea {
-    background: #20251F;
-
-    color: #F3F5F1;
-
-    border-color: #60755A;
-}
-
-body.modo-escuro input::placeholder,
-body.modo-escuro textarea::placeholder {
-    color: #AEB8AA;
-}
-
-body.modo-escuro .pergunta {
-    background: #292D27;
-
-    border-color: rgba(169,190,154,.16);
-}
-
-body.modo-escuro .pergunta label {
-    color: #D9DED7;
-}
-
-body.modo-escuro .pergunta label:hover {
-    background: rgba(143,164,127,.15);
-
-    color: var(--verde-claro);
-}
-
-body.modo-escuro footer {
-    background: #1B211A;
-}
-
-
-/* =========================
-   EFEITO DE TRANSIÇÃO DO SITE
-========================= */
-
-body,
-header,
-.card,
-.item-pilar,
-.item-cuidado,
-form,
-.fundo-destaque,
-.caixa-destaque,
-.caixa-resposta,
-.resultado-quiz,
-.lista-referencias li,
-.chamada-escuta,
-blockquote,
-.botoes-flutuantes button {
-    transition:
-        background .35s ease,
-        color .35s ease,
-        border-color .35s ease,
-        box-shadow .35s ease;
-}
-
-
-/* =========================
-   RESPONSIVIDADE — TABLET
-========================= */
+/* =========================================================
+   RESPONSIVIDADE — TABLETS
+========================================================= */
 
 @media (max-width: 900px) {
 
@@ -1764,67 +714,56 @@ blockquote,
         padding-right: 20px;
     }
 
-    .lista-pilares,
-    .lista-cuidados {
-        grid-template-columns: 1fr;
+    .cabecalho {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .menu-navegacao {
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
     .destaque-principal {
-        padding: 60px 25px;
-    }
-
-    .fundo-destaque,
-    .apoio {
-        padding: 35px 25px;
-    }
-
-    .botoes-flutuantes {
-        right: 16px;
-        bottom: 16px;
+        padding: 65px 25px;
     }
 }
 
 
-/* =========================
-   RESPONSIVIDADE — CELULAR
-========================= */
+/* =========================================================
+   RESPONSIVIDADE — CELULARES
+========================================================= */
 
-@media (max-width: 768px) {
-
-    /* CABEÇALHO */
+@media (max-width: 700px) {
 
     header {
-        position: relative;
+        position: fixed;
     }
 
     .cabecalho {
-        padding: 18px 15px 8px;
+        padding:
+            12px
+            15px
+            5px;
     }
 
     .cabecalho h1 {
-        font-size: 1.45rem;
+        font-size: 1.35rem;
     }
 
     .cabecalho p {
-        font-size: .82rem;
+        font-size: 0.76rem;
     }
-
-    .subtitulo {
-        font-size: .72rem !important;
-    }
-
-
-    /* MENU */
 
     .menu-navegacao {
-        padding: 5px 15px 15px;
+        padding:
+            5px
+            15px
+            10px;
     }
 
     .botao-menu {
-        display: flex;
-
-        align-items: center;
-        justify-content: center;
+        display: block;
     }
 
     .lista-menu {
@@ -1841,8 +780,6 @@ blockquote,
 
     .lista-menu.aberto {
         display: flex;
-
-        animation: aparecer .3s ease;
     }
 
     .lista-menu li {
@@ -1852,135 +789,1694 @@ blockquote,
     .lista-menu a {
         width: 100%;
 
+        padding: 10px 15px;
+
+        border-radius: 12px;
+
         text-align: center;
-
-        padding: 10px;
-
-        border-radius: 10px;
     }
-
-
-    /* CONTEÚDO */
 
     main {
         padding:
-            45px 16px 50px;
+            185px
+            15px
+            50px;
     }
 
     .secao {
         margin-bottom: 60px;
     }
 
-
-    /* HERO */
-
     .destaque-principal {
-        padding: 50px 20px;
+        padding:
+            55px
+            18px;
 
         border-radius: 22px;
     }
 
     .destaque-principal h2 {
-        font-size: 2rem;
+        font-size:
+            clamp(1.8rem, 9vw, 2.5rem);
     }
 
     .destaque-principal p {
-        font-size: .95rem;
+        font-size: 0.95rem;
     }
-
-
-    /* BOTÕES */
 
     .botoes-acao {
         flex-direction: column;
-
-        width: 100%;
     }
 
-    .botoes-acao .botao {
+    .botao {
         width: 100%;
-
         max-width: 320px;
     }
 
     .botao.grande {
         width: 100%;
+        min-width: 0;
     }
-
-
-    /* TÍTULOS */
 
     .titulo-secao {
-        font-size: 1.8rem;
+        margin-bottom: 28px;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE — CELULARES PEQUENOS
+========================================================= */
+
+@media (max-width: 420px) {
+
+    body {
+        font-size: 15px;
     }
 
+    .cabecalho h1 {
+        font-size: 1.2rem;
+    }
 
-    /* CARDS */
+    .cabecalho p {
+        font-size: 0.7rem;
+    }
 
+    main {
+        padding-top: 180px;
+    }
+
+    .destaque-principal {
+        padding:
+            45px
+            15px;
+    }
+
+    .destaque-principal h2 {
+        font-size: 1.75rem;
+    }
+
+    .titulo-secao h2 {
+        font-size: 1.55rem;
+    }
+}
+/* =========================================================
+   🌿 SAÚDE EMOCIONAL — STYLE.CSS
+   PARTE 2/4
+   Cards + Princípios + Pilares + Cuidados + Seções
+   ========================================================= */
+
+
+/* =========================================================
+   SEÇÕES COM FUNDO COLORIDO
+========================================================= */
+
+.fundo-rosa {
+    background:
+        linear-gradient(
+            135deg,
+            var(--rosa-claro),
+            var(--bege-claro)
+        );
+
+    border-radius: 28px;
+
+    padding: 55px 35px;
+
+    margin-left: 0;
+    margin-right: 0;
+
+    border: 1px solid var(--borda);
+
+    box-shadow:
+        0 5px 20px rgba(63, 80, 55, 0.05);
+}
+
+
+/* =========================================================
+   SOBRE
+========================================================= */
+
+.sobre-conteudo {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.5fr)
+        minmax(280px, 0.8fr);
+
+    gap: 35px;
+
+    align-items: stretch;
+
+    max-width: 1050px;
+
+    margin: 0 auto;
+}
+
+.sobre-texto {
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    gap: 18px;
+}
+
+.sobre-texto p {
+    color: var(--marrom-claro);
+
+    line-height: 1.85;
+
+    text-align: left;
+}
+
+
+/* destaque lateral */
+
+.sobre-destaque {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 35px 25px;
+
+    background: var(--branco);
+
+    border: 1px solid var(--borda);
+
+    border-radius: var(--raio);
+
+    box-shadow: var(--sombra);
+
+    transition: var(--transicao);
+}
+
+.sobre-destaque:hover {
+    transform: translateY(-6px);
+
+    box-shadow: var(--sombra-forte);
+}
+
+.sobre-destaque i {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 70px;
+    height: 70px;
+
+    margin-bottom: 18px;
+
+    border-radius: 50%;
+
+    background: var(--bege);
+
+    color: var(--verde-musgo);
+
+    font-size: 2rem;
+}
+
+.sobre-destaque h3 {
+    margin-bottom: 10px;
+
+    color: var(--verde-escuro);
+
+    font-size: 1.2rem;
+}
+
+body.modo-escuro .sobre-destaque h3 {
+    color: var(--verde-claro);
+}
+
+.sobre-destaque p {
+    color: var(--marrom-claro);
+
+    font-size: 0.93rem;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   GRADE DE CARDS
+========================================================= */
+
+.cards,
+.grade-cards {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 20px;
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.card {
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+
+    min-height: 260px;
+
+    padding: 30px 22px;
+
+    background: var(--branco);
+
+    border: 1px solid var(--borda);
+
+    border-radius: 20px;
+
+    box-shadow: var(--sombra);
+
+    overflow: hidden;
+
+    transition: var(--transicao);
+}
+
+
+/* barra superior */
+
+.card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 4px;
+
+    background: var(--verde-musgo);
+
+    transform: scaleX(0);
+
+    transform-origin: center;
+
+    transition: var(--transicao);
+}
+
+.card:hover {
+    transform: translateY(-8px);
+
+    border-color: var(--verde-claro);
+
+    box-shadow: var(--sombra-forte);
+}
+
+.card:hover::before {
+    transform: scaleX(1);
+}
+
+
+/* ícones dos cards */
+
+.card > i {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 65px;
+    height: 65px;
+
+    margin-bottom: 18px;
+
+    border-radius: 18px;
+
+    background: var(--bege);
+
+    color: var(--verde-musgo);
+
+    font-size: 1.7rem;
+
+    transition: var(--transicao);
+}
+
+.card:hover > i {
+    background: var(--verde-musgo);
+
+    color: var(--branco);
+
+    transform: scale(1.05);
+}
+
+
+/* títulos */
+
+.card h3 {
+    margin-bottom: 10px;
+
+    color: var(--verde-escuro);
+
+    font-size: 1.1rem;
+
+    line-height: 1.4;
+}
+
+body.modo-escuro .card h3 {
+    color: var(--verde-claro);
+}
+
+
+/* textos */
+
+.card p {
+    color: var(--marrom-claro);
+
+    font-size: 0.92rem;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   PILARES
+========================================================= */
+
+.pilares-grid,
+.lista-pilares {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 22px;
+
+    max-width: 1050px;
+
+    margin: 0 auto;
+}
+
+
+/* item individual */
+
+.pilar,
+.item-pilar {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 20px;
+
+    padding: 25px;
+
+    background: var(--branco);
+
+    border: 1px solid var(--borda);
+
+    border-left:
+        5px solid var(--verde-musgo);
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 5px 18px rgba(63, 80, 55, 0.08);
+
+    transition: var(--transicao);
+}
+
+.pilar:hover,
+.item-pilar:hover {
+    transform: translateY(-5px);
+
+    border-left-color: var(--verde-claro);
+
+    box-shadow: var(--sombra);
+}
+
+
+/* ícone */
+
+.pilar-icone {
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 58px;
+    height: 58px;
+
+    border-radius: 16px;
+
+    background: var(--bege);
+
+    color: var(--verde-musgo);
+
+    font-size: 1.4rem;
+}
+
+
+/* conteúdo */
+
+.pilar h3,
+.item-pilar h3 {
+    margin-bottom: 7px;
+
+    color: var(--verde-escuro);
+
+    font-size: 1.08rem;
+
+    line-height: 1.4;
+}
+
+body.modo-escuro .pilar h3,
+body.modo-escuro .item-pilar h3 {
+    color: var(--verde-claro);
+}
+
+.pilar p,
+.item-pilar p {
+    color: var(--marrom-claro);
+
+    font-size: 0.93rem;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   CUIDADOS
+========================================================= */
+
+.cuidados-grid,
+.lista-cuidados {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 20px;
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+}
+
+
+/* cuidado */
+
+.cuidado,
+.item-cuidado {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 28px 20px;
+
+    background: var(--branco);
+
+    border: 1px solid var(--borda);
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 5px 18px rgba(63, 80, 55, 0.08);
+
+    transition: var(--transicao);
+}
+
+.cuidado:hover,
+.item-cuidado:hover {
+    transform: translateY(-7px);
+
+    border-color: var(--verde-claro);
+
+    box-shadow: var(--sombra-forte);
+}
+
+
+/* ícone */
+
+.cuidado > i {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 62px;
+    height: 62px;
+
+    margin-bottom: 16px;
+
+    border-radius: 50%;
+
+    background: var(--bege);
+
+    color: var(--verde-musgo);
+
+    font-size: 1.5rem;
+
+    transition: var(--transicao);
+}
+
+.cuidado:hover > i {
+    background: var(--verde-musgo);
+
+    color: var(--branco);
+}
+
+
+/* títulos */
+
+.cuidado h3,
+.item-cuidado h3 {
+    margin-bottom: 9px;
+
+    color: var(--verde-escuro);
+
+    font-size: 1.05rem;
+
+    line-height: 1.4;
+}
+
+body.modo-escuro .cuidado h3,
+body.modo-escuro .item-cuidado h3 {
+    color: var(--verde-claro);
+}
+
+
+/* textos */
+
+.cuidado p,
+.item-cuidado p {
+    color: var(--marrom-claro);
+
+    font-size: 0.91rem;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   SEÇÃO "NA ESCOLA"
+========================================================= */
+
+.escola {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.2fr)
+        minmax(280px, 0.8fr);
+
+    gap: 35px;
+
+    align-items: center;
+
+    max-width: 1050px;
+
+    margin: 0 auto;
+}
+
+.escola-texto {
+    text-align: left;
+}
+
+.escola-texto p {
+    margin-bottom: 18px;
+
+    color: var(--marrom-claro);
+
+    line-height: 1.8;
+}
+
+.escola-texto .botao {
+    margin-top: 8px;
+
+    background: var(--verde-musgo);
+
+    color: var(--branco);
+}
+
+.escola-texto .botao:hover {
+    background: var(--verde-escuro);
+}
+
+
+/* =========================================================
+   CARDS DA ESCOLA
+========================================================= */
+
+.escola-cards {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+.escola-cards > div {
+    display: grid;
+
+    grid-template-columns:
+        48px 1fr;
+
+    grid-template-rows:
+        auto auto;
+
+    column-gap: 15px;
+
+    padding: 18px;
+
+    background: var(--branco);
+
+    border: 1px solid var(--borda);
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 5px 18px rgba(63, 80, 55, 0.07);
+
+    transition: var(--transicao);
+}
+
+.escola-cards > div:hover {
+    transform: translateX(5px);
+
+    box-shadow: var(--sombra);
+}
+
+
+/* ícone */
+
+.escola-cards i {
+    grid-row: 1 / 3;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 48px;
+    height: 48px;
+
+    border-radius: 14px;
+
+    background: var(--bege);
+
+    color: var(--verde-musgo);
+
+    font-size: 1.2rem;
+}
+
+
+/* texto */
+
+.escola-cards strong {
+    color: var(--verde-escuro);
+
+    font-size: 1rem;
+}
+
+body.modo-escuro .escola-cards strong {
+    color: var(--verde-claro);
+}
+
+.escola-cards span {
+    color: var(--marrom-claro);
+
+    font-size: 0.88rem;
+}
+
+
+/* =========================================================
+   COMO AJUDAR
+========================================================= */
+
+.ajuda-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+
+    max-width: 950px;
+
+    margin: 0 auto;
+}
+
+.ajuda-item {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 20px;
+
+    padding: 25px;
+
+    background: var(--branco);
+
+    border: 1px solid var(--borda);
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 5px 18px rgba(63, 80, 55, 0.07);
+
+    transition: var(--transicao);
+}
+
+.ajuda-item:hover {
+    transform: translateY(-5px);
+
+    box-shadow: var(--sombra);
+}
+
+
+/* número */
+
+.ajuda-item > span {
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 48px;
+    height: 48px;
+
+    border-radius: 50%;
+
+    background: var(--verde-musgo);
+
+    color: var(--branco);
+
+    font-weight: 700;
+
+    font-size: 0.9rem;
+}
+
+
+/* texto */
+
+.ajuda-item h3 {
+    margin-bottom: 6px;
+
+    color: var(--verde-escuro);
+
+    font-size: 1.05rem;
+}
+
+body.modo-escuro .ajuda-item h3 {
+    color: var(--verde-claro);
+}
+
+.ajuda-item p {
+    color: var(--marrom-claro);
+
+    font-size: 0.92rem;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   APOIO
+========================================================= */
+
+.apoio {
+    position: relative;
+
+    max-width: 1100px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    padding: 50px 40px;
+
+    border-radius: 28px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--verde-escuro),
+            var(--verde-musgo)
+        );
+
+    color: var(--branco);
+
+    overflow: hidden;
+
+    box-shadow: var(--sombra-forte);
+}
+
+.apoio::after {
+    content: "🌿";
+
+    position: absolute;
+
+    top: 20px;
+    right: 30px;
+
+    font-size: 4rem;
+
+    opacity: 0.08;
+
+    pointer-events: none;
+}
+
+.apoio .titulo-secao h2 {
+    color: var(--branco);
+}
+
+.apoio .titulo-secao span {
+    color: var(--bege);
+}
+
+.apoio .titulo-secao::after {
+    background: var(--bege);
+}
+
+
+/* =========================================================
+   CARD INTERNO DE APOIO
+========================================================= */
+
+.apoio-card {
+    position: relative;
+
+    z-index: 1;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    padding: 30px;
+
+    background: rgba(255, 255, 255, 0.09);
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    border-radius: 20px;
+
+    backdrop-filter: blur(5px);
+}
+
+.apoio-icone {
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 75px;
+    height: 75px;
+
+    border-radius: 22px;
+
+    background: var(--bege);
+
+    color: var(--verde-escuro);
+
+    font-size: 2rem;
+}
+
+.apoio-texto h3 {
+    margin-bottom: 10px;
+
+    color: var(--bege);
+
+    font-size: 1.25rem;
+}
+
+.apoio-texto p {
+    margin-bottom: 10px;
+
+    color: rgba(255, 255, 255, 0.9);
+
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE — TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .cards,
     .grade-cards {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .cuidados-grid,
+    .lista-cuidados {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .sobre-conteudo,
+    .escola {
+        grid-template-columns:
+            1fr;
+    }
+
+    .sobre-destaque {
+        max-width: 600px;
+
+        margin: 0 auto;
+
+        width: 100%;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE — CELULAR
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .fundo-rosa {
+        padding:
+            40px
+            15px;
+
+        border-radius: 22px;
+    }
+
+    .cards,
+    .grade-cards,
+    .pilares-grid,
+    .lista-pilares,
+    .cuidados-grid,
+    .lista-cuidados,
+    .ajuda-grid {
         grid-template-columns: 1fr;
 
         gap: 16px;
     }
 
     .card {
-        padding: 23px 20px;
+        min-height: auto;
+
+        padding: 27px 20px;
     }
 
-
-    /* FUNDO DESTAQUE */
-
-    .fundo-destaque {
-        padding: 28px 18px;
-
-        border-radius: 20px;
-    }
-
-
-    /* PILARES */
-
-    .lista-pilares,
-    .lista-cuidados {
-        grid-template-columns: 1fr;
-
+    .pilar,
+    .item-pilar {
         gap: 15px;
-    }
 
-    .item-pilar,
-    .item-cuidado {
         padding: 20px;
     }
 
+    .pilar-icone {
+        width: 50px;
+        height: 50px;
 
-    /* APOIO */
+        font-size: 1.2rem;
+    }
+
+    .escola-texto {
+        text-align: center;
+    }
+
+    .escola-texto .botao {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .ajuda-item {
+        gap: 15px;
+
+        padding: 20px;
+    }
 
     .apoio {
-        padding: 30px 18px;
+        padding:
+            40px
+            18px;
 
         border-radius: 22px;
     }
 
-    .apoio::after {
-        display: none;
+    .apoio-card {
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 25px 18px;
+
+        gap: 18px;
     }
 
-    .lista-apoio li {
-        padding: 13px;
+    .apoio-texto h3 {
+        font-size: 1.1rem;
+    }
+}
 
-        font-size: .92rem;
+
+/* =========================================================
+   CELULARES PEQUENOS
+========================================================= */
+
+@media (max-width: 420px) {
+
+    .card,
+    .cuidado,
+    .item-cuidado {
+        padding:
+            23px
+            17px;
     }
 
-
-    /* CITAÇÃO */
-
-    blockquote {
-        padding: 22px 18px;
-
-        font-size: 1.05rem;
+    .sobre-destaque {
+        padding:
+            28px
+            18px;
     }
 
+    .pilar,
+    .item-pilar {
+        flex-direction: column;
 
-    /* ESCUTA */
+        align-items: center;
+
+        text-align: center;
+    }
+
+    .ajuda-item {
+        flex-direction: column;
+
+        align-items: center;
+
+        text-align: center;
+    }
+
+    .escola-cards > div {
+        grid-template-columns:
+            42px 1fr;
+    }
+
+    .escola-cards i {
+        width: 42px;
+        height: 42px;
+    }
+}
+/* =========================================================
+   PARTE 3/4
+   Formulários + Espaço de Escuta + Quiz + Referências
+   ========================================================= */
+
+
+/* =========================================================
+   FORMULÁRIOS
+========================================================= */
+
+form {
+    width: 100%;
+    max-width: 850px;
+    margin: 30px auto 0;
+    padding: 35px;
+
+    background: var(--branco);
+    border: 1px solid var(--borda);
+    border-radius: 22px;
+
+    box-shadow: var(--sombra);
+}
+
+form label {
+    display: block;
+
+    margin: 18px 0 8px;
+
+    color: var(--verde-escuro);
+
+    font-weight: 600;
+    text-align: left;
+}
+
+body.modo-escuro form label {
+    color: var(--verde-claro);
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+
+    padding: 14px 16px;
+
+    border: 2px solid var(--borda);
+    border-radius: 13px;
+
+    background: var(--bege-claro);
+    color: var(--marrom);
+
+    outline: none;
+
+    transition: var(--transicao);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: var(--verde-musgo);
+
+    box-shadow:
+        0 0 0 4px rgba(95, 115, 82, .12);
+}
+
+textarea {
+    min-height: 180px;
+    resize: vertical;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: var(--marrom-claro);
+    opacity: .7;
+}
+
+
+/* =========================================================
+   BOTÕES DOS FORMULÁRIOS
+========================================================= */
+
+form button[type="submit"] {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: fit-content;
+
+    margin: 25px auto 0;
+
+    padding: 13px 25px;
+
+    border: none;
+    border-radius: 50px;
+
+    background: var(--verde-musgo);
+    color: var(--branco);
+
+    font-weight: 700;
+    font-size: .95rem;
+
+    box-shadow:
+        0 6px 18px rgba(63, 80, 55, .16);
+
+    transition: var(--transicao);
+}
+
+form button[type="submit"]:hover {
+    background: var(--verde-escuro);
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 25px rgba(63, 80, 55, .22);
+}
+
+form button[type="submit"]:active {
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   CAIXA DE RESPOSTA
+========================================================= */
+
+.caixa-resposta,
+.resultado-quiz {
+    display: none;
+
+    width: 100%;
+    max-width: 850px;
+
+    margin: 25px auto 0;
+
+    padding: 28px;
+
+    background: var(--bege-claro);
+
+    border: 2px solid var(--verde-claro);
+
+    border-radius: 20px;
+
+    color: var(--marrom);
+
+    text-align: center;
+
+    line-height: 1.8;
+
+    box-shadow: var(--sombra);
+
+    animation: aparecer .5s ease;
+}
+
+.caixa-resposta.mostrar,
+.resultado-quiz.mostrar {
+    display: block;
+}
+
+
+/* =========================================================
+   ESPAÇO DE ESCUTA
+========================================================= */
+
+#formularioEscuta {
+    margin-top: 30px;
+}
+
+#formularioEscuta textarea {
+    min-height: 220px;
+}
+
+#respostaAutomatica {
+    font-size: 1rem;
+}
+
+#respostaAutomatica strong {
+    color: var(--verde-escuro);
+}
+
+body.modo-escuro #respostaAutomatica strong {
+    color: var(--verde-claro);
+}
+
+
+/* =========================================================
+   MENSAGENS PARA O CORAÇÃO
+========================================================= */
+
+.caixa-destaque {
+    width: 100%;
+    max-width: 850px;
+
+    margin: 35px auto;
+
+    padding: 30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--bege-claro),
+            var(--bege)
+        );
+
+    border: 1px solid var(--borda);
+
+    border-radius: 22px;
+
+    box-shadow: var(--sombra);
+
+    text-align: center;
+}
+
+.caixa-destaque .titulo-secao {
+    margin-bottom: 10px;
+}
+
+.frase-motivacional {
+    max-width: 700px;
+
+    margin: 20px auto;
+
+    padding: 22px;
+
+    background: var(--branco);
+
+    border-left: 5px solid var(--verde-musgo);
+
+    border-radius: 15px;
+
+    color: var(--verde-escuro);
+
+    font-size: 1.05rem;
+
+    font-style: italic;
+
+    line-height: 1.8;
+
+    box-shadow:
+        0 5px 18px rgba(63, 80, 55, .07);
+}
+
+body.modo-escuro .frase-motivacional {
+    color: var(--verde-claro);
+}
+
+
+/* =========================================================
+   QUIZ
+========================================================= */
+
+#formularioQuiz {
+    max-width: 900px;
+}
+
+
+/* cada pergunta */
+
+.pergunta {
+    width: 100%;
+
+    margin: 25px 0;
+
+    padding: 25px;
+
+    background: var(--bege-claro);
+
+    border: 1px solid var(--borda);
+
+    border-radius: 20px;
+
+    transition: var(--transicao);
+}
+
+.pergunta:hover {
+    border-color: var(--verde-claro);
+
+    box-shadow:
+        0 8px 22px rgba(63, 80, 55, .08);
+}
+
+
+/* título da pergunta */
+
+.pergunta > p {
+    margin-bottom: 17px;
+
+    color: var(--verde-escuro);
+
+    font-size: 1.05rem;
+
+    line-height: 1.5;
+
+    text-align: left;
+}
+
+body.modo-escuro .pergunta > p {
+    color: var(--verde-claro);
+}
+
+
+/* =========================================================
+   ALTERNATIVAS DO QUIZ — CARDS
+========================================================= */
+
+.pergunta label {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    width: 100%;
+
+    margin: 10px 0;
+
+    padding: 15px 17px;
+
+    background: var(--branco);
+
+    border: 2px solid transparent;
+
+    border-radius: 14px;
+
+    color: var(--marrom);
+
+    font-size: .94rem;
+
+    font-weight: 500;
+
+    line-height: 1.5;
+
+    cursor: pointer;
+
+    transition: var(--transicao);
+
+    text-align: left;
+}
+
+
+/* efeito ao passar o mouse */
+
+.pergunta label:hover {
+    border-color: var(--verde-claro);
+
+    background: var(--bege);
+
+    transform: translateX(3px);
+}
+
+
+/* radio */
+
+.pergunta input[type="radio"] {
+    flex-shrink: 0;
+
+    width: 19px;
+    height: 19px;
+
+    margin: 0;
+
+    accent-color: var(--verde-musgo);
+
+    cursor: pointer;
+}
+
+
+/* alternativa selecionada */
+
+.pergunta label:has(input:checked) {
+    background: rgba(143, 164, 127, .18);
+
+    border-color: var(--verde-musgo);
+
+    color: var(--verde-escuro);
+
+    box-shadow:
+        0 4px 14px rgba(95, 115, 82, .12);
+}
+
+body.modo-escuro .pergunta label:has(input:checked) {
+    color: var(--verde-claro);
+}
+
+
+/* =========================================================
+   BOTÃO DO QUIZ
+========================================================= */
+
+#formularioQuiz button {
+    min-width: 250px;
+}
+
+#formularioQuiz .botao.grande {
+    margin-top: 30px;
+}
+
+
+/* =========================================================
+   RESULTADO DO QUIZ
+========================================================= */
+
+.resultado-quiz {
+    max-width: 750px;
+
+    margin-top: 35px;
+
+    padding: 35px;
+}
+
+.resultado-quiz h2 {
+    margin-bottom: 12px;
+
+    color: var(--verde-escuro);
+
+    font-size: 1.6rem;
+}
+
+body.modo-escuro .resultado-quiz h2 {
+    color: var(--verde-claro);
+}
+
+.resultado-quiz p {
+    margin-bottom: 10px;
+
+    color: var(--marrom-claro);
+}
+
+.resultado-quiz strong {
+    color: var(--verde-escuro);
+}
+
+body.modo-escuro .resultado-quiz strong {
+    color: var(--verde-claro);
+}
+
+
+/* =========================================================
+   REFERÊNCIAS
+========================================================= */
+
+.lista-referencias {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+
+    max-width: 950px;
+
+    margin: 30px auto;
+}
+
+.lista-referencias li {
+    list-style: none;
+
+    padding: 22px;
+
+    background: var(--branco);
+
+    border: 1px solid var(--borda);
+
+    border-left: 5px solid var(--verde-musgo);
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 5px 18px rgba(63, 80, 55, .07);
+
+    transition: var(--transicao);
+
+    text-align: left;
+}
+
+.lista-referencias li:hover {
+    transform: translateY(-5px);
+
+    border-left-color: var(--verde-claro);
+
+    box-shadow: var(--sombra);
+}
+
+.lista-referencias a {
+    color: var(--verde-escuro);
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    overflow-wrap: anywhere;
+}
+
+.lista-referencias a:hover {
+    text-decoration: underline;
+}
+
+body.modo-escuro .lista-referencias a {
+    color: var(--verde-claro);
+}
+
+
+/* =========================================================
+   CAIXA DE APOIO DA PÁGINA DE ESCUTA
+========================================================= */
+
+.lista-apoio {
+    max-width: 850px;
+
+    margin: 25px auto 0;
+
+    padding: 0;
+
+    list-style: none;
+}
+
+.lista-apoio li {
+    margin-bottom: 12px;
+
+    padding: 16px 20px;
+
+    background: rgba(255, 255, 255, .09);
+
+    border: 1px solid rgba(255, 255, 255, .1);
+
+    border-radius: 14px;
+
+    color: rgba(255, 255, 255, .94);
+
+    text-align: left;
+
+    transition: var(--transicao);
+}
+
+.lista-apoio li:hover {
+    background: rgba(255, 255, 255, .15);
+
+    transform: translateX(4px);
+}
+
+.lista-apoio strong {
+    color: var(--bege);
+}
+
+
+/* =========================================================
+   ACESSIBILIDADE — FOCO
+========================================================= */
+
+input:focus-visible,
+textarea:focus-visible,
+button:focus-visible,
+a:focus-visible {
+    outline: 3px solid rgba(143, 164, 127, .55);
+
+    outline-offset: 3px;
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE — FORMULÁRIOS
+========================================================= */
+
+@media (max-width: 700px) {
 
     form {
         padding: 25px 18px;
@@ -1988,31 +2484,504 @@ blockquote,
         border-radius: 18px;
     }
 
+    .pergunta {
+        padding: 20px 15px;
 
-    /* BOTÕES FLUTUANTES */
+        border-radius: 17px;
+    }
 
-    .botoes-flutuantes {
-        position: static;
+    .pergunta label {
+        padding: 14px;
 
-        flex-direction: row;
+        font-size: .9rem;
+    }
 
+    .caixa-destaque {
+        padding: 25px 17px;
+
+        border-radius: 18px;
+    }
+
+    .caixa-resposta,
+    .resultado-quiz {
+        padding: 25px 18px;
+
+        border-radius: 18px;
+    }
+
+    .lista-referencias {
+        grid-template-columns: 1fr;
+    }
+
+    #formularioQuiz .botao.grande {
+        width: 100%;
+
+        min-width: 0;
+    }
+}
+
+
+/* =========================================================
+   CELULARES PEQUENOS
+========================================================= */
+
+@media (max-width: 420px) {
+
+    form {
+        padding: 22px 14px;
+    }
+
+    .pergunta {
+        padding: 18px 12px;
+    }
+
+    .pergunta label {
+        gap: 9px;
+
+        padding: 13px 11px;
+
+        font-size: .86rem;
+    }
+
+    .frase-motivacional {
+        padding: 18px;
+
+        font-size: .95rem;
+    }
+}
+/* =========================================================
+   🌿 SAÚDE EMOCIONAL — STYLE.CSS
+   PARTE 4/4
+   Botões flutuantes + Rodapé + Menu Mobile + Ajustes finais
+   ========================================================= */
+
+
+/* =========================================================
+   BOTÕES FLUTUANTES
+========================================================= */
+
+.botoes-flutuantes {
+    position: fixed;
+
+    right: 22px;
+    bottom: 22px;
+
+    z-index: 1500;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.botoes-flutuantes button {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 48px;
+    height: 48px;
+
+    border: 1px solid var(--borda);
+
+    border-radius: 50%;
+
+    background: var(--verde-musgo);
+
+    color: var(--branco);
+
+    font-size: 1.15rem;
+
+    box-shadow:
+        0 6px 18px rgba(63, 80, 55, .20);
+
+    transition: var(--transicao);
+}
+
+.botoes-flutuantes button:hover {
+    background: var(--verde-escuro);
+
+    transform: translateY(-4px) scale(1.05);
+
+    box-shadow:
+        0 10px 25px rgba(63, 80, 55, .25);
+}
+
+.botoes-flutuantes button:active {
+    transform: scale(.95);
+}
+
+
+/* =========================================================
+   BOTÃO VOLTAR AO TOPO
+========================================================= */
+
+#botaoTopo {
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(10px);
+
+    transition:
+        opacity .3s ease,
+        visibility .3s ease,
+        transform .3s ease;
+}
+
+#botaoTopo.mostrar {
+    opacity: 1;
+    visibility: visible;
+
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   BOTÃO DE AUMENTAR FONTE
+========================================================= */
+
+body.fonte-grande {
+    font-size: 18px;
+}
+
+body.fonte-grande .cabecalho h1 {
+    font-size: 1.85rem;
+}
+
+body.fonte-grande .cabecalho p {
+    font-size: 1rem;
+}
+
+body.fonte-grande .menu a {
+    font-size: 1rem;
+}
+
+body.fonte-grande .card p,
+body.fonte-grande .cuidado p,
+body.fonte-grande .pilar p,
+body.fonte-grande .item-pilar p {
+    font-size: 1rem;
+}
+
+
+/* =========================================================
+   RODAPÉ
+========================================================= */
+
+footer {
+    width: 100%;
+
+    margin-top: 50px;
+
+    padding: 40px 25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--verde-escuro),
+            var(--verde-musgo)
+        );
+
+    color: var(--branco);
+
+    text-align: center;
+
+    border-top:
+        4px solid var(--verde-claro);
+}
+
+footer p {
+    max-width: 850px;
+
+    margin: 5px auto;
+
+    color: rgba(255, 255, 255, .9);
+
+    font-size: .92rem;
+
+    line-height: 1.7;
+}
+
+footer p:first-child {
+    color: var(--bege);
+
+    font-weight: 700;
+
+    font-size: 1rem;
+}
+
+
+/* =========================================================
+   MENU MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    header {
+        padding-bottom: 8px;
+    }
+
+    .cabecalho {
+        padding:
+            12px
+            55px
+            5px;
+    }
+
+    .cabecalho h1 {
+        font-size: 1.35rem;
+
+        line-height: 1.3;
+    }
+
+    .cabecalho p {
+        font-size: .78rem;
+
+        line-height: 1.4;
+    }
+
+
+    /* botão */
+
+    .botao-menu {
+        display: flex;
+
+        align-items: center;
         justify-content: center;
 
-        margin: 20px auto;
+        width: 43px;
+        height: 43px;
 
-        padding-bottom: 10px;
+        margin: 5px auto;
+
+        border-radius: 12px;
+    }
+
+
+    /* lista */
+
+    .menu-navegacao {
+        position: relative;
+
+        padding:
+            3px
+            15px
+            8px;
+    }
+
+    .lista-menu {
+        display: none;
+
+        flex-direction: column;
+
+        width: min(92%, 380px);
+
+        margin: 8px auto 0;
+
+        padding: 10px;
+
+        background: var(--branco);
+
+        border:
+            1px solid var(--borda);
+
+        border-radius: 18px;
+
+        box-shadow:
+            0 12px 30px rgba(63, 80, 55, .15);
+
+        animation: menuAparecer .25s ease;
+    }
+
+    .lista-menu.aberto {
+        display: flex;
+    }
+
+    .lista-menu li {
+        width: 100%;
+    }
+
+    .lista-menu a {
+        display: block;
+
+        width: 100%;
+
+        padding: 12px 15px;
+
+        text-align: center;
+
+        border-radius: 12px;
+
+        font-size: .92rem;
+    }
+
+    .lista-menu a::after {
+        display: none;
+    }
+
+    .lista-menu a:hover,
+    .lista-menu a.ativo {
+        transform: none;
+
+        background: var(--bege);
+
+        color: var(--verde-escuro);
+    }
+
+    body.modo-escuro .lista-menu {
+        background: var(--creme);
+    }
+
+    body.modo-escuro .lista-menu a:hover,
+    body.modo-escuro .lista-menu a.ativo {
+        background: var(--bege);
+        color: var(--verde-claro);
+    }
+
+
+    /* conteúdo */
+
+    main {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+
+/* =========================================================
+   ANIMAÇÃO DO MENU
+========================================================= */
+
+@keyframes menuAparecer {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(-8px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+/* =========================================================
+   TABLETS
+========================================================= */
+
+@media (min-width: 701px) and (max-width: 1000px) {
+
+    main {
+        padding-left: 22px;
+        padding-right: 22px;
+    }
+
+    .cabecalho {
+        padding-left: 22px;
+        padding-right: 22px;
+    }
+
+    .menu-navegacao {
+        padding-left: 22px;
+        padding-right: 22px;
+    }
+
+    .lista-menu {
+        gap: 5px;
+    }
+
+    .lista-menu a {
+        padding:
+            8px
+            12px;
+
+        font-size: .86rem;
+    }
+}
+
+
+/* =========================================================
+   CELULARES
+========================================================= */
+
+@media (max-width: 600px) {
+
+    body {
+        font-size: 15px;
+    }
+
+    main {
+        padding-top: 150px;
+        padding-bottom: 40px;
+    }
+
+    .secao {
+        margin-bottom: 55px;
+    }
+
+    .titulo-secao {
+        font-size: 1.65rem;
+
+        line-height: 1.3;
+    }
+
+    .titulo-secao::after {
+        width: 50px;
+        height: 3px;
+    }
+
+    .introducao {
+        font-size: .92rem;
+    }
+
+
+    /* botões */
+
+    .botao {
+        width: 100%;
+
+        max-width: 330px;
+
+        padding:
+            12px
+            20px;
+    }
+
+    .botao.grande {
+        width: 100%;
+    }
+
+
+    /* botões flutuantes */
+
+    .botoes-flutuantes {
+        right: 12px;
+        bottom: 12px;
+
+        gap: 7px;
     }
 
     .botoes-flutuantes button {
-        width: 44px;
-        height: 44px;
+        width: 43px;
+        height: 43px;
+
+        font-size: 1rem;
     }
 
 
-    /* RODAPÉ */
+    /* rodapé */
 
     footer {
-        padding: 32px 18px;
+        padding:
+            32px
+            18px;
     }
 
     footer p {
@@ -2021,53 +2990,44 @@ blockquote,
 }
 
 
-/* =========================
-   CELULARES PEQUENOS
-========================= */
+/* =========================================================
+   CELULARES MUITO PEQUENOS
+========================================================= */
 
-@media (max-width: 430px) {
-
-    body {
-        font-size: 15px;
-    }
+@media (max-width: 380px) {
 
     .cabecalho h1 {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
 
-    .destaque-principal {
-        padding: 42px 17px;
+    .cabecalho p {
+        font-size: .72rem;
     }
 
-    .destaque-principal h2 {
-        font-size: 1.75rem;
+    main {
+        padding-left: 10px;
+        padding-right: 10px;
     }
 
     .titulo-secao {
-        font-size: 1.6rem;
+        font-size: 1.45rem;
     }
 
-    .card {
-        padding: 20px 17px;
+    .botoes-flutuantes {
+        right: 8px;
+        bottom: 8px;
     }
 
-    .apoio {
-        padding: 25px 15px;
-    }
-
-    .chamada-escuta {
-        padding: 27px 18px;
-    }
-
-    .botao.grande {
-        min-width: 0;
+    .botoes-flutuantes button {
+        width: 40px;
+        height: 40px;
     }
 }
 
 
-/* =========================
+/* =========================================================
    REDUÇÃO DE MOVIMENTO
-========================= */
+========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
 
@@ -2082,3 +3042,85 @@ blockquote,
         transition-duration: .01ms !important;
     }
 }
+
+
+/* =========================================================
+   IMPRESSÃO
+========================================================= */
+
+@media print {
+
+    header {
+        position: static;
+
+        box-shadow: none;
+    }
+
+    .botao-menu,
+    .botoes-flutuantes,
+    .hero-buttons,
+    footer {
+        display: none !important;
+    }
+
+    main {
+        padding-top: 30px;
+    }
+
+    .secao {
+        break-inside: avoid;
+    }
+}
+
+
+/* =========================================================
+   AJUSTES FINAIS
+========================================================= */
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+table {
+    max-width: 100%;
+}
+
+button,
+a,
+input,
+textarea,
+select {
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+/* evita textos enormes quebrando o layout */
+
+h1,
+h2,
+h3,
+h4,
+p,
+a,
+li {
+    overflow-wrap: break-word;
+}
+
+
+/* garante que cards nunca ultrapassem a tela */
+
+.card,
+.cuidado,
+.pilar,
+.item-pilar,
+.ajuda-item,
+.apoio-card,
+.sobre-destaque {
+    max-width: 100%;
+}
+
+
+/* =========================================================
+   FIM DO STYLE.CSS 🌿
+========================================================= */
