@@ -1,88 +1,295 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Quiz | Saúde Emocional</title>
+
     <link rel="stylesheet" href="css/estilo.css">
 </head>
+
 <body>
 
+    <!-- =========================
+         CABEÇALHO
+    ========================== -->
+
     <header>
+
         <div class="cabecalho">
             <h1>🌿 Saúde Emocional</h1>
             <p>Equilíbrio • Acolhimento • Cuidado</p>
         </div>
+
         <nav class="menu-navegacao">
-            <button class="botao-menu" id="botaoMenu">☰</button>
+
+            <button class="botao-menu" id="botaoMenu">
+                ☰
+            </button>
+
             <ul class="lista-menu" id="listaMenu">
-                <li><a href="index.html">Início</a></li>
-                <li><a href="escuta.html">Espaço de Escuta</a></li>
-                <li><a href="quiz.html" class="ativo">Quiz</a></li>
-                <li><a href="referencias.html">Referências</a></li>
+
+                <li>
+                    <a href="index.html">
+                        Início
+                    </a>
+                </li>
+
+                <li>
+                    <a href="escuta.html">
+                        Espaço de Escuta
+                    </a>
+                </li>
+
+                <li>
+                    <a href="quiz.html" class="ativo">
+                        Quiz
+                    </a>
+                </li>
+
+                <li>
+                    <a href="referencias.html">
+                        Referências
+                    </a>
+                </li>
+
             </ul>
+
         </nav>
+
     </header>
 
-    <main style="padding-top: 8rem;">
-        <section class="secao">
-            <h2 class="titulo-secao">🧠 Quiz: O Que Você Sabe Sobre Saúde Emocional?</h2>
-            <p class="introducao">Responda com calma. No final você verá sua pontuação e receberá uma mensagem especial!</p>
 
-            <form id="formularioQuiz">
-                <div class="pergunta">
-                    <p><strong>1. O que significa ter saúde emocional?</strong></p>
-                    <label><input type="radio" name="p1" value="errado"> Nunca sentir tristeza, medo ou ansiedade</label>
-                    <label><input type="radio" name="p1" value="certo"> Reconhecer, aceitar e saber lidar com os sentimentos</label>
-                    <label><input type="radio" name="p1" value="errado"> Estar sempre feliz e sorrindo</label>
+    <!-- =========================
+         CONTEÚDO
+    ========================== -->
+
+    <main>
+
+        <section class="secao quiz-secao">
+
+            <div class="quiz-introducao">
+
+                <h2 class="titulo-secao">
+                    🧠 Quiz de Saúde Emocional
+                </h2>
+
+                <p class="introducao">
+                    Que tal testar seus conhecimentos sobre saúde emocional?
+                    Responda às perguntas com calma e descubra sua pontuação no final.
+                </p>
+
+            </div>
+
+
+            <!-- =========================
+                 QUIZ
+            ========================== -->
+
+            <div class="quiz-card" id="quizCard">
+
+
+                <!-- PROGRESSO -->
+
+                <div class="quiz-progresso">
+
+                    <div class="quiz-progresso-topo">
+
+                        <span>
+                            Pergunta
+                            <strong id="numeroPergunta">1</strong>
+                            de 5
+                        </span>
+
+                        <span>
+                            <strong id="pontuacaoAtual">0</strong> ponto(s)
+                        </span>
+
+                    </div>
+
+                    <div class="barra-quiz">
+
+                        <div
+                            id="progressoQuiz"
+                            class="progresso-quiz"
+                        ></div>
+
+                    </div>
+
                 </div>
 
-                <div class="pergunta">
-                    <p><strong>2. Quando estamos nos sentindo sobrecarregados, o que devemos fazer PRIMEIRO?</strong></p>
-                    <label><input type="radio" name="p2" value="errado"> Ignorar os sentimentos e continuar trabalhando/estudando</label>
-                    <label><input type="radio" name="p2" value="errado"> Ficar sozinho(a) sem falar com ninguém</label>
-                    <label><input type="radio" name="p2" value="certo"> Parar, respirar e buscar ajuda ou descansar</label>
+
+                <!-- PERGUNTA -->
+
+                <div class="quiz-pergunta">
+
+                    <span class="numero-pergunta">
+                        Pergunta 1
+                    </span>
+
+                    <h3 id="textoPergunta">
+                        O que significa ter saúde emocional?
+                    </h3>
+
                 </div>
 
-                <div class="pergunta">
-                    <p><strong>3. Sentir ansiedade com frequência significa que:</strong></p>
-                    <label><input type="radio" name="p3" value="errado"> Você está doente sem solução</label>
-                    <label><input type="radio" name="p3" value="certo"> Precisa cuidar melhor de si e buscar orientação profissional</label>
-                    <label><input type="radio" name="p3" value="errado"> É só uma fase e vai passar sozinha sem precisar de ninguém</label>
+
+                <!-- ALTERNATIVAS -->
+
+                <div
+                    class="quiz-opcoes"
+                    id="opcoesQuiz"
+                >
+
+                    <button
+                        class="quiz-opcao"
+                        data-resposta="errada"
+                    >
+                        Nunca sentir tristeza, medo ou ansiedade.
+                    </button>
+
+                    <button
+                        class="quiz-opcao"
+                        data-resposta="certa"
+                    >
+                        Reconhecer, aceitar e aprender a lidar com os sentimentos.
+                    </button>
+
+                    <button
+                        class="quiz-opcao"
+                        data-resposta="errada"
+                    >
+                        Estar sempre feliz e não demonstrar emoções negativas.
+                    </button>
+
                 </div>
 
-                <div class="pergunta">
-                    <p><strong>4. Qual é a atitude MAIS saudável diante de um problema ou sentimento difícil?</strong></p>
-                    <label><input type="radio" name="p4" value="errado"> Guardar tudo dentro de si e não contar a ninguém</label>
-                    <label><input type="radio" name="p4" value="certo"> Conversar com alguém de confiança e buscar apoio</label>
-                    <label><input type="radio" name="p4" value="errado"> Fingir que nada está acontecendo</label>
+
+                <!-- FEEDBACK -->
+
+                <div
+                    id="feedbackQuiz"
+                    class="feedback-quiz"
+                ></div>
+
+
+                <!-- PRÓXIMA -->
+
+                <button
+                    id="proximaPergunta"
+                    class="botao grande botao-proxima"
+                >
+                    Próxima pergunta →
+                </button>
+
+            </div>
+
+
+            <!-- =========================
+                 RESULTADO
+            ========================== -->
+
+            <div
+                id="resultadoQuiz"
+                class="resultado-quiz"
+            >
+
+                <div class="resultado-icone">
+                    🏆
                 </div>
 
-                <div class="pergunta">
-                    <p><strong>5. Sobre pedir ajuda quando precisamos, podemos dizer que é:</strong></p>
-                    <label><input type="radio" name="p5" value="errado"> Sinal de fraqueza</label>
-                    <label><input type="radio" name="p5" value="certo"> Coragem de reconhecer que não precisamos enfrentar tudo sozinhos</label>
-                    <label><input type="radio" name="p5" value="errado"> Algo que só pessoas fracas fazem</label>
-                </div>
+                <h2>
+                    Quiz concluído!
+                </h2>
 
-                <button type="submit" class="botao grande">✅ Verificar respostas</button>
-            </form>
+                <p class="resultado-pontuacao">
+                    Você acertou
+                    <strong id="pontuacaoFinal">0</strong>
+                    de 5 perguntas.
+                </p>
 
-            <div id="resultadoQuiz" class="caixa-resposta"></div>
+                <p id="mensagemResultado"></p>
+
+                <button
+                    id="refazerQuiz"
+                    class="botao grande"
+                >
+                    🔄 Refazer o quiz
+                </button>
+
+            </div>
+
+
+            <!-- =========================
+                 FRASE FINAL
+            ========================== -->
+
+            <div class="quiz-frase-final">
+
+                <p>
+                    💚 Conhecer melhor nossas emoções também é uma forma de cuidar de nós mesmos.
+                </p>
+
+            </div>
+
         </section>
+
     </main>
 
+
+    <!-- =========================
+         RODAPÉ
+    ========================== -->
+
     <footer>
-        <p>🌿 Portal de Saúde Emocional — Projeto Educativo Ana Laura</p>
-        <p>Você não está sozinho(a). Sempre há alguém pronto para ouvir.</p>
+
+        <p>
+            🌿 Portal de Saúde Emocional — Projeto Educativo Ana Laura
+        </p>
+
+        <p>
+            Você não está sozinho(a). Sempre há alguém pronto para ouvir.
+        </p>
+
     </footer>
 
+
+    <!-- =========================
+         BOTÕES FLUTUANTES
+    ========================== -->
+
     <div class="botoes-flutuantes">
-        <button id="botaoModoEscuro" title="Modo Escuro">🌙</button>
-        <button id="botaoAumentarFonte" title="Aumentar Fonte">🔤</button>
-        <button id="botaoTopo" title="Voltar ao Topo">⬆</button>
+
+        <button
+            id="botaoModoEscuro"
+            title="Modo Escuro"
+        >
+            🌙
+        </button>
+
+        <button
+            id="botaoAumentarFonte"
+            title="Aumentar Fonte"
+        >
+            🔤
+        </button>
+
+        <button
+            id="botaoTopo"
+            title="Voltar ao Topo"
+        >
+            ⬆
+        </button>
+
     </div>
 
+
+    <!-- JAVASCRIPT -->
+
     <script src="js/funcional.js"></script>
+
 </body>
+
 </html>
