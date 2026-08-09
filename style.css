@@ -1747,3 +1747,342 @@ a:focus-visible {
     background: var(--verde-musgo);
     color: white;
 }
+/* =====================================================
+   PORTAL DE ESCUTA
+   ===================================================== */
+
+
+/* ==================== CONTAINER ==================== */
+
+.escuta-container {
+    width: 100%;
+    max-width: 1050px;
+
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+
+    gap: 30px;
+
+    align-items: stretch;
+}
+
+
+/* ==================== INFORMAÇÕES ==================== */
+
+.escuta-info {
+    padding: 35px;
+
+    background: var(--verde-suave);
+
+    border-radius: 20px;
+
+    border: 1px solid rgba(85, 107, 79, 0.1);
+}
+
+
+.escuta-info-icon {
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 20px;
+
+    border-radius: 15px;
+
+    background: var(--verde-musgo);
+
+    color: white;
+
+    font-size: 1.4rem;
+}
+
+
+.escuta-info h3 {
+    color: var(--verde-escuro);
+
+    font-size: 1.4rem;
+
+    margin-bottom: 12px;
+}
+
+
+.dark-mode .escuta-info h3 {
+    color: #edf2eb;
+}
+
+
+.escuta-info > p {
+    color: var(--texto-suave);
+
+    font-size: 0.88rem;
+
+    margin-bottom: 25px;
+}
+
+
+/* ==================== DICAS ==================== */
+
+.escuta-tips {
+    display: flex;
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+
+.escuta-tips div {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 10px;
+}
+
+
+.escuta-tips i {
+    flex-shrink: 0;
+
+    margin-top: 3px;
+
+    color: var(--verde-musgo);
+}
+
+
+.escuta-tips span {
+    color: var(--texto);
+
+    font-size: 0.82rem;
+}
+
+
+/* ==================== FORMULÁRIO ==================== */
+
+.escuta-form-card {
+    padding: 35px;
+
+    background: var(--branco);
+
+    border-radius: 20px;
+
+    box-shadow: var(--sombra);
+
+    border: 1px solid rgba(85, 107, 79, 0.08);
+}
+
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: var(--verde-escuro);
+
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+
+.dark-mode .form-group label {
+    color: #e9f0e6;
+}
+
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+
+    width: 100%;
+
+    padding: 13px 15px;
+
+    border: 1px solid #d2dacf;
+
+    border-radius: 10px;
+
+    outline: none;
+
+    background: var(--creme);
+
+    color: var(--texto);
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 0.84rem;
+
+    transition: var(--transicao);
+
+}
+
+
+.form-group textarea {
+    resize: vertical;
+
+    min-height: 150px;
+}
+
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #929b93;
+}
+
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+
+    border-color: var(--verde-musgo);
+
+    box-shadow:
+        0 0 0 3px rgba(85, 107, 79, 0.12);
+}
+
+
+.form-group small {
+    display: block;
+
+    margin-top: 6px;
+
+    color: var(--texto-suave);
+
+    font-size: 0.7rem;
+}
+
+
+/* ==================== BOTÃO DO FORMULÁRIO ==================== */
+
+.form-button {
+    width: 100%;
+
+    border: none;
+}
+
+
+/* ==================== MENSAGEM DE SUCESSO ==================== */
+
+.mensagem-sucesso {
+    text-align: center;
+
+    padding: 25px 10px;
+}
+
+
+.success-icon {
+    width: 75px;
+    height: 75px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--verde-suave);
+
+    color: var(--verde-musgo);
+
+    font-size: 1.8rem;
+}
+
+
+.mensagem-sucesso h3 {
+    color: var(--verde-escuro);
+
+    font-size: 1.25rem;
+
+    margin-bottom: 10px;
+}
+
+
+.dark-mode .mensagem-sucesso h3 {
+    color: #edf2eb;
+}
+
+
+.mensagem-sucesso p {
+    max-width: 450px;
+
+    margin: 0 auto 22px;
+
+    color: var(--texto-suave);
+
+    font-size: 0.85rem;
+}
+
+
+/* ==================== RESPONSIVIDADE ==================== */
+
+@media (max-width: 850px) {
+
+    .escuta-container {
+        grid-template-columns: 1fr;
+
+        max-width: 650px;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .escuta-container {
+        width: 100%;
+
+        gap: 20px;
+    }
+
+
+    .escuta-info,
+    .escuta-form-card {
+        padding: 25px 20px;
+
+        border-radius: 16px;
+    }
+
+
+    .escuta-info h3 {
+        font-size: 1.25rem;
+    }
+
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        font-size: 0.82rem;
+    }
+
+}
+
+
+@media (max-width: 420px) {
+
+    .escuta-info,
+    .escuta-form-card {
+        padding: 22px 17px;
+    }
+
+
+    .escuta-info-icon {
+        width: 50px;
+        height: 50px;
+
+        font-size: 1.2rem;
+    }
+
+
+    .form-group {
+        margin-bottom: 18px;
+    }
+
+}
