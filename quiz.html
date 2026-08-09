@@ -2,34 +2,66 @@
 <html lang="pt-BR">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Quiz sobre Saúde Emocional - teste seus conhecimentos.">
 
     <title>Quiz | Saúde Emocional</title>
 
-    <link rel="stylesheet" href="css/estilo.css">
+    <!-- Fonte -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Ícones -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
 </head>
+
 
 <body>
 
-    <!-- =========================
-         CABEÇALHO
-    ========================== -->
 
-    <header>
+    <!-- ==================== CABEÇALHO ==================== -->
 
-        <div class="cabecalho">
-            <h1>🌿 Saúde Emocional</h1>
-            <p>Equilíbrio • Acolhimento • Cuidado</p>
-        </div>
+    <header class="header">
 
-        <nav class="menu-navegacao">
+        <nav class="navbar">
 
-            <button class="botao-menu" id="botaoMenu">
-                ☰
+            <a href="index.html" class="logo">
+
+                <i class="fa-solid fa-leaf"></i>
+
+                <span>
+                    Saúde Emocional
+                </span>
+
+            </a>
+
+
+            <button
+                class="menu-toggle"
+                id="menu-toggle"
+                aria-label="Abrir menu">
+
+                <i class="fa-solid fa-bars"></i>
+
             </button>
 
-            <ul class="lista-menu" id="listaMenu">
+
+            <ul class="nav-menu" id="nav-menu">
 
                 <li>
                     <a href="index.html">
@@ -38,13 +70,25 @@
                 </li>
 
                 <li>
-                    <a href="escuta.html">
-                        Espaço de Escuta
+                    <a href="index.html#sobre">
+                        Sobre
                     </a>
                 </li>
 
                 <li>
-                    <a href="quiz.html" class="ativo">
+                    <a href="index.html#cuidados">
+                        Cuidados
+                    </a>
+                </li>
+
+                <li>
+                    <a href="escuta.html">
+                        Portal de Escuta
+                    </a>
+                </li>
+
+                <li>
+                    <a href="quiz.html">
                         Quiz
                     </a>
                 </li>
@@ -55,6 +99,19 @@
                     </a>
                 </li>
 
+                <li>
+
+                    <button
+                        class="theme-toggle"
+                        id="theme-toggle"
+                        aria-label="Ativar modo escuro">
+
+                        <i class="fa-solid fa-moon"></i>
+
+                    </button>
+
+                </li>
+
             </ul>
 
         </nav>
@@ -62,175 +119,539 @@
     </header>
 
 
-    <!-- =========================
-         CONTEÚDO
-    ========================== -->
 
     <main>
 
-        <section class="secao quiz-secao">
 
-            <div class="quiz-introducao">
+        <!-- ==================== INTRODUÇÃO ==================== -->
 
-                <h2 class="titulo-secao">
-                    🧠 Quiz de Saúde Emocional
-                </h2>
+        <section class="quiz-hero">
 
-                <p class="introducao">
-                    Que tal testar seus conhecimentos sobre saúde emocional?
-                    Responda às perguntas com calma e descubra sua pontuação no final.
-                </p>
+            <div class="quiz-hero-content">
 
-            </div>
+                <span class="section-tag">
+                    Teste seus conhecimentos
+                </span>
 
 
-            <!-- =========================
-                 QUIZ
-            ========================== -->
+                <h1>
+                    Quiz de
+                    <span>Saúde Emocional</span>
+                </h1>
 
-            <div class="quiz-card" id="quizCard">
-
-
-                <!-- PROGRESSO -->
-
-                <div class="quiz-progresso">
-
-                    <div class="quiz-progresso-topo">
-
-                        <span>
-                            Pergunta
-                            <strong id="numeroPergunta">1</strong>
-                            de 5
-                        </span>
-
-                        <span>
-                            <strong id="pontuacaoAtual">0</strong> ponto(s)
-                        </span>
-
-                    </div>
-
-                    <div class="barra-quiz">
-
-                        <div
-                            id="progressoQuiz"
-                            class="progresso-quiz"
-                        ></div>
-
-                    </div>
-
-                </div>
-
-
-                <!-- PERGUNTA -->
-
-                <div class="quiz-pergunta">
-
-                    <span class="numero-pergunta">
-                        Pergunta 1
-                    </span>
-
-                    <h3 id="textoPergunta">
-                        O que significa ter saúde emocional?
-                    </h3>
-
-                </div>
-
-
-                <!-- ALTERNATIVAS -->
-
-                <div
-                    class="quiz-opcoes"
-                    id="opcoesQuiz"
-                >
-
-                    <button
-                        class="quiz-opcao"
-                        data-resposta="errada"
-                    >
-                        Nunca sentir tristeza, medo ou ansiedade.
-                    </button>
-
-                    <button
-                        class="quiz-opcao"
-                        data-resposta="certa"
-                    >
-                        Reconhecer, aceitar e aprender a lidar com os sentimentos.
-                    </button>
-
-                    <button
-                        class="quiz-opcao"
-                        data-resposta="errada"
-                    >
-                        Estar sempre feliz e não demonstrar emoções negativas.
-                    </button>
-
-                </div>
-
-
-                <!-- FEEDBACK -->
-
-                <div
-                    id="feedbackQuiz"
-                    class="feedback-quiz"
-                ></div>
-
-
-                <!-- PRÓXIMA -->
-
-                <button
-                    id="proximaPergunta"
-                    class="botao grande botao-proxima"
-                >
-                    Próxima pergunta →
-                </button>
-
-            </div>
-
-
-            <!-- =========================
-                 RESULTADO
-            ========================== -->
-
-            <div
-                id="resultadoQuiz"
-                class="resultado-quiz"
-            >
-
-                <div class="resultado-icone">
-                    🏆
-                </div>
-
-                <h2>
-                    Quiz concluído!
-                </h2>
-
-                <p class="resultado-pontuacao">
-                    Você acertou
-                    <strong id="pontuacaoFinal">0</strong>
-                    de 5 perguntas.
-                </p>
-
-                <p id="mensagemResultado"></p>
-
-                <button
-                    id="refazerQuiz"
-                    class="botao grande"
-                >
-                    🔄 Refazer o quiz
-                </button>
-
-            </div>
-
-
-            <!-- =========================
-                 FRASE FINAL
-            ========================== -->
-
-            <div class="quiz-frase-final">
 
                 <p>
-                    💚 Conhecer melhor nossas emoções também é uma forma de cuidar de nós mesmos.
+
+                    Vamos descobrir o quanto você sabe sobre emoções,
+                    autocuidado e bem-estar emocional?
+
                 </p>
+
+            </div>
+
+
+            <div class="quiz-hero-icon">
+
+                <i class="fa-solid fa-brain"></i>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==================== QUIZ ==================== -->
+
+        <section class="quiz-section">
+
+            <div class="quiz-container">
+
+
+                <!-- PERGUNTA 1 -->
+
+                <div class="question-card">
+
+                    <span class="question-number">
+                        Pergunta 01
+                    </span>
+
+                    <h2>
+                        O que significa ter saúde emocional?
+                    </h2>
+
+
+                    <div class="answers">
+
+                        <label class="answer">
+
+                            <input
+                                type="radio"
+                                name="q1"
+                                value="a">
+
+                            <span>
+                                Nunca sentir emoções negativas.
+                            </span>
+
+                        </label>
+
+
+                        <label class="answer">
+
+                            <input
+                                type="radio"
+                                name="q1"
+                                value="b">
+
+                            <span>
+                                Saber reconhecer e lidar de forma
+                                saudável com os próprios sentimentos.
+                            </span>
+
+                        </label>
+
+
+                        <label class="answer">
+
+                            <input
+                                type="radio"
+                                name="q1"
+                                value="c">
+
+                            <span>
+                                Evitar conversar sobre os sentimentos.
+                            </span>
+
+                        </label>
+
+
+                        <label class="answer">
+
+                            <input
+                                type="radio"
+                                name="q1"
+                                value="d">
+
+                            <span>
+                                Estar feliz durante todo o tempo.
+                            </span>
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PERGUNTA 2 -->
+
+                <div class="question-card">
+
+                    <span class="question-number">
+                        Pergunta 02
+                    </span>
+
+                    <h2>
+                        Qual destas atitudes pode contribuir para o
+                        bem-estar emocional?
+                    </h2>
+
+
+                    <div class="answers">
+
+                        <label class="answer">
+
+                            <input
+                                type="radio"
+                                name="q2"
+                                value="a">
+
+                            <span>
+                                Guardar todos os problemas para si.
+                            </span>
+
+                        </label>
+
+
+                        <label class="answer">
+
+                            <input
+                                type="radio"
+                                name="q2"
+                                value="b">
+
+                            <span>
+                                Ignorar os próprios sentimentos.
+                            </span>
+
+                        </label>
+
+
+                        <label class="answer">
+
+                            <input
+                                type="radio"
+                                name="q2"
+                                value="c">
+
+                            <span>
+                                Respeitar seus limites e momentos de descanso.
+                            </span>
+
+                        </label>
+
+
+                        <label class="answer">
+
+                            <input
+                                type="radio"
+                                name="q2"
+                                value="d">
+
+                            <span>
+                                Evitar pedir ajuda.
+                            </span>
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PERGUNTA 3 -->
+
+                <div class="question-card">
+
+                    <span class="question-number">
+                        Pergunta 03
+                    </span>
+
+                    <h2>
+                        Pedir ajuda quando estamos passando por uma
+                        situação difícil significa:
+                    </h2>
+
+
+                    <div class="answers">
+
+                        <label class="answer">
+
+                            <input
+                                type="radio"
+                                name="q3"
+                                value="a">
+
+                            <span>
+                                Ser fraco.
+                            </span>
+
+                        </label>
+
+
+                        <label class="answer">
+
+                            <input
+                                type="radio"
+                                name="q3"
+                                value="b">
+
+                            <span>
+                                Não conseguir resolver nenhum problema.
+                            </span>
+
+                        </label>
+
+
+                        <label class="answer">
+
+                            <input
+                                type="radio"
+                                name="q3"
+                                value="c">
+
+                            <span>
+                                Demonstrar coragem e buscar apoio.
+                            </span>
+
+                        </label>
+
+
+                        <label class="answer">
+
+                            <input
+                                type="radio"
+                                name="q3"
+                                value="d">
+
+                            <span>
+                                Incomodar outras pessoas.
+                            </span>
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PERGUNTA 4 -->
+
+                <div class="question-card">
+
+                    <span class="question-number">
+                        Pergunta 04
+                    </span>
+
+                    <h2>
+                        Qual atitude pode ajudar quando estamos
+                        preocupados ou sobrecarregados?
+                    </h2>
+
+
+                    <div class="answers">
+
+                        <label class="answer">
+
+                            <input
+                                type="radio"
+                                name="q4"
+                                value="a">
+
+                            <span>
+                                Conversar com alguém de confiança.
+                            </span>
+
+                        </label>
+
+
+                        <label class="answer">
+
+                            <input
+                                type="radio"
+                                name="q4"
+                                value="b">
+
+                            <span>
+                                Fingir que nada está acontecendo.
+                            </span>
+
+                        </label>
+
+
+                        <label class="answer">
+
+                            <input
+                                type="radio"
+                                name="q4"
+                                value="c">
+
+                            <span>
+                                Se afastar de todas as pessoas.
+                            </span>
+
+                        </label>
+
+
+                        <label class="answer">
+
+                            <input
+                                type="radio"
+                                name="q4"
+                                value="d">
+
+                            <span>
+                                Ignorar completamente o que está sentindo.
+                            </span>
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PERGUNTA 5 -->
+
+                <div class="question-card">
+
+                    <span class="question-number">
+                        Pergunta 05
+                    </span>
+
+                    <h2>
+                        Qual destas frases representa uma atitude
+                        saudável em relação às emoções?
+                    </h2>
+
+
+                    <div class="answers">
+
+                        <label class="answer">
+
+                            <input
+                                type="radio"
+                                name="q5"
+                                value="a">
+
+                            <span>
+                                "Eu não posso demonstrar o que sinto."
+                            </span>
+
+                        </label>
+
+
+                        <label class="answer">
+
+                            <input
+                                type="radio"
+                                name="q5"
+                                value="b">
+
+                            <span>
+                                "Preciso resolver tudo sozinho."
+                            </span>
+
+                        </label>
+
+
+                        <label class="answer">
+
+                            <input
+                                type="radio"
+                                name="q5"
+                                value="c">
+
+                            <span>
+                                "Meus sentimentos não são importantes."
+                            </span>
+
+                        </label>
+
+
+                        <label class="answer">
+
+                            <input
+                                type="radio"
+                                name="q5"
+                                value="d">
+
+                            <span>
+                                "Posso reconhecer o que sinto e buscar
+                                ajuda quando precisar."
+                            </span>
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- BOTÃO -->
+
+                <button
+                    type="button"
+                    id="finalizar-quiz"
+                    class="btn btn-primary quiz-button">
+
+                    <i class="fa-solid fa-check"></i>
+
+                    Finalizar Quiz
+
+                </button>
+
+
+
+                <!-- RESULTADO -->
+
+                <div
+                    id="resultado-quiz"
+                    class="quiz-result"
+                    style="display: none;">
+
+                    <div class="result-icon">
+
+                        <i class="fa-solid fa-seedling"></i>
+
+                    </div>
+
+
+                    <h2 id="resultado-titulo">
+                        Resultado
+                    </h2>
+
+
+                    <p id="resultado-texto">
+                    </p>
+
+
+                    <button
+                        type="button"
+                        id="refazer-quiz"
+                        class="btn btn-secondary">
+
+                        <i class="fa-solid fa-rotate-right"></i>
+
+                        Refazer Quiz
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==================== MENSAGEM FINAL ==================== -->
+
+        <section class="support-section">
+
+            <div class="support-content">
+
+                <span class="section-tag">
+                    Lembrete
+                </span>
+
+
+                <h2>
+                    Conhecimento também é uma forma de cuidado.
+                </h2>
+
+
+                <p>
+
+                    Entender nossas emoções é um processo.
+                    Não precisamos saber lidar com tudo sozinhos.
+
+                </p>
+
+
+                <a
+                    href="escuta.html"
+                    class="btn btn-light">
+
+                    Portal de Escuta
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+
+            <div
+                class="support-icon"
+                aria-hidden="true">
+
+                <i class="fa-solid fa-heart"></i>
 
             </div>
 
@@ -239,57 +660,206 @@
     </main>
 
 
-    <!-- =========================
-         RODAPÉ
-    ========================== -->
 
-    <footer>
+    <!-- ==================== RODAPÉ ==================== -->
 
-        <p>
-            🌿 Portal de Saúde Emocional — Projeto Educativo Ana Laura
-        </p>
+    <footer class="footer">
 
-        <p>
-            Você não está sozinho(a). Sempre há alguém pronto para ouvir.
-        </p>
+        <div class="footer-content">
+
+
+            <div class="footer-brand">
+
+                <a
+                    href="index.html"
+                    class="logo">
+
+                    <i class="fa-solid fa-leaf"></i>
+
+                    <span>
+                        Saúde Emocional
+                    </span>
+
+                </a>
+
+
+                <p>
+
+                    Um portal de informação, acolhimento
+                    e apoio para estudantes.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="footer-links">
+
+                <h3>
+                    Acesse
+                </h3>
+
+
+                <a href="index.html">
+                    Início
+                </a>
+
+
+                <a href="index.html#sobre">
+                    Sobre o tema
+                </a>
+
+
+                <a href="index.html#cuidados">
+                    Cuidados
+                </a>
+
+
+                <a href="escuta.html">
+                    Portal de Escuta
+                </a>
+
+
+                <a href="referencias.html">
+                    Referências
+                </a>
+
+            </div>
+
+
+
+            <div class="footer-help">
+
+                <h3>
+                    Lembre-se
+                </h3>
+
+
+                <p>
+
+                    Pedir ajuda é uma atitude de coragem.
+                    Você não precisa enfrentar tudo sozinho.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 — Projeto de Saúde Emocional
+            </p>
+
+
+            <a
+                href="#"
+                class="back-to-top"
+                aria-label="Voltar ao topo">
+
+                <i class="fa-solid fa-arrow-up"></i>
+
+            </a>
+
+        </div>
 
     </footer>
 
 
-    <!-- =========================
-         BOTÕES FLUTUANTES
-    ========================== -->
 
-    <div class="botoes-flutuantes">
+    <!-- JavaScript principal -->
 
-        <button
-            id="botaoModoEscuro"
-            title="Modo Escuro"
-        >
-            🌙
-        </button>
-
-        <button
-            id="botaoAumentarFonte"
-            title="Aumentar Fonte"
-        >
-            🔤
-        </button>
-
-        <button
-            id="botaoTopo"
-            title="Voltar ao Topo"
-        >
-            ⬆
-        </button>
-
-    </div>
+    <script src="script.js"></script>
 
 
-    <!-- JAVASCRIPT -->
 
-    <script src="js/funcional.js"></script>
+    <!-- JavaScript do Quiz -->
 
-</body>
+    <script>
 
-</html>
+        const botaoFinalizar =
+            document.getElementById("finalizar-quiz");
+
+        const resultado =
+            document.getElementById("resultado-quiz");
+
+        const resultadoTitulo =
+            document.getElementById("resultado-titulo");
+
+        const resultadoTexto =
+            document.getElementById("resultado-texto");
+
+        const botaoRefazer =
+            document.getElementById("refazer-quiz");
+
+
+        botaoFinalizar.addEventListener("click", function() {
+
+            const respostasCorretas = {
+
+                q1: "b",
+                q2: "c",
+                q3: "c",
+                q4: "a",
+                q5: "d"
+
+            };
+
+
+            let pontos = 0;
+
+
+            for (let pergunta in respostasCorretas) {
+
+                const respostaSelecionada =
+                    document.querySelector(
+                        `input[name="${pergunta}"]:checked`
+                    );
+
+
+                if (
+                    respostaSelecionada &&
+                    respostaSelecionada.value ===
+                    respostasCorretas[pergunta]
+                ) {
+
+                    pontos++;
+
+                }
+
+            }
+
+
+            if (pontos === 5) {
+
+                resultadoTitulo.textContent =
+                    "Parabéns! 🌿";
+
+                resultadoTexto.textContent =
+                    "Você acertou 5 de 5 perguntas! " +
+                    "Você demonstrou que conhece bastante " +
+                    "sobre Saúde Emocional.";
+
+            } else if (pontos >= 3) {
+
+                resultadoTitulo.textContent =
+                    "Muito bem! 💚";
+
+                resultadoTexto.textContent =
+                    `Você acertou ${pontos} de 5 perguntas. ` +
+                    "Continue aprendendo e cuidando da sua " +
+                    "saúde emocional.";
+
+            } else {
+
+                resultadoTitulo.textContent =
+                    "Continue aprendendo! 🌱";
+
+                resultadoTexto.textContent =
+                    `Você acertou ${pontos} de 5 perguntas. ` +
+                    "Que tal voltar ao conteúdo do site e " +
+                    "aprender um pouco mais sob
