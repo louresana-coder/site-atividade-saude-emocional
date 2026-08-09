@@ -8,8 +8,8 @@
    📱 MENU RESPONSIVO
 ===================================================== */
 
-const botaoMenu = document.getElementById("botaoMenu");
-const listaMenu = document.getElementById("listaMenu");
+const botaoMenu = document.getElementById("menuToggle");
+const listaMenu = document.getElementById("menu");
 
 if (botaoMenu && listaMenu) {
 
