@@ -2,47 +2,66 @@
 <html lang="pt-BR">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Espaço de Escuta | Saúde Emocional</title>
+    <meta name="description"
+        content="Portal de Escuta - um espaço de acolhimento e reflexão sobre saúde emocional.">
 
-    <link rel="stylesheet" href="css/estilo.css">
+    <title>Portal de Escuta | Saúde Emocional</title>
+
+    <!-- Fonte -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Ícones -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS principal -->
+    <link rel="stylesheet" href="style.css">
+
 </head>
+
 
 <body>
 
-    <!-- =========================
-         CABEÇALHO
-    ========================== -->
 
-    <header>
+    <!-- ==================== CABEÇALHO ==================== -->
 
-        <div class="cabecalho">
+    <header class="header">
 
-            <h1>🌿 Saúde Emocional</h1>
+        <nav class="navbar">
 
-            <p>
-                Equilíbrio • Acolhimento • Cuidado
-            </p>
+            <a href="index.html" class="logo">
 
-        </div>
+                <i class="fa-solid fa-leaf"></i>
 
+                <span>
+                    Saúde Emocional
+                </span>
 
-        <!-- MENU -->
+            </a>
 
-        <nav class="menu-navegacao">
 
             <button
-                class="botao-menu"
-                id="botaoMenu"
+                class="menu-toggle"
+                id="menu-toggle"
                 aria-label="Abrir menu">
-                ☰
+
+                <i class="fa-solid fa-bars"></i>
+
             </button>
 
-            <ul
-                class="lista-menu"
-                id="listaMenu">
+
+            <ul class="nav-menu" id="nav-menu">
 
                 <li>
                     <a href="index.html">
@@ -51,10 +70,20 @@
                 </li>
 
                 <li>
-                    <a
-                        href="escuta.html"
-                        class="ativo">
-                        Espaço de Escuta
+                    <a href="index.html#sobre">
+                        Sobre
+                    </a>
+                </li>
+
+                <li>
+                    <a href="index.html#cuidados">
+                        Cuidados
+                    </a>
+                </li>
+
+                <li>
+                    <a href="escuta.html">
+                        Portal de Escuta
                     </a>
                 </li>
 
@@ -70,6 +99,19 @@
                     </a>
                 </li>
 
+                <li>
+
+                    <button
+                        class="theme-toggle"
+                        id="theme-toggle"
+                        aria-label="Ativar modo escuro">
+
+                        <i class="fa-solid fa-moon"></i>
+
+                    </button>
+
+                </li>
+
             </ul>
 
         </nav>
@@ -77,262 +119,614 @@
     </header>
 
 
-    <!-- =========================
-         CONTEÚDO
-    ========================== -->
 
     <main>
 
-        <!-- INTRODUÇÃO -->
 
-        <section class="secao">
+        <!-- ==================== TÍTULO ==================== -->
 
-            <div class="pagina-titulo">
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <span class="hero-tag">
+
+                    <i class="fa-solid fa-heart"></i>
+
+                    Um espaço de acolhimento
+
+                </span>
+
+
+                <h1>
+
+                    Portal de
+                    <span>Escuta</span>
+
+                </h1>
+
+
+                <p>
+
+                    Às vezes, colocar em palavras aquilo que estamos
+                    sentindo pode ser um primeiro passo para entender
+                    melhor nossas emoções.
+
+                </p>
+
+
+                <div class="hero-buttons">
+
+                    <a
+                        href="#formulario"
+                        class="btn btn-primary">
+
+                        Quero escrever
+
+                        <i class="fa-solid fa-arrow-down"></i>
+
+                    </a>
+
+
+                    <a
+                        href="index.html"
+                        class="btn btn-secondary">
+
+                        <i class="fa-solid fa-house"></i>
+
+                        Voltar ao início
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-illustration" aria-hidden="true">
+
+                <div class="illustration-circle">
+
+                    <i class="fa-solid fa-comments"></i>
+
+                </div>
+
+
+                <div class="floating-card card-one">
+
+                    <i class="fa-solid fa-heart"></i>
+
+                    <span>
+                        Você pode falar
+                    </span>
+
+                </div>
+
+
+                <div class="floating-card card-two">
+
+                    <i class="fa-solid fa-hand-holding-heart"></i>
+
+                    <span>
+                        Você merece apoio
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==================== MENSAGEM ==================== -->
+
+        <section class="quote-section">
+
+            <div class="quote-box">
+
+                <i class="fa-solid fa-heart"></i>
+
+                <p>
+
+                    Seus sentimentos são importantes.
+                    Não existe emoção "boba" demais para ser ouvida.
+
+                </p>
+
+                <span>
+                    Um lembrete do Portal de Escuta
+                </span>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==================== FORMULÁRIO ==================== -->
+
+        <section
+            class="section"
+            id="formulario">
+
+            <div class="section-heading">
+
+                <span class="section-tag">
+                    Espaço de reflexão
+                </span>
+
 
                 <h2>
-                    💬 Espaço de Escuta
+
+                    Como você está
+                    <span>se sentindo?</span>
+
                 </h2>
 
+
                 <p>
-                    Um espaço para colocar em palavras aquilo
-                    que você está sentindo.
+
+                    Escreva livremente. Você pode falar sobre algo
+                    que aconteceu hoje, uma preocupação ou simplesmente
+                    sobre como está se sentindo.
+
                 </p>
 
             </div>
 
 
-            <div class="caixa-destaque">
 
-                <p>
-                    Às vezes, organizar os sentimentos em palavras
-                    pode ajudar a entender melhor o que estamos
-                    vivendo. Aqui, você pode escrever livremente,
-                    sem se preocupar em encontrar as palavras
-                    perfeitas.
-                </p>
+            <div class="escuta-container">
 
-                <p>
-                    <strong>
-                        Seus sentimentos são importantes.
-                    </strong>
-                    Você não precisa enfrentar tudo sozinho(a).
-                </p>
+
+                <!-- CARTÃO DE INFORMAÇÃO -->
+
+                <div class="escuta-info">
+
+                    <div class="escuta-info-icon">
+
+                        <i class="fa-solid fa-ear-listen"></i>
+
+                    </div>
+
+
+                    <h3>
+                        Este espaço é seu
+                    </h3>
+
+
+                    <p>
+
+                        Não existe uma maneira certa de escrever.
+                        Coloque seus pensamentos em palavras da
+                        forma que fizer sentido para você.
+
+                    </p>
+
+
+                    <div class="escuta-tips">
+
+                        <div>
+
+                            <i class="fa-solid fa-check"></i>
+
+                            <span>
+                                Escreva no seu próprio ritmo.
+                            </span>
+
+                        </div>
+
+
+                        <div>
+
+                            <i class="fa-solid fa-check"></i>
+
+                            <span>
+                                Não precisa escrever muito.
+                            </span>
+
+                        </div>
+
+
+                        <div>
+
+                            <i class="fa-solid fa-check"></i>
+
+                            <span>
+                                Seus sentimentos merecem atenção.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- FORMULÁRIO -->
+
+                <div class="escuta-form-card">
+
+                    <form id="escuta-form">
+
+
+                        <div class="form-group">
+
+                            <label for="nome">
+                                Como podemos chamar você?
+                            </label>
+
+                            <input
+                                type="text"
+                                id="nome"
+                                name="nome"
+                                placeholder="Digite seu nome ou apelido"
+                                maxlength="50">
+
+                        </div>
+
+
+
+                        <div class="form-group">
+
+                            <label for="sentimento">
+
+                                Como você está se sentindo hoje?
+
+                            </label>
+
+                            <select
+                                id="sentimento"
+                                name="sentimento">
+
+                                <option value="">
+                                    Selecione uma opção
+                                </option>
+
+                                <option value="feliz">
+                                    😊 Feliz
+                                </option>
+
+                                <option value="tranquilo">
+                                    🌿 Tranquilo(a)
+                                </option>
+
+                                <option value="ansioso">
+                                    😟 Preocupado(a)
+                                </option>
+
+                                <option value="triste">
+                                    💙 Triste
+                                </option>
+
+                                <option value="cansado">
+                                    😴 Cansado(a)
+                                </option>
+
+                                <option value="confuso">
+                                    🤔 Confuso(a)
+                                </option>
+
+                                <option value="outro">
+                                    💭 Outro sentimento
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+
+                        <div class="form-group">
+
+                            <label for="mensagem">
+
+                                Quer contar um pouco mais?
+
+                            </label>
+
+                            <textarea
+                                id="mensagem"
+                                name="mensagem"
+                                rows="7"
+                                maxlength="1000"
+                                placeholder="Escreva aqui o que você gostaria de compartilhar..."></textarea>
+
+                            <small>
+                                Máximo de 1000 caracteres.
+                            </small>
+
+                        </div>
+
+
+
+                        <button
+                            type="submit"
+                            class="btn btn-primary form-button">
+
+                            <i class="fa-solid fa-paper-plane"></i>
+
+                            Enviar mensagem
+
+                        </button>
+
+
+                    </form>
+
+
+
+                    <!-- MENSAGEM APÓS ENVIO -->
+
+                    <div
+                        id="mensagem-sucesso"
+                        class="mensagem-sucesso"
+                        style="display: none;">
+
+                        <div class="success-icon">
+
+                            <i class="fa-solid fa-heart"></i>
+
+                        </div>
+
+
+                        <h3>
+                            Obrigada por compartilhar. 💚
+                        </h3>
+
+
+                        <p>
+
+                            Seus sentimentos são importantes.
+                            Lembre-se de procurar alguém de confiança
+                            para conversar quando precisar.
+
+                        </p>
+
+
+                        <button
+                            type="button"
+                            class="btn btn-secondary"
+                            id="nova-mensagem">
+
+                            Escrever novamente
+
+                        </button>
+
+                    </div>
+
+                </div>
 
             </div>
 
         </section>
 
 
-        <!-- FORMULÁRIO -->
 
-        <section class="secao">
+        <!-- ==================== AVISO ==================== -->
 
-            <h2 class="titulo-secao">
-                📝 Coloque seus sentimentos no papel
-            </h2>
+        <section class="support-section">
 
-            <form id="formularioEscuta">
+            <div class="support-content">
 
-                <label for="nomeUsuario">
-                    Como gostaria de ser chamado(a)?
-                </label>
-
-                <input
-                    type="text"
-                    id="nomeUsuario"
-                    placeholder="Pode ser seu nome ou um apelido"
-                    required>
+                <span class="section-tag">
+                    Importante
+                </span>
 
 
-                <label for="desabafo">
-                    O que você gostaria de dizer?
-                </label>
-
-                <textarea
-                    id="desabafo"
-                    rows="9"
-                    placeholder="Escreva livremente sobre o que está sentindo..."
-                    required></textarea>
+                <h2>
+                    Você não precisa enfrentar tudo sozinho.
+                </h2>
 
 
-                <button
-                    type="submit"
-                    class="botao primario">
+                <p>
 
-                    💚 Enviar meu desabafo
+                    Este site é um projeto escolar de conscientização
+                    sobre saúde emocional. O formulário acima é apenas
+                    uma simulação e não armazena nem envia mensagens
+                    para outras pessoas.
 
-                </button>
-
-            </form>
+                </p>
 
 
-            <!-- RESPOSTA AUTOMÁTICA -->
+                <p>
+
+                    Se algo estiver fazendo você se sentir mal,
+                    converse com um adulto de confiança, familiar,
+                    professor ou profissional que possa oferecer apoio.
+
+                </p>
+
+
+                <a
+                    href="index.html"
+                    class="btn btn-light">
+
+                    Voltar para o início
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
 
             <div
-                id="respostaAutomatica"
-                class="caixa-resposta">
+                class="support-icon"
+                aria-hidden="true">
+
+                <i class="fa-solid fa-hand-holding-heart"></i>
 
             </div>
 
         </section>
 
-
-        <!-- MENSAGENS -->
-
-        <section class="secao caixa-destaque">
-
-            <h2 class="titulo-secao">
-                🌿 Uma mensagem para você
-            </h2>
-
-            <p>
-                Às vezes, uma pequena mensagem pode fazer
-                diferença no nosso dia.
-            </p>
-
-
-            <p
-                id="fraseMotivacional"
-                class="frase-motivacional">
-            </p>
-
-
-            <button
-                id="novaFrase"
-                class="botao pequeno"
-                type="button">
-
-                🌱 Quero outra mensagem
-
-            </button>
-
-        </section>
-
-
-        <!-- IMPORTANTE -->
-
-        <section class="secao apoio">
-
-            <h2 class="titulo-secao">
-                🤝 Quando conversar com alguém pode ajudar
-            </h2>
-
-            <p>
-                Escrever pode ser uma forma de organizar os
-                pensamentos, mas algumas situações precisam
-                de apoio de uma pessoa de confiança ou de um
-                profissional.
-            </p>
-
-            <ul class="lista-apoio">
-
-                <li>
-                    <strong>🏫 Na escola:</strong>
-                    procure um professor, pedagogo,
-                    orientador ou outro adulto de confiança.
-                </li>
-
-                <li>
-                    <strong>💚 Em casa:</strong>
-                    converse com seus pais, responsáveis
-                    ou outro familiar em quem confie.
-                </li>
-
-                <li>
-                    <strong>🏥 Profissionais:</strong>
-                    uma Unidade Básica de Saúde pode orientar
-                    sobre os serviços disponíveis.
-                </li>
-
-            </ul>
-
-        </section>
-
-
-        <!-- ENCERRAMENTO -->
-
-        <section class="secao encerramento">
-
-            <blockquote>
-                Você não precisa ter todas as respostas agora.
-                Dar um passo de cada vez também é seguir em frente.
-            </blockquote>
-
-            <p>
-                Cuidar da saúde emocional também significa
-                reconhecer quando precisamos de apoio.
-                Pedir ajuda é um ato de coragem.
-            </p>
-
-
-            <a
-                href="index.html"
-                class="botao grande">
-
-                🌿 Voltar para o início
-
-            </a>
-
-        </section>
 
     </main>
 
 
-    <!-- =========================
-         RODAPÉ
-    ========================== -->
 
-    <footer>
+    <!-- ==================== RODAPÉ ==================== -->
 
-        <p>
-            🌿 Portal de Saúde Emocional —
-            Projeto Educativo Ana Laura
-        </p>
+    <footer class="footer">
 
-        <p>
-            Conteúdo desenvolvido para fins educativos.
-        </p>
+        <div class="footer-content">
 
-        <p>
-            Cuidar de si também é uma forma de cuidado.
-        </p>
+
+            <div class="footer-brand">
+
+                <a
+                    href="index.html"
+                    class="logo">
+
+                    <i class="fa-solid fa-leaf"></i>
+
+                    <span>
+                        Saúde Emocional
+                    </span>
+
+                </a>
+
+
+                <p>
+
+                    Um portal de informação, acolhimento
+                    e apoio para estudantes.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="footer-links">
+
+                <h3>
+                    Acesse
+                </h3>
+
+
+                <a href="index.html">
+                    Início
+                </a>
+
+
+                <a href="index.html#sobre">
+                    Sobre o tema
+                </a>
+
+
+                <a href="index.html#cuidados">
+                    Cuidados
+                </a>
+
+
+                <a href="quiz.html">
+                    Quiz
+                </a>
+
+
+                <a href="referencias.html">
+                    Referências
+                </a>
+
+            </div>
+
+
+
+            <div class="footer-help">
+
+                <h3>
+                    Lembre-se
+                </h3>
+
+
+                <p>
+
+                    Pedir ajuda é uma atitude de coragem.
+                    Você não precisa enfrentar tudo sozinho.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 — Projeto de Saúde Emocional
+            </p>
+
+
+            <a
+                href="#"
+                class="back-to-top"
+                aria-label="Voltar ao topo">
+
+                <i class="fa-solid fa-arrow-up"></i>
+
+            </a>
+
+        </div>
 
     </footer>
 
 
-    <!-- =========================
-         BOTÕES FLUTUANTES
-    ========================== -->
 
-    <div class="botoes-flutuantes">
+    <!-- JavaScript -->
 
-        <button
-            id="botaoModoEscuro"
-            title="Ativar modo escuro"
-            aria-label="Ativar modo escuro">
-            🌙
-        </button>
-
-        <button
-            id="botaoAumentarFonte"
-            title="Aumentar fonte"
-            aria-label="Aumentar fonte">
-            🔤
-        </button>
-
-        <button
-            id="botaoTopo"
-            title="Voltar ao topo"
-            aria-label="Voltar ao topo">
-            ⬆
-        </button>
-
-    </div>
+    <script src="script.js"></script>
 
 
-    <!-- JAVASCRIPT -->
+    <!-- JavaScript específico do formulário -->
 
-    <script src="js/funcional.js"></script>
+    <script>
+
+        const formulario =
+            document.getElementById("escuta-form");
+
+        const mensagemSucesso =
+            document.getElementById("mensagem-sucesso");
+
+        const novaMensagem =
+            document.getElementById("nova-mensagem");
+
+
+        if (formulario) {
+
+            formulario.addEventListener("submit", function(event) {
+
+                event.preventDefault();
+
+                formulario.style.display = "none";
+
+                mensagemSucesso.style.display = "block";
+
+            });
+
+        }
+
+
+        if (novaMensagem) {
+
+            novaMensagem.addEventListener("click", function() {
+
+                formulario.reset();
+
+                formulario.style.display = "block";
+
+                mensagemSucesso.style.display = "none";
+
+            });
+
+        }
+
+    </script>
+
 
 </body>
 
