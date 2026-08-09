@@ -2086,3 +2086,472 @@ a:focus-visible {
     }
 
 }
+/* =====================================================
+   QUIZ
+   ===================================================== */
+
+.quiz-hero {
+    width: 90%;
+    max-width: 1200px;
+
+    min-height: 430px;
+
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 40px;
+}
+
+
+.quiz-hero-content {
+    max-width: 700px;
+}
+
+
+.quiz-hero-content h1 {
+    margin: 15px 0;
+
+    color: var(--verde-escuro);
+
+    font-size: clamp(2.5rem, 5vw, 4.2rem);
+
+    line-height: 1.1;
+}
+
+
+.quiz-hero-content h1 span {
+    display: block;
+
+    color: var(--verde-musgo);
+}
+
+
+.dark-mode .quiz-hero-content h1 {
+    color: #edf2eb;
+}
+
+
+.quiz-hero-content p {
+    max-width: 620px;
+
+    color: var(--texto-suave);
+
+    font-size: 0.95rem;
+
+    line-height: 1.7;
+}
+
+
+.quiz-hero-icon {
+    width: 220px;
+    height: 220px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--verde-suave);
+
+    color: var(--verde-musgo);
+
+    font-size: 6rem;
+
+    box-shadow: var(--sombra);
+
+    animation: flutuar 4s ease-in-out infinite;
+}
+
+
+@keyframes flutuar {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+}
+
+
+/* ==================== ÁREA DO QUIZ ==================== */
+
+.quiz-section {
+    width: 100%;
+
+    padding: 70px 5%;
+
+    background: var(--verde-suave);
+}
+
+
+.quiz-container {
+    width: 100%;
+    max-width: 900px;
+
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 22px;
+}
+
+
+/* ==================== PERGUNTAS ==================== */
+
+.question-card {
+    padding: 30px;
+
+    background: var(--branco);
+
+    border-radius: 18px;
+
+    box-shadow: var(--sombra);
+
+    border: 1px solid rgba(85, 107, 79, 0.08);
+
+    transition: var(--transicao);
+}
+
+
+.question-card:hover {
+    transform: translateY(-3px);
+}
+
+
+.question-number {
+    display: inline-block;
+
+    margin-bottom: 12px;
+
+    color: var(--verde-musgo);
+
+    font-size: 0.72rem;
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+
+.question-card h2 {
+    margin-bottom: 22px;
+
+    color: var(--verde-escuro);
+
+    font-size: 1.15rem;
+
+    line-height: 1.5;
+}
+
+
+.dark-mode .question-card h2 {
+    color: #edf2eb;
+}
+
+
+/* ==================== ALTERNATIVAS ==================== */
+
+.answers {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+
+.answer {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 14px 16px;
+
+    border: 1px solid #d8ded7;
+
+    border-radius: 11px;
+
+    background: var(--creme);
+
+    color: var(--texto);
+
+    cursor: pointer;
+
+    transition: var(--transicao);
+}
+
+
+.answer:hover {
+    border-color: var(--verde-musgo);
+
+    background: var(--verde-suave);
+
+    transform: translateX(3px);
+}
+
+
+.answer input {
+    width: 17px;
+    height: 17px;
+
+    flex-shrink: 0;
+
+    accent-color: var(--verde-musgo);
+
+    cursor: pointer;
+}
+
+
+.answer span {
+    font-size: 0.83rem;
+
+    line-height: 1.5;
+}
+
+
+.dark-mode .answer {
+    border-color: #465447;
+}
+
+
+/* ==================== BOTÃO ==================== */
+
+.quiz-button {
+    align-self: center;
+
+    min-width: 210px;
+
+    margin-top: 10px;
+
+    border: none;
+}
+
+
+/* ==================== RESULTADO ==================== */
+
+.quiz-result {
+    padding: 40px 30px;
+
+    margin-top: 10px;
+
+    text-align: center;
+
+    background: var(--branco);
+
+    border-radius: 20px;
+
+    box-shadow: var(--sombra);
+
+    border: 2px solid var(--verde-musgo);
+}
+
+
+.result-icon {
+    width: 75px;
+    height: 75px;
+
+    margin: 0 auto 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--verde-suave);
+
+    color: var(--verde-musgo);
+
+    font-size: 1.8rem;
+}
+
+
+.quiz-result h2 {
+    margin-bottom: 10px;
+
+    color: var(--verde-escuro);
+
+    font-size: 1.5rem;
+}
+
+
+.dark-mode .quiz-result h2 {
+    color: #edf2eb;
+}
+
+
+.quiz-result p {
+    max-width: 600px;
+
+    margin: 0 auto 25px;
+
+    color: var(--texto-suave);
+
+    font-size: 0.88rem;
+
+    line-height: 1.7;
+}
+
+
+/* ==================== MODO ESCURO ==================== */
+
+.dark-mode .quiz-section {
+    background: #253126;
+}
+
+
+.dark-mode .answer {
+    background: #202b22;
+
+    color: #e3ebe0;
+}
+
+
+.dark-mode .answer:hover {
+    background: #304032;
+}
+
+
+.dark-mode .question-card,
+.dark-mode .quiz-result {
+    border-color: rgba(180, 201, 175, 0.1);
+}
+
+
+/* ==================== RESPONSIVIDADE ==================== */
+
+@media (max-width: 768px) {
+
+    .quiz-hero {
+        min-height: auto;
+
+        padding: 60px 0;
+
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+
+    .quiz-hero-content {
+        max-width: 100%;
+    }
+
+
+    .quiz-hero-content h1 {
+        font-size: 2.6rem;
+    }
+
+
+    .quiz-hero-content p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    .quiz-hero-icon {
+        width: 160px;
+        height: 160px;
+
+        font-size: 4.5rem;
+    }
+
+
+    .quiz-section {
+        padding: 50px 5%;
+    }
+
+
+    .question-card {
+        padding: 23px 18px;
+    }
+
+
+    .question-card h2 {
+        font-size: 1rem;
+    }
+
+
+    .answer {
+        padding: 12px;
+
+        align-items: flex-start;
+    }
+
+
+    .answer input {
+        margin-top: 2px;
+    }
+
+
+    .answer span {
+        font-size: 0.78rem;
+    }
+
+
+    .quiz-button {
+        width: 100%;
+    }
+
+
+    .quiz-result {
+        padding: 30px 20px;
+    }
+
+}
+
+
+@media (max-width: 420px) {
+
+    .quiz-hero {
+        padding: 45px 0;
+    }
+
+
+    .quiz-hero-content h1 {
+        font-size: 2.25rem;
+    }
+
+
+    .quiz-hero-icon {
+        width: 135px;
+        height: 135px;
+
+        font-size: 3.8rem;
+    }
+
+
+    .question-card {
+        padding: 20px 15px;
+    }
+
+
+    .question-card h2 {
+        font-size: 0.94rem;
+    }
+
+
+    .answer {
+        padding: 11px;
+    }
+
+
+    .answer span {
+        font-size: 0.74rem;
+    }
+
+}
