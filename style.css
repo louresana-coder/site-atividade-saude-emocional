@@ -2555,3 +2555,436 @@ a:focus-visible {
     }
 
 }
+/* =====================================================
+   PÁGINA DE REFERÊNCIAS
+   ===================================================== */
+
+.references-hero {
+    width: 90%;
+    max-width: 1100px;
+
+    min-height: 400px;
+
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+
+    gap: 55px;
+}
+
+
+.references-hero-icon {
+    width: 190px;
+    height: 190px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--verde-suave);
+
+    color: var(--verde-musgo);
+
+    font-size: 5rem;
+
+    box-shadow: var(--sombra);
+
+    animation: flutuar 4s ease-in-out infinite;
+}
+
+
+.references-hero h1 {
+    margin: 15px 0;
+
+    color: var(--verde-escuro);
+
+    font-size: clamp(2.5rem, 5vw, 4rem);
+
+    line-height: 1.1;
+}
+
+
+.references-hero h1 span {
+    display: block;
+
+    color: var(--verde-musgo);
+}
+
+
+.dark-mode .references-hero h1 {
+    color: #edf2eb;
+}
+
+
+.references-hero p {
+    max-width: 650px;
+
+    color: var(--texto-suave);
+
+    font-size: 0.92rem;
+
+    line-height: 1.7;
+}
+
+
+/* ==================== GRID ==================== */
+
+.references-grid {
+    width: 100%;
+    max-width: 1050px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+
+/* ==================== CARTÃO ==================== */
+
+.reference-card {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 18px;
+
+    padding: 25px;
+
+    background: var(--branco);
+
+    border-radius: 18px;
+
+    border: 1px solid rgba(85, 107, 79, 0.08);
+
+    box-shadow: var(--sombra);
+
+    transition: var(--transicao);
+}
+
+
+.reference-card:hover {
+    transform: translateY(-5px);
+}
+
+
+.reference-icon {
+    width: 52px;
+    height: 52px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background: var(--verde-suave);
+
+    color: var(--verde-musgo);
+
+    font-size: 1.25rem;
+}
+
+
+.reference-card h3 {
+    margin: 5px 0 9px;
+
+    color: var(--verde-escuro);
+
+    font-size: 1rem;
+
+    line-height: 1.4;
+}
+
+
+.dark-mode .reference-card h3 {
+    color: #edf2eb;
+}
+
+
+.reference-type {
+    color: var(--verde-musgo);
+
+    font-size: 0.68rem;
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.8px;
+}
+
+
+.reference-card p {
+    margin-bottom: 15px;
+
+    color: var(--texto-suave);
+
+    font-size: 0.78rem;
+
+    line-height: 1.6;
+}
+
+
+.reference-card a {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: var(--verde-musgo);
+
+    font-size: 0.75rem;
+    font-weight: 600;
+
+    transition: var(--transicao);
+}
+
+
+.reference-card a:hover {
+    gap: 10px;
+
+    text-decoration: underline;
+}
+
+
+/* ==================== OBSERVAÇÃO ==================== */
+
+.reference-note {
+    width: 90%;
+    max-width: 1050px;
+
+    margin: 20px auto 60px;
+
+    padding: 30px;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 20px;
+
+    background: var(--verde-suave);
+
+    border-radius: 18px;
+
+    border-left: 5px solid var(--verde-musgo);
+}
+
+
+.reference-note-icon {
+    width: 48px;
+    height: 48px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: var(--verde-musgo);
+
+    color: white;
+
+    font-size: 1.2rem;
+}
+
+
+.reference-note h2 {
+    margin-bottom: 8px;
+
+    color: var(--verde-escuro);
+
+    font-size: 1.15rem;
+}
+
+
+.dark-mode .reference-note h2 {
+    color: #edf2eb;
+}
+
+
+.reference-note p {
+    margin-bottom: 8px;
+
+    color: var(--texto-suave);
+
+    font-size: 0.8rem;
+
+    line-height: 1.7;
+}
+
+
+.reference-note p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* ==================== BOTÃO VOLTAR ==================== */
+
+.reference-back {
+    display: flex;
+
+    justify-content: center;
+
+    margin-bottom: 70px;
+}
+
+
+/* ==================== MODO ESCURO ==================== */
+
+.dark-mode .reference-card {
+    border-color: rgba(180, 201, 175, 0.1);
+}
+
+
+.dark-mode .reference-card a {
+    color: #b8cdb2;
+}
+
+
+/* ==================== RESPONSIVIDADE ==================== */
+
+@media (max-width: 850px) {
+
+    .references-hero {
+        min-height: auto;
+
+        padding: 60px 0;
+
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 30px;
+    }
+
+
+    .references-hero-icon {
+        width: 150px;
+        height: 150px;
+
+        font-size: 4rem;
+    }
+
+
+    .references-hero p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    .references-grid {
+        grid-template-columns: 1fr;
+
+        max-width: 650px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .references-hero {
+        width: 90%;
+
+        padding: 45px 0;
+    }
+
+
+    .references-hero h1 {
+        font-size: 2.35rem;
+    }
+
+
+    .references-hero-icon {
+        width: 125px;
+        height: 125px;
+
+        font-size: 3.3rem;
+    }
+
+
+    .reference-card {
+        padding: 20px;
+
+        gap: 13px;
+    }
+
+
+    .reference-icon {
+        width: 45px;
+        height: 45px;
+
+        border-radius: 11px;
+
+        font-size: 1rem;
+    }
+
+
+    .reference-card h3 {
+        font-size: 0.9rem;
+    }
+
+
+    .reference-card p {
+        font-size: 0.74rem;
+    }
+
+
+    .reference-note {
+        padding: 22px 18px;
+
+        gap: 13px;
+    }
+
+
+    .reference-note-icon {
+        width: 42px;
+        height: 42px;
+
+        font-size: 1rem;
+    }
+
+
+    .reference-note h2 {
+        font-size: 1rem;
+    }
+
+
+    .reference-note p {
+        font-size: 0.74rem;
+    }
+
+}
+
+
+@media (max-width: 420px) {
+
+    .references-hero h1 {
+        font-size: 2.1rem;
+    }
+
+
+    .reference-card {
+        flex-direction: column;
+    }
+
+
+    .reference-note {
+        flex-direction: column;
+    }
+
+}
