@@ -2162,159 +2162,32 @@ footer p:first-child {
         height: 42px;
     }
 }
-/* =========================================================
-   📱 CORREÇÃO DO MENU NO CELULAR
+
+   /* =========================================================
+   📱 CORREÇÃO FINAL — CABEÇALHO NÃO FICA FIXO
 ========================================================= */
 
 @media (max-width: 700px) {
 
-    /* Cabeçalho menor */
     header {
-        position: fixed;
-        top: 0;
-        left: 0;
+        position: relative !important;
+        top: auto;
+        left: auto;
 
         width: 100%;
-
-        max-height: 85px;
+        max-height: none;
 
         overflow: visible;
     }
 
-    .navbar {
-        min-height: 75px;
-
-        padding: 10px 16px;
-
-        gap: 10px;
+    main {
+        padding-top: 30px;
     }
 
-    /* Logo menor */
-    .logo {
-        gap: 9px;
-    }
-
-    .logo > i {
-        width: 42px;
-        height: 42px;
-
-        border-radius: 12px;
-
-        font-size: 1.1rem;
-    }
-
-    .logo h2 {
-        font-size: 1rem;
-    }
-
-    .logo p {
-        font-size: .6rem;
-
-        margin-top: 2px;
-    }
-
-    /* Botão ☰ */
-    .menu-toggle {
-        display: flex;
-
-        flex-shrink: 0;
-
-        width: 42px;
-        height: 42px;
-
-        border-radius: 11px;
-
-        font-size: 1.15rem;
-    }
-
-    /* MENU FECHADO */
     .menu {
-        display: none;
-
         position: absolute;
-
         top: 75px;
         left: 12px;
         right: 12px;
-
-        flex-direction: column;
-
-        align-items: stretch;
-
-        gap: 5px;
-
-        padding: 12px;
-
-        background: var(--creme);
-
-        border: 1px solid var(--borda);
-
-        border-radius: 18px;
-
-        box-shadow: var(--sombra-forte);
-
-        z-index: 1001;
-    }
-
-    /* MENU ABERTO */
-    .menu.aberto {
-        display: flex;
-    }
-
-    .menu li {
-        width: 100%;
-    }
-
-    .menu a {
-        width: 100%;
-
-        justify-content: center;
-
-        padding: 12px 15px;
-
-        font-size: .9rem;
-
-        border-radius: 12px;
-    }
-
-    /* Evita que o hero fique escondido atrás do cabeçalho */
-    .hero {
-        padding-top: 55px;
-    }
-
-    main {
-        padding-top: 95px;
-    }
-}
-
-
-/* =========================================================
-   📱 CELULARES MUITO PEQUENOS
-========================================================= */
-
-@media (max-width: 420px) {
-
-    .navbar {
-        padding: 9px 12px;
-    }
-
-    .logo > i {
-        width: 38px;
-        height: 38px;
-
-        font-size: 1rem;
-    }
-
-    .logo h2 {
-        font-size: .92rem;
-    }
-
-    .logo p {
-        font-size: .55rem;
-    }
-
-    .menu {
-        left: 8px;
-        right: 8px;
     }
 }
