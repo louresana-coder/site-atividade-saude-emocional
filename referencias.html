@@ -1,88 +1,669 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Referências utilizadas no projeto Saúde Emocional.">
+
     <title>Referências | Saúde Emocional</title>
-    <link rel="stylesheet" href="css/estilo.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+
 </head>
+
+
 <body>
 
-    <header>
-        <div class="cabecalho">
-            <h1>🌿 Saúde Emocional</h1>
-            <p>Equilíbrio • Acolhimento • Cuidado</p>
-        </div>
-        <nav class="menu-navegacao">
-            <button class="botao-menu" id="botaoMenu">☰</button>
-            <ul class="lista-menu" id="listaMenu">
-                <li><a href="index.html">Início</a></li>
-                <li><a href="escuta.html">Espaço de Escuta</a></li>
-                <li><a href="quiz.html">Quiz</a></li>
-                <li><a href="referencias.html" class="ativo">Referências</a></li>
+
+    <!-- ==================== CABEÇALHO ==================== -->
+
+    <header class="header">
+
+        <nav class="navbar">
+
+            <a href="index.html" class="logo">
+
+                <i class="fa-solid fa-leaf"></i>
+
+                <span>
+                    Saúde Emocional
+                </span>
+
+            </a>
+
+
+            <button
+                class="menu-toggle"
+                id="menu-toggle"
+                aria-label="Abrir menu">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+
+            <ul class="nav-menu" id="nav-menu">
+
+                <li>
+                    <a href="index.html">
+                        Início
+                    </a>
+                </li>
+
+                <li>
+                    <a href="index.html#sobre">
+                        Sobre
+                    </a>
+                </li>
+
+                <li>
+                    <a href="index.html#cuidados">
+                        Cuidados
+                    </a>
+                </li>
+
+                <li>
+                    <a href="escuta.html">
+                        Portal de Escuta
+                    </a>
+                </li>
+
+                <li>
+                    <a href="quiz.html">
+                        Quiz
+                    </a>
+                </li>
+
+                <li>
+                    <a href="referencias.html">
+                        Referências
+                    </a>
+                </li>
+
+                <li>
+
+                    <button
+                        class="theme-toggle"
+                        id="theme-toggle"
+                        aria-label="Ativar modo escuro">
+
+                        <i class="fa-solid fa-moon"></i>
+
+                    </button>
+
+                </li>
+
             </ul>
+
         </nav>
+
     </header>
 
-    <main style="padding-top: 8rem;">
-        <section class="secao">
-            <h2 class="titulo-secao">📚 Fontes e Referências Confiáveis</h2>
-            <p class="introducao">Todo o conteúdo deste site foi baseado em informações de fontes oficiais e reconhecidas nacional e internacionalmente.</p>
-            
-            <ul class="lista-referencias">
-                <li>
-                    <strong>🏛️ Ministério da Saúde — Governo Federal</strong><br>
-                    Orientações oficiais sobre saúde mental e emocional para a população brasileira.<br>
-                    <a href="https://www.gov.br/saude/pt-br" target="_blank">www.gov.br/saude</a>
-                </li>
-                <li>
-                    <strong>🌍 Organização Mundial da Saúde (OMS)</strong><br>
-                    Definições oficiais sobre saúde, saúde mental e bem-estar.<br>
-                    <a href="https://www.paho.org/pt" target="_blank">www.paho.org/pt</a>
-                </li>
-                <li>
-                    <strong>📘 Ministério da Educação (MEC)</strong><br>
-                    Orientações sobre saúde emocional no ambiente escolar.<br>
-                    <a href="https://www.gov.br/mec/pt-br" target="_blank">www.gov.br/mec</a>
-                </li>
-                <li>
-                    <strong>💚 CVV — Centro de Valorização da Vida</strong><br>
-                    Apoio emocional gratuito e 24h — Ligue 188.<br>
-                    <a href="https://www.cvv.org.br" target="_blank">www.cvv.org.br</a>
-                </li>
-                <li>
-                    <strong>👶 UNICEF — Fundo das Nações Unidas para a Infância</strong><br>
-                    Orientações sobre saúde mental e bem-estar de crianças e adolescentes.<br>
-                    <a href="https://www.unicef.org/brazil" target="_blank">www.unicef.org/brazil</a>
-                </li>
-                <li>
-                    <strong>📞 Disque 100 — Direitos Humanos</strong><br>
-                    Canal gratuito do Governo Federal para orientação e proteção.<br>
-                    <a href="https://www.gov.br/mdh/pt-br/disque-100" target="_blank">www.gov.br/mdh/disque-100</a>
-                </li>
-            </ul>
+
+
+    <main>
+
+
+        <!-- ==================== TÍTULO ==================== -->
+
+        <section class="references-hero">
+
+            <div class="references-hero-icon">
+
+                <i class="fa-solid fa-book-open"></i>
+
+            </div>
+
+
+            <div>
+
+                <span class="section-tag">
+                    Pesquisa e informação
+                </span>
+
+
+                <h1>
+                    Nossas
+                    <span>Referências</span>
+                </h1>
+
+
+                <p>
+
+                    Esta página reúne as principais fontes utilizadas
+                    para pesquisar e desenvolver os conteúdos deste
+                    projeto sobre Saúde Emocional.
+
+                </p>
+
+            </div>
+
         </section>
 
-        <section class="secao caixa-destaque">
-            <h2 class="titulo-secao">ℹ️ Sobre o Projeto</h2>
-            <p>Este site foi desenvolvido por <strong>Ana Laura</strong> como projeto educativo com o objetivo de informar, conscientizar e oferecer apoio a jovens sobre a importância da saúde emocional.</p>
-            <p>Todas as informações apresentadas são baseadas em fontes confiáveis. No entanto, este site não substitui a consulta com um profissional de saúde. Em caso de dificuldades, procure ajuda — você não está sozinho(a).</p>
+
+
+        <!-- ==================== REFERÊNCIAS ==================== -->
+
+        <section class="section">
+
+            <div class="section-heading">
+
+                <span class="section-tag">
+                    Fontes consultadas
+                </span>
+
+
+                <h2>
+                    Informação com
+                    <span>responsabilidade</span>
+                </h2>
+
+
+                <p>
+
+                    Buscamos utilizar fontes confiáveis para apresentar
+                    informações de forma simples, clara e adequada
+                    para estudantes.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="references-grid">
+
+
+                <!-- OMS -->
+
+                <article class="reference-card">
+
+                    <div class="reference-icon">
+
+                        <i class="fa-solid fa-globe"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <span class="reference-type">
+                            Organização internacional
+                        </span>
+
+
+                        <h3>
+                            Organização Mundial da Saúde — OMS
+                        </h3>
+
+
+                        <p>
+
+                            Fonte utilizada para consultar informações
+                            gerais sobre saúde mental, bem-estar e
+                            saúde emocional.
+
+                        </p>
+
+
+                        <a
+                            href="https://www.who.int/"
+                            target="_blank"
+                            rel="noopener noreferrer">
+
+                            Visitar fonte
+
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- MINISTÉRIO DA SAÚDE -->
+
+                <article class="reference-card">
+
+                    <div class="reference-icon">
+
+                        <i class="fa-solid fa-hospital"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <span class="reference-type">
+                            Saúde pública
+                        </span>
+
+
+                        <h3>
+                            Ministério da Saúde
+                        </h3>
+
+
+                        <p>
+
+                            Consultado para informações relacionadas
+                            à saúde mental e aos cuidados com a saúde
+                            da população brasileira.
+
+                        </p>
+
+
+                        <a
+                            href="https://www.gov.br/saude/"
+                            target="_blank"
+                            rel="noopener noreferrer">
+
+                            Visitar fonte
+
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- UNICEF -->
+
+                <article class="reference-card">
+
+                    <div class="reference-icon">
+
+                        <i class="fa-solid fa-children"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <span class="reference-type">
+                            Crianças e adolescentes
+                        </span>
+
+
+                        <h3>
+                            UNICEF Brasil
+                        </h3>
+
+
+                        <p>
+
+                            Fonte consultada para informações sobre
+                            adolescentes, bem-estar, proteção e
+                            desenvolvimento.
+
+                        </p>
+
+
+                        <a
+                            href="https://www.unicef.org/brazil/"
+                            target="_blank"
+                            rel="noopener noreferrer">
+
+                            Visitar fonte
+
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- CVV -->
+
+                <article class="reference-card">
+
+                    <div class="reference-icon">
+
+                        <i class="fa-solid fa-phone"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <span class="reference-type">
+                            Apoio emocional
+                        </span>
+
+
+                        <h3>
+                            Centro de Valorização da Vida — CVV
+                        </h3>
+
+
+                        <p>
+
+                            Fonte de referência para informações sobre
+                            apoio emocional e canais de ajuda.
+
+                        </p>
+
+
+                        <a
+                            href="https://cvv.org.br/"
+                            target="_blank"
+                            rel="noopener noreferrer">
+
+                            Visitar fonte
+
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- BIBLIOTECA VIRTUAL -->
+
+                <article class="reference-card">
+
+                    <div class="reference-icon">
+
+                        <i class="fa-solid fa-book"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <span class="reference-type">
+                            Pesquisa
+                        </span>
+
+
+                        <h3>
+                            Biblioteca Virtual em Saúde
+                        </h3>
+
+
+                        <p>
+
+                            Base utilizada para pesquisas relacionadas
+                            à saúde, saúde mental e qualidade de vida.
+
+                        </p>
+
+
+                        <a
+                            href="https://bvsalud.org/"
+                            target="_blank"
+                            rel="noopener noreferrer">
+
+                            Visitar fonte
+
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- UNESCO -->
+
+                <article class="reference-card">
+
+                    <div class="reference-icon">
+
+                        <i class="fa-solid fa-school"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <span class="reference-type">
+                            Educação
+                        </span>
+
+
+                        <h3>
+                            UNESCO
+                        </h3>
+
+
+                        <p>
+
+                            Consultada para informações relacionadas
+                            à educação, bem-estar e desenvolvimento
+                            de estudantes.
+
+                        </p>
+
+
+                        <a
+                            href="https://www.unesco.org/"
+                            target="_blank"
+                            rel="noopener noreferrer">
+
+                            Visitar fonte
+
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
         </section>
+
+
+
+        <!-- ==================== OBSERVAÇÃO ==================== -->
+
+        <section class="reference-note">
+
+            <div class="reference-note-icon">
+
+                <i class="fa-solid fa-lightbulb"></i>
+
+            </div>
+
+
+            <div>
+
+                <h2>
+                    Sobre este projeto
+                </h2>
+
+
+                <p>
+
+                    Este site foi desenvolvido com finalidade
+                    educativa e escolar. As informações apresentadas
+                    têm o objetivo de promover conhecimento e
+                    conscientização sobre Saúde Emocional.
+
+                </p>
+
+
+                <p>
+
+                    O conteúdo não substitui avaliação, diagnóstico
+                    ou acompanhamento realizado por profissionais
+                    especializados.
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==================== VOLTAR ==================== -->
+
+        <div class="reference-back">
+
+            <a
+                href="index.html"
+                class="btn btn-primary">
+
+                <i class="fa-solid fa-house"></i>
+
+                Voltar ao início
+
+            </a>
+
+        </div>
+
+
     </main>
 
-    <footer>
-        <p>🌿 Portal de Saúde Emocional — Projeto Educativo Ana Laura</p>
-        <p>Conteúdo baseado em fontes oficiais: OMS, Ministério da Saúde, MEC, UNICEF e CVV</p>
-        <p>Você não está sozinho(a). Sempre há alguém pronto para ouvir.</p>
+
+
+    <!-- ==================== RODAPÉ ==================== -->
+
+    <footer class="footer">
+
+        <div class="footer-content">
+
+
+            <div class="footer-brand">
+
+                <a
+                    href="index.html"
+                    class="logo">
+
+                    <i class="fa-solid fa-leaf"></i>
+
+                    <span>
+                        Saúde Emocional
+                    </span>
+
+                </a>
+
+
+                <p>
+
+                    Um portal de informação, acolhimento
+                    e apoio para estudantes.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="footer-links">
+
+                <h3>
+                    Acesse
+                </h3>
+
+
+                <a href="index.html">
+                    Início
+                </a>
+
+
+                <a href="index.html#sobre">
+                    Sobre o tema
+                </a>
+
+
+                <a href="index.html#cuidados">
+                    Cuidados
+                </a>
+
+
+                <a href="escuta.html">
+                    Portal de Escuta
+                </a>
+
+
+                <a href="quiz.html">
+                    Quiz
+                </a>
+
+            </div>
+
+
+
+            <div class="footer-help">
+
+                <h3>
+                    Lembre-se
+                </h3>
+
+
+                <p>
+
+                    Cuidar da saúde emocional também é
+                    cuidar de si.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 — Projeto de Saúde Emocional
+            </p>
+
+
+            <a
+                href="#"
+                class="back-to-top"
+                aria-label="Voltar ao topo">
+
+                <i class="fa-solid fa-arrow-up"></i>
+
+            </a>
+
+        </div>
+
     </footer>
 
-    <div class="botoes-flutuantes">
-        <button id="botaoModoEscuro" title="Modo Escuro">🌙</button>
-        <button id="botaoAumentarFonte" title="Aumentar Fonte">🔤</button>
-        <button id="botaoTopo" title="Voltar ao Topo">⬆</button>
-    </div>
 
-    <script src="js/funcional.js"></script>
+
+    <!-- JavaScript -->
+
+    <script src="script.js"></script>
+
+
 </body>
+
 </html>
